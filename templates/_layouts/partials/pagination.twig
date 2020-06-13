@@ -1,0 +1,33 @@
+{% if pageInfo.totalPages > 1 %}
+
+    <nav class="block">
+
+        <div class="pagination">
+
+            {% if pageInfo.prevUrl %}
+                <a class="pagination-link" href="{{ pageInfo.prevUrl }}">«</a>
+            {% endif %}
+
+
+            {% for page, url in pageInfo.getPrevUrls(3) %}
+                <a class="pagination-link" href="{{ url }}">{{ page }}</a>
+            {% endfor %}
+
+
+            <a class=" bg-primary pagination-link text-white" href="#">{{ pageInfo.currentPage }}</a>
+
+
+            {% for page, url in pageInfo.getNextUrls(3) %}
+                <a class="pagination-link" href="{{ url }}">{{ page }}</a>
+            {% endfor %}
+
+
+            {% if pageInfo.nextUrl %}
+                <a class="pagination-link" href="{{ pageInfo.nextUrl }}">»</a>
+            {% endif %}
+
+        </div>
+
+    </nav>
+
+{% endif %}

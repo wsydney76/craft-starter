@@ -1,0 +1,24 @@
+{% extends "_layout.twig" %}
+
+{% set searchFor = craft.app.request.getParam('q') %}
+
+{% block titleText "#{'Search for'|t} \"#{searchFor}\"" %}
+
+{% if searchFor %}
+    {% set query = craft.entries()
+        .search({query:searchFor})
+        .orderBy('score')
+    %}
+{% endif %}
+
+{% block contentBottom %}
+
+    {% if searchFor %}
+        {% include '_partials/search_results.twig' with {query:query, searchFor:searchFor} only %}
+    {% else %}
+        <div class="mb-5">
+            {{ "You did not enter a search criteria"|t }}
+        </div>
+    {% endif %}
+
+{% endblock %}

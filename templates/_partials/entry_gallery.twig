@@ -1,0 +1,32 @@
+{% set with = [
+    ['featuredImage', {withTransforms:['galleryThumbnail']}]
+] %}
+
+{% if andWith is defined %}
+    {% set with = with|merge(andWith) %}
+{% endif %}
+
+{% paginate query
+    .limit(craft.app.config.general.project.entriesPerPage ?? 10)
+    .with(with) as pageInfo, entries %}
+
+{% set navHtml %}
+    {% include '_layouts/partials/pagination.twig'
+        with {pageInfo: pageInfo} only %}
+{% endset %}
+
+{{ navHtml }}
+
+<div class="mb-5">
+    {% for entry in entries %}
+        <article class="mb-5">
+            {% embed "_partials/gallery_item.twig" with {entry:entry} only %}
+                {% block content %}
+                    {% include "_partials/index/#{entry.section.handle}.twig" ignore missing %}
+                {% endblock %}
+            {% endembed %}
+        </article>
+    {% endfor %}
+</div>
+
+{{ navHtml }}

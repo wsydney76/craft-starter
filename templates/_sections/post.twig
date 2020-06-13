@@ -1,0 +1,11 @@
+{% extends "_layout.twig" %}
+
+{% set global_navCondition = {section:'post'} %}
+
+{% block contentBottom %}
+
+    {% include '_partials/entry_meta.twig'
+        with {entry:entry} only %}
+
+{% endblock %}
+

@@ -1,0 +1,47 @@
+{% macro textField(title, name, object, required=false, type='text') %}
+    {% from _self import errorList %}
+    <div class="form-group">
+        <label for="input-{{ name }}">{{ title }} {{ required ? '<span class="text-danger">*</span>' }}</label>
+        <input class="form-control" id="input-{{ name }}" type="{{ type }}" name="{{ name }}" {{ required ? 'required' }}
+               value="{{ type == 'password' ? '' : object[name] }}">
+
+        {{ errorList(object.getErrors(name)) }}
+
+    </div>
+{% endmacro %}
+
+
+{% macro textAreaField(title, name, object, required) %}
+    {% from _self import errorList %}
+    <div class="form-group">
+        <label for="input-{{ name }}">{{ title }} {{ required ? '<span class="text-danger">*</span>' }}</label>
+        <textarea class="form-control" id="input-{{ name }}" name="{{ name }}" rows="5" {{ required ? 'required' }}>{{ object[name] }}</textarea>
+
+        {{ errorList(object.getErrors(name)) }}
+    </div>
+{% endmacro %}
+
+{% macro singleCheckbox(title, name, object) %}
+    <div class="form-group">
+        <div class="form-check">
+            <input class="form-check-input" id="input-{{ name }}" type="checkbox" name="{{ name }}" value="1">
+            <label for="input-{{ name }}" class="form-check-label">{{ title }}</label>
+        </div>
+    </div>
+{% endmacro %}
+
+
+{% macro submit(caption) %}
+    <button type="submit" class="my-2 py-2 px-4 bg-primary text-white">{{ caption }}</button>
+{% endmacro %}
+
+
+{% macro errorList(errors) %}
+    {% if errors %}
+        <ul class="list-none text-red">
+            {% for error in errors %}
+                <li>{{ error|t }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endmacro %}

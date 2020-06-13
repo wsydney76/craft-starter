@@ -1,0 +1,36 @@
+{% set transform = 'showFullHeight' in block.options ? 'contentImageFullHeight' : 'contentImage' %}
+{% set transformMd = transform ~ 'Md' %}
+{% set transformXs= transform ~ 'Xs' %}
+
+{% set image = block.image.withTransforms([transform, transformMd, transformXs]).one %}
+{% if image %}
+
+    {% set caption = block.caption ?: image.title %}
+
+    {% set imgAttr = {
+        src: image.url(transformMd),
+        srcset: "#{image.url(transformXs)} 420w, #{image.url(transformMd)} 768w, #{image.url(transform)} 1160w",
+        alt: caption != image.title ? image.title : '',
+        loading: 'lazy'
+    } %}
+
+    <figure class="figure">
+
+        <img {{ attr(imgAttr) }}>
+
+        {% if image.copyright %}
+            {% set caption -%}
+                {{ caption }} &copy; {{ image.copyright }}
+            {%- endset %}
+
+        {% endif %}
+
+        {% if caption %}
+            <figcaption class="my-3 text-center">
+                {{ caption }}
+            </figcaption>
+        {% endif %}
+    </figure>
+
+{% endif %}
+

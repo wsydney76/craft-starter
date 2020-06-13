@@ -1,0 +1,10 @@
+{% set blocks = query.all %}
+
+{% for block in blocks %}
+    <div class="mb-5 block-{{ block.type }}" id="block-{{ block.id }}">
+        {% include "_blocks/#{block.type}.twig"
+            ignore missing
+            with {block:block} only %}
+    </div>
+{% endfor %}
+

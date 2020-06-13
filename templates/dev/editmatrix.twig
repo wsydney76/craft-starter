@@ -1,0 +1,210 @@
+{#
+Basic example for editing matrix field via Alpine js
+https://docs.craftcms.com/v3/matrix-fields.html#templating
+
+Matrix field 'cast'
+-  Block type 'role'
+-  -  Plaintext field 'roleName'
+-  -  Entries field 'persons'
+ #}
+
+{% extends "_layout.twig" %}
+
+{% block featured1 %}{% endblock %}
+
+{% block content %}
+
+    {% if entry is defined %}
+        {# Previous post request has errors #}
+        {{ dump(entry.errors) }}
+    {% else %}
+        {# Fresh request #}
+        {% set slug = craft.app.request.param('slug','test') %}
+        {% set entry = craft.entries.section('film').slug(slug).one %}
+        {% if not entry %}
+            {% exit 404 %}
+        {% endif %}
+    {% endif %}
+
+    {# Show flash messages (notice/error) #}
+    {{ dump(craft.app.session.allFlashes) }}
+
+    <h2>Cast</h2>
+
+    {# Using twig output to prevent PhpStorm from killing syntax highlighting #}
+    {{ '<form method="post">' }}
+
+    {# Security #}
+    {{ csrfInput() }}
+
+    {# Use Craft's default controller #}
+    {{ actionInput('entries/save-entry') }}
+
+    {# Need this to preserve query params #}
+    {{ redirectInput(craft.app.request.url) }}
+
+    {# Identify entry #}
+    {{ hiddenInput('entryId', entry.id) }}
+    {{ hiddenInput('siteId', entry.siteId) }}
+
+    {# Params are required by default controller action, although we do not change them #}
+    {{ hiddenInput('sectionId', entry.section.id) }}
+    {{ hiddenInput('title', entry.title) }}
+    {{ hiddenInput('slug', entry.slug) }}
+
+    {# Set timestamp #}
+    {{ hiddenInput('fields[teaser]', 'Updated via frontend form on ' ~ now|datetime('long')) }}
+
+    {# Prepare data for Alpine component #}
+    {% set roles = [] %}
+    {% set newIndex = 0 %}
+    {% for role in entry.cast.all %}
+        {% set id = role.id %}
+        {% if not id %}
+            {# set a unique id for unsaved blocks #}
+            {% set id = 'unsaved-' ~ newIndex %}
+            {% set newIndex = newIndex + 1 %}
+        {% endif %}
+        {% set roles = roles|merge([{id: id, roleName: role.roleName, personIds: role.persons.ids, actionsOpen:false}]) %}
+    {% endfor %}
+
+    {# Alpine JS component #}
+    <div x-data="{roles:{{ roles|json_encode }}, savePoints: [{{ roles|json_encode }}] , newIndex:0}">
+
+        {# This is needed if we want to delete all blocks, otherwise the field will be ignored #}
+        <input type="hidden" name="fields[cast]">
+
+        {# Output all blocks #}
+        <template x-for="(role, index) in roles">
+
+            {# We are using role.id from here for setting up field names as expected by Craft, and index for operations on component data  #}
+
+            <div class="my-4 align-text-top border border-primary p-5 flex">
+
+                {# Determines sort order. If no data would be present for this block, it would simply persist old content #}
+                <input type="hidden" name="fields[cast][sortOrder][]" :value="role.id">
+
+                {# Declare matrix block type #}
+                <input type="hidden" :name="'fields[cast][blocks][' + role.id + '][type]'" value="role">
+
+                <div>
+                    Index <span x-text="index"></span>
+                    <br>
+                    Id: <span x-text="role.id"></span>
+                </div>
+
+                {# RoleName plain text field #}
+                <div class="ml-4 flex flex-col">
+                    <input type="text" required class="p-1 border border-gray-500"
+                           :name="'fields[cast][blocks][' + role.id + '][fields][roleName]'"
+                           x-model="role.roleName">
+                </div>
+                {# Persons entries field #}
+                {# TODO: This does not handle any order #}
+                <div class="ml-4 flex flex-col">
+                    <select multiple required class="border border-gray-500"
+                            :name="'fields[cast][blocks][' + role.id + '][fields][persons][]'"
+                            x-model="role.personIds">
+                        {% for person in craft.entries.section('person').orderBy('title').all %}
+                            <option value="{{ person.id }}">{{ person.title }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+
+                {# Actions drop down #}
+                <div class="ml-4">
+                    <button class="p-1 border border-gray-500"
+                            :class="{'bg-blue-700 text-white': role.actionsOpen, 'bg-white': !role.actionsOpen}"
+                            @click.prevent="role.actionsOpen = true">
+                        Actions
+                    </button>
+
+                    <div class="flex bg-white border border-blue-700"
+                         x-show="role.actionsOpen"
+                         @click.away="role.actionsOpen = false">
+
+                        <div class="cursor-pointer p-1 hover:bg-blue-700 hover:text-white"
+                             @click="dropItem(roles, index);">
+                            Delete
+                        </div>
+
+                        <div class="cursor-pointer p-1 hover:bg-blue-700 hover:text-white"
+                             @click="moveItem(roles, index, 0);">
+                            First
+                        </div>
+
+                        <div class="cursor-pointer p-1 hover:bg-blue-700 hover:text-white"
+                             @click="moveItem(roles, index, index+1);">
+                            Down
+                        </div>
+
+                        <div class="cursor-pointer p-1 hover:bg-blue-700 hover:text-white"
+                             @click="moveItem(roles, index, index-1);">
+                            Up
+                        </div>
+
+                        <div class="cursor-pointer p-1 hover:bg-blue-700 hover:text-white"
+                             @click="moveItem(roles, index, roles.length-1);">
+                            Last
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </template>
+
+        <div class="my-8">
+            <button class="p-2 bg-gray-400" @click.prevent="addRole(roles, newIndex++)">
+                New Role
+            </button>
+
+            <button class="p-2 bg-gray-400"
+                    @click.prevent="i = savePoints.length-1; roles = JSON.parse(JSON.stringify(savePoints[i])); if(i>0){savePoints.splice(i, 1)};">
+                Restore last savepoint
+            </button>
+
+            <button class="p-2 bg-gray-400"
+                    @click.prevent="savePoints.push(JSON.parse(JSON.stringify(roles)))">
+                Create savepoint
+            </button>
+        </div>
+
+    </div>
+
+    <div class="my-4">
+        <input class="p-2 w-32 bg-red-500 text-white" value="Update" type="submit">
+    </div>
+    {{ '</form>' }}
+
+{% endblock %}
+
+{% js %}
+
+// Specific functions
+function addRole(roles, index) {
+    addItem(roles, {id: 'new-' + index, roleName: '', personIds: [], actionsOpen: false})
+}
+
+
+// Generic functions
+function addItem(items, item) {
+    items.push(item);
+}
+
+function dropItem(items, index) {
+    if (confirm('Delete item?')) {
+        items.splice(index, 1);
+    }
+}
+
+function moveItem(items, old_index, new_index) {
+    // https://stackoverflow.com/questions/5306680/move-an-array-element-from-one-array-position-to-another
+    if (new_index < 0 || new_index >= items.length) {
+        return;
+    }
+
+    items.splice(new_index, 0, items.splice(old_index, 1)[0]);
+};
+{% endjs %}

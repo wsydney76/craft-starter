@@ -1,0 +1,48 @@
+
+    {% set asset = block.asset.one %}
+
+    {% set embedAssets = true %}
+    {% set isLivePreview = false %}
+
+    {% if asset %}
+        {% set embeddedAsset = craft.embeddedAssets.get(asset) %}
+
+        {% if embedAssets and not isLivePreview  %}
+
+            {% if block.showTitle %}
+                <h4 class="my-3">{{ embeddedAsset.title }}</h4>    
+            {% endif %}
+            
+
+            {% if not embeddedAsset.aspectRatio %}
+                {% set aspectRatioClass = '' %}
+            {% elseif embeddedAsset.aspectRatio > 90 %}
+                {% set aspectRatioClass = 'embed-responsive aspect-ratio-square' %}
+            {% elseif embeddedAsset.aspectRatio > 70 %}
+                {% set aspectRatioClass = 'embed-responsive aspect-ratio-4/3' %}
+            {% elseif embeddedAsset.aspectRatio > 45 %}
+                {% set aspectRatioClass = 'embed-responsive aspect-ratio-16/9' %}
+            {% else %}
+                {% set aspectRatioClass = 'embed-responsive aspect-ratio-21/9' %}
+            {% endif %}
+
+            {% if embeddedAsset.providerName != 'Instagram' %}
+                <div class="{{ aspectRatioClass }}">
+                    {{ embeddedAsset ? embeddedAsset.html }}
+                </div>
+            {% else %}
+                {# will end up with height=0 within bootstraps tags #}
+                {{ embeddedAsset ? embeddedAsset.html }}
+            {% endif %}
+
+            {% if block.showDescription %}
+                <div class="my-3">
+                    {{ embeddedAsset.description }}
+                </div>
+            {% endif %}
+
+        {% endif %}
+
+    {% endif %}
+
+

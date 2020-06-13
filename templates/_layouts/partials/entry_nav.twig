@@ -1,0 +1,20 @@
+{# @var entry \craft\elements\Entry #}
+
+
+{% set prev = entry.prev(condition) %}
+{% set next = entry.next(condition) %}
+
+<div class="flex my-8 border-t border-secondary space-x-2 divide-x divide-secondary">
+    <div class="w-1/2 pt-3 text-left">
+        {% if next %}
+            <a href="{{ next.url }}" > &lt; {{ next.title }}</a>
+        {% endif %}
+    </div>
+    <div class="w-1/2 pt-3 text-right">
+        {% if prev %}
+            <a href="{{ prev.url }}" >{{ prev.title }}  &gt;</a>
+        {% endif %}
+    </div>
+</div>
+
+

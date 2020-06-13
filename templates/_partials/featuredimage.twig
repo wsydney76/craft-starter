@@ -1,0 +1,37 @@
+{% set transforms = ['featuredImageSm','featuredImageMd','featuredImageMd','featuredImage'] %}
+{% set image = null %}
+
+{# 1. global_featured image contains asset query #}
+{% if global_featuredImage is defined %}
+    {% set image = global_featuredImage.withTransforms(transforms).one %}
+{% endif %}
+
+{# 2. Elements featuredImage is sset #}
+{% if element and not image and element.featuredImage %}
+    {% set image = element.featuredImage.withTransforms(transforms).one %}
+{% endif -%}
+
+{# 3. Fallback Image from siteInfo global #}
+{% if not image %}
+    {% set image = siteInfo.featuredImage.withTransforms(transforms).one %}
+{% endif %}
+
+{# Finally... #}
+{% if image %}
+    {% set heights = "h-32 sm:h-48 lg:h-64 xl:h-75" %}
+    <header id="featured-image">
+        {% if image.mimeType == 'image/svg+xml' %}
+            <div class="">
+                <img class="mx-auto {{ heights }}" src="{{ image.url }}" alt="">
+            </div>
+        {% else %}
+            <img
+                    class="object-cover {{ heights }}"
+                    srcset="{{ "#{image.url('featuredImageSm')} 576w, #{image.url('featuredImageMd')} 768w, #{image.url('featuredImageLg')} 1160w, #{image.url('featuredImage')} 2000w" }}"
+                    sizes="100vw"
+                    src="{{ image.url('featuredImageSm') }}"
+                    alt="{{ image.title|e('html_attr') }}">
+
+        {% endif %}
+    </header>
+{% endif %}

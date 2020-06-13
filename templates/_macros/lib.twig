@@ -1,0 +1,20 @@
+{% macro linkTo(text, url, target='') %}
+    <a href="{{ url }}" target="{{ target }}">{{ text }}</a>
+{% endmacro %}
+
+{% macro linkList(links, showPostDate=false) %}
+    <ul class="list-none">
+        {% for link in links %}
+            <li class="my-2">
+                {% if showPostDate %}
+                    <div class="text-gray-900">{{ link.postDate }}</div>
+                {% endif %}
+                <a href="{{ link.href }}">{{ link.text }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endmacro %}
+
+
+
+

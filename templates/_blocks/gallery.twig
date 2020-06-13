@@ -1,0 +1,34 @@
+{% set rows = block.images
+    .with([
+    ['image', {withTransforms: ['galleryThumbnail','galleryFullHeight']}]
+])
+    .all %}
+
+{% if rows %}
+
+    {% do view.registerAssetBundle('project\\resources\\site\\LightboxAssets') %}
+
+    <div class="gallery-{{ block.id }} grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-3 gap-2">
+        {% for row in rows %}
+            {% set image = row.image[0] ?? null %}
+            {% if image %}
+                {% set caption = row.caption ?: image.title %}
+
+                <div class="relative">
+                    <a href="{{ image.url('galleryFullHeight') }}" data-caption="{{ caption }}">
+                        <img src="{{ image.url('galleryThumbnail') }}" alt="{{ caption }}">
+                    </a>
+                    <div style="left:50%;transform: translate(-50%);"
+                         class="absolute bottom-0 text-center bg-red text-white pb-2 text-sm">{{ caption }}</div>
+                </div>
+            {% endif %}
+        {% endfor %}
+
+    </div>
+
+    {% js %}
+        baguetteBox.run('.gallery-{{ block.id }}');
+    {% endjs %}
+
+{% endif %}
+

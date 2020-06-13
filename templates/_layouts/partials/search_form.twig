@@ -1,0 +1,14 @@
+{% set searchEntry = craft.entries.section('search').one %}
+
+{% if searchEntry %}
+
+    <form class="flex ml-5 my-2" method="get" action="{{ searchEntry.url }}">
+        <input class=" my-2 px-3 relative bg-white bg-white text-sm border border-primary outline-none focus:outline-none focus:shadow-outline w-full"
+               type="text"
+               name="q" type="search" placeholder="{{ "Search"|t }}"
+               value="{{ searchFor is defined ? searchFor : '' }}"
+               aria-label="{{ searchEntry.title }}">
+        <button class="my-2 py-2 px-4 bg-primary text-white" type="submit">{{ "Search"|t }}</button>
+    </form>
+
+{% endif %}

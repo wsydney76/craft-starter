@@ -1,0 +1,33 @@
+{% extends "_layouts/main.twig" %}
+{% set global_siteName = siteInfo.siteName %}
+{% set global_siteIcon = siteInfo.siteIcon.one %}
+
+{% block featured1 %}
+    {% include '_partials/featuredimage.twig' %}
+{% endblock %}
+
+{% block titleBottom %}
+    {% if element is defined and element.teaser %}
+        {{ element.teaser }}
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    {% if element is defined and element.bodyContent %}
+        {% include '_partials/blocks.twig'
+            with {query: element.bodyContent} only %}
+    {% endif %}
+{% endblock %}
+
+{% block secondaryContent %}
+    {% include '_partials/entries_list.twig'
+        with {heading: 'Latest Posts', query: craft.entries.section('post').limit(3), showPostDate: true } only %}
+{% endblock %}
+
+{% block footer1 %}
+    {% include '_partials/footer_copyright.twig' %}
+{% endblock %}
+
+{% block footer3 %}
+    {% include '_partials/footer_menu.twig' %}
+{% endblock %}

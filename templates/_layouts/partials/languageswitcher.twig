@@ -1,0 +1,13 @@
+{% if element %}
+
+    <ul class="list-none">
+        {% for element in element.find.id(element.sourceId).site(['de','en']).all %}
+            {% if currentSite.id != element.site.id %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ element.url }}" @click="isOpen = false">{{ element.site.name[:2] }}</a>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+{% endif %}
+

@@ -1,0 +1,5 @@
+{% set entry = block.target.one %}
+{% if entry %}
+    <a href="{{ entry.url }}"
+       class="inline-block my-3 py-2 px-4 bg-{{ block.color }} text-white hover:bg-{{ block.color }}-dark hover:text-white">{{ block.caption ?: entry.title }}</a>
+{% endif %}

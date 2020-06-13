@@ -1,0 +1,5 @@
+{# register additional assets here #}
+{% set stylesheet = rev('main.css') %}
+{% if stylesheet %}
+    <link rel="stylesheet" href="{{ rev('main.css') }}">
+{% endif %}

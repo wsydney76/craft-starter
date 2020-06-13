@@ -1,0 +1,13 @@
+<nav>
+
+    {% cache globally %}
+        {% set entries = siteNavigation.footerNavigation.all %}
+        {% for entry in entries %}
+            <div>
+                <a class="text-xs font-semibold uppercase" href="{{ entry.url }}"">{{ entry.title }}</a>
+            </div>
+        {% endfor %}
+    {% endcache %}
+
+</nav>
+

@@ -1,0 +1,16 @@
+{% extends "_layout.twig" %}
+
+{% if query is not defined %}
+    {% set indexSection = entry.section.handle|replace({'Index':''}) %}
+
+    {% set orderBy = craft.app.config.general.project['orderBy'][indexSection] ?? 'title' %}
+
+    {% set query = craft.entries.section(indexSection).orderBy(orderBy) %}
+{% endif %}
+
+{% set andWith = andWith ?? [] %}
+
+{% block contentBottom %}
+    {% include '_partials/entry_gallery.twig'
+        with {query:query, andWith:andWith } only %}
+{% endblock %}

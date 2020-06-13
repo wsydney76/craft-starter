@@ -1,0 +1,4 @@
+{% if entry.author %}
+    {{ entry.author.fullName }},
+{% endif %}
+{{ entry.postDate|date('long') }}

@@ -1,0 +1,8 @@
+{% extends "_layout.twig" %}
+
+
+{% block secondaryContent %}
+    {% include '_partials/page_nav.twig'
+        with {entry:entry, query:craft.entries.section('page'), heading:'Pages'|t} only %}
+{% endblock %}
+
