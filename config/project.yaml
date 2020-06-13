@@ -1,6 +1,6 @@
 assets:
   tempVolumeUid: 35c3b3f5-30e7-4780-9ae1-286ee8bd275e
-dateModified: 1592039359
+dateModified: 1592042370
 email:
   fromEmail: '@EMAIL_ADDRESS'
   fromName: '@EMAIL_SENDER'
@@ -867,7 +867,7 @@ matrixBlockTypes:
           allowSelfRelations: ''
           allowedKinds:
             - json
-          defaultUploadLocationSource: 'volume:8136d7e9-1a74-464d-aef2-3a4f91a5cdda'
+          defaultUploadLocationSource: 'volume:cbbf12d2-97db-4750-8f2d-ea5a5ca1f975'
           defaultUploadLocationSubpath: ''
           limit: '1'
           localizeRelations: ''
@@ -1411,7 +1411,7 @@ system:
   edition: pro
   live: true
   name: '@SYSTEM_NAME'
-  schemaVersion: 3.4.10
+  schemaVersion: 3.5.2
   timeZone: Europe/Berlin
 users:
   allowPublicRegistration: true

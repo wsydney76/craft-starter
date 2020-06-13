@@ -1,9 +1,9 @@
 {% extends "_layouts/base.twig" %}
 
 {% block body %}
-
+    <body class="text-base font-sans">
     {% block nav %}
-       {% include '_layouts/partials/nav.twig' %}
+        {% include '_layouts/partials/nav.twig' %}
     {% endblock nav %}
 
     <div id="canvas" class="bg-light">
@@ -83,7 +83,8 @@
                                         </div>
 
 
-                                        <div id="content-secondary-area" class="xl:col-span-3 border-t border-secondary mt-8 pt-6 xl:border-0 xl:mt-0 xl:pt-0">
+                                        <div id="content-secondary-area"
+                                             class="xl:col-span-3 border-t border-secondary mt-8 pt-6 xl:border-0 xl:mt-0 xl:pt-0">
                                             {% block contentSecondaryArea %}
                                                 <div id="secondary-content-top">
                                                     {% block secondaryContentTop %}{% endblock %}
@@ -144,5 +145,5 @@
     </div>
 
     {% block endBody %}{% endblock %}
-
+    </body>
 {% endblock body %}
