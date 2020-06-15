@@ -4,14 +4,6 @@
   @apply bg-primary text-white;
 }
 
-.img-scale {
-  transition: transform .3s;
-
-  &:hover {
-    transform: scale(1.05);
-  }
-}
-
 .rich-text {
   a {
     @apply underline;

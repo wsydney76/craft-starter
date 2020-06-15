@@ -1,6 +1,6 @@
 assets:
   tempVolumeUid: 35c3b3f5-30e7-4780-9ae1-286ee8bd275e
-dateModified: 1592210431
+dateModified: 1592218304
 email:
   fromEmail: '@EMAIL_ADDRESS'
   fromName: '@EMAIL_SENDER'
@@ -88,14 +88,15 @@ fields:
     name: Teaser
     searchable: true
     settings:
-      charLimit: '100'
+      byteLimit: 100
+      charLimit: null
       code: ''
       columnType: string
       initialRows: '4'
       multiline: ''
       placeholder: ''
     translationKeyFormat: null
-    translationMethod: site
+    translationMethod: language
     type: craft\fields\PlainText
   3f9c2f2a-8ab0-4aba-bf4e-02d5336d14c0:
     contentColumnType: string
@@ -473,7 +474,7 @@ matrixBlockTypes:
           multiline: ''
           placeholder: ''
         translationKeyFormat: null
-        translationMethod: site
+        translationMethod: language
         type: craft\fields\PlainText
       d420edab-c758-4dce-8b02-e17b23ed0e60:
         contentColumnType: string
@@ -491,7 +492,7 @@ matrixBlockTypes:
           multiline: ''
           placeholder: ''
         translationKeyFormat: null
-        translationMethod: site
+        translationMethod: language
         type: craft\fields\PlainText
       efc1fd0a-3fd1-4379-84a0-e8cf931be331:
         contentColumnType: string
@@ -549,6 +550,9 @@ matrixBlockTypes:
         tabs:
           -
             fields:
+              133bba22-df33-4432-a49f-198e9c071f22:
+                required: false
+                sortOrder: 4
               7d7cf5ed-7c41-4d49-ba86-cef811f69683:
                 required: false
                 sortOrder: 3
@@ -561,6 +565,52 @@ matrixBlockTypes:
             name: Content
             sortOrder: 1
     fields:
+      133bba22-df33-4432-a49f-198e9c071f22:
+        contentColumnType: string
+        fieldGroup: null
+        handle: display
+        instructions: ''
+        name: Display
+        searchable: false
+        settings:
+          optgroups: true
+          options:
+            -
+              __assoc__:
+                -
+                  - label
+                  - Default
+                -
+                  - value
+                  - default
+                -
+                  - default
+                  - ''
+            -
+              __assoc__:
+                -
+                  - label
+                  - 'Align left'
+                -
+                  - value
+                  - left
+                -
+                  - default
+                  - ''
+            -
+              __assoc__:
+                -
+                  - label
+                  - 'Align right'
+                -
+                  - value
+                  - right
+                -
+                  - default
+                  - ''
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\Dropdown
       7d7cf5ed-7c41-4d49-ba86-cef811f69683:
         contentColumnType: string
         fieldGroup: null
@@ -682,7 +732,7 @@ matrixBlockTypes:
             - 'volume:8136d7e9-1a74-464d-aef2-3a4f91a5cdda'
           targetSiteId: null
           useSingleFolder: false
-          validateRelatedElements: ''
+          validateRelatedElements: '1'
           viewMode: large
         translationKeyFormat: null
         translationMethod: site
@@ -760,7 +810,7 @@ matrixBlockTypes:
           multiline: ''
           placeholder: ''
         translationKeyFormat: null
-        translationMethod: site
+        translationMethod: language
         type: craft\fields\PlainText
     handle: image
     name: Image
@@ -843,7 +893,7 @@ matrixBlockTypes:
           multiline: ''
           placeholder: ''
         translationKeyFormat: null
-        translationMethod: site
+        translationMethod: language
         type: craft\fields\PlainText
     handle: heading
     name: Heading
@@ -952,7 +1002,7 @@ matrixBlockTypes:
           defaultUploadLocationSource: 'volume:cbbf12d2-97db-4750-8f2d-ea5a5ca1f975'
           defaultUploadLocationSubpath: ''
           limit: '1'
-          localizeRelations: ''
+          localizeRelations: '1'
           restrictFiles: '1'
           selectionLabel: ''
           showUnpermittedFiles: false
@@ -1648,7 +1698,7 @@ volumes:
           -
             fields:
               3f9c2f2a-8ab0-4aba-bf4e-02d5336d14c0:
-                required: false
+                required: true
                 sortOrder: 1
             name: Content
             sortOrder: 1

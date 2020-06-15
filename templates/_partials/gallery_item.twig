@@ -1,12 +1,13 @@
 {% set image = entry.featuredImage[0]??null %}
 
-<div class="sm:flex mb-3 bg-white">
+<div class="sm:flex mb-3 bg-white shadow">
 
     {% set image = image ?? siteInfo.featuredImage.one ?? null %}
     {% if image %}
-        <div class="flex-shrink-0">
+        <div class="flex-shrink-0 overflow-hidden">
             <a href="{{ entry.url }}">
-                <img class="img-scale rounded" src="{{ image.url('galleryThumbnail') }}" alt="{{ image.title }}"
+                <img class="transform hover:scale-105 transition ease-in-out duration-300 rounded"
+                     src="{{ image.url('galleryThumbnail') }}" alt="{{ image.title }}"
                      loading="lazy">
             </a>
         </div>

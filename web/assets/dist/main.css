@@ -630,14 +630,6 @@ video {
   color: rgba(255, 255, 255, var(--text-opacity));
 }
 
-.img-scale {
-  transition: transform .3s;
-}
-
-.img-scale:hover {
-  transform: scale(1.05);
-}
-
 .rich-text a {
   text-decoration: underline;
 }
@@ -18615,8 +18607,8 @@ h6 {
 
 p {
   line-height: 1.625;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 ul {
@@ -18644,11 +18636,6 @@ p img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-}
-
-p {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
 }
 
 table,

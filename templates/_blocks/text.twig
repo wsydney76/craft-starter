@@ -3,7 +3,7 @@
         {{ block.text|striptags }}
     </div>
 {% elseif display in ['left','right'] %}
-    <div class="rich-text bg-white p-3 shadow">
+    <div class="rich-text bg-white px-4 py-1 shadow">
         {{ block.text|striptags|parseRefs|md }}
     </div>
 {% else %}
