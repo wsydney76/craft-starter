@@ -1,6 +1,10 @@
-{% if block.highlightBlock %}
+{% if display == 'highlight' %}
 	<div class="bg-primary text-white text-lg leading-relaxed p-3">
         {{ block.text|striptags }}
+    </div>
+{% elseif display in ['left','right'] %}
+    <div class="rich-text bg-white p-3 shadow">
+        {{ block.text|striptags|parseRefs|md }}
     </div>
 {% else %}
     <div class="rich-text">

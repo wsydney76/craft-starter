@@ -702,6 +702,24 @@ video {
   margin-bottom: 0.75rem;
 }
 
+@media (min-width: 576px) {
+  .block-display-left {
+    width: 300px;
+    float: left;
+    clear: both;
+    margin-right: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .block-display-right {
+    width: 300px;
+    float: right;
+    clear: both;
+    margin-left: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+}
+
 /* purgecss end ignore */
 
 .space-y-0 > :not(template) ~ :not(template) {
@@ -15922,6 +15940,10 @@ video {
   width: 25rem;
 }
 
+.w-300 {
+  width: 300px;
+}
+
 .w-auto {
   width: auto;
 }
@@ -18650,25 +18672,6 @@ table th,
   tbody th {
   font-weight: 700;
   text-align: left;
-}
-
-blockquote {
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-}
-
-blockquote p {
-  margin-top: 0;
-  font-size: 1.5rem;
-  font-weight: 600;
-  font-style: italic;
-}
-
-blockquote cite {
-  font-size: 1.125rem;
-}
-
-blockquote cite:before {
-  content: "\2014 \00A0";
 }
 
 a:hover {
@@ -33894,6 +33897,10 @@ a:hover {
 
   .sm\:w-75 {
     width: 25rem;
+  }
+
+  .sm\:w-300 {
+    width: 300px;
   }
 
   .sm\:w-auto {
@@ -51725,6 +51732,10 @@ a:hover {
     width: 25rem;
   }
 
+  .md\:w-300 {
+    width: 300px;
+  }
+
   .md\:w-auto {
     width: auto;
   }
@@ -69554,6 +69565,10 @@ a:hover {
     width: 25rem;
   }
 
+  .lg\:w-300 {
+    width: 300px;
+  }
+
   .lg\:w-auto {
     width: auto;
   }
@@ -87381,6 +87396,10 @@ a:hover {
 
   .xl\:w-75 {
     width: 25rem;
+  }
+
+  .xl\:w-300 {
+    width: 300px;
   }
 
   .xl\:w-auto {

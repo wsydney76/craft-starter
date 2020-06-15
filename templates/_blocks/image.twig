@@ -1,20 +1,40 @@
-{% set transform = 'showFullHeight' in block.options ? 'contentImageFullHeight' : 'contentImage' %}
-{% set transformMd = transform ~ 'Md' %}
-{% set transformXs= transform ~ 'Xs' %}
+{% set isFloat = display in ['left','right'] %}
+{% set query = block.image %}
 
-{% set image = block.image.withTransforms([transform, transformMd, transformXs]).one %}
+{% if not isFloat %}
+    {% set transform = display == 'fullHeight' ? 'contentImageFullHeight' : 'contentImage' %}
+    {% set transformMd = transform ~ 'Md' %}
+    {% set transformXs= transform ~ 'Xs' %}
+    {% set query = query.withTransforms([transform, transformMd, transformXs]) %}
+{% endif %}
+
+{% set image = query.one %}
+
 {% if image %}
-
     {% set caption = block.caption ?: image.title %}
 
-    {% set imgAttr = {
-        src: image.url(transformMd),
-        srcset: "#{image.url(transformXs)} 420w, #{image.url(transformMd)} 768w, #{image.url(transform)} 1160w",
-        alt: caption != image.title ? image.title : '',
-        loading: 'lazy'
-    } %}
+    {% if isFloat %}
+        {% set imgAttr = {
+            src: image.url('galleryThumbnail'),
+            alt: caption != image.title ? image.title : '',
+            loading: 'lazy'
+        } %}
+        {% set figureAttr = {
+            class: "figure bg-white pb-1 text-sm shadow"
+        } %}
+    {% else %}
+        {% set imgAttr = {
+            src: image.url(transformMd),
+            srcset: "#{image.url(transformXs)} 420w, #{image.url(transformMd)} 768w, #{image.url(transform)} 1160w",
+            alt: caption != image.title ? image.title : '',
+            loading: 'lazy'
+        } %}
+        {% set figureAttr = {
+            class: "figure"
+        } %}
+    {% endif %}
 
-    <figure class="figure">
+    <figure {{ attr(figureAttr) }}>
 
         <img {{ attr(imgAttr) }}>
 
@@ -33,4 +53,3 @@
     </figure>
 
 {% endif %}
-

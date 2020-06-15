@@ -1,6 +1,6 @@
 assets:
   tempVolumeUid: 35c3b3f5-30e7-4780-9ae1-286ee8bd275e
-dateModified: 1592130479
+dateModified: 1592210431
 email:
   fromEmail: '@EMAIL_ADDRESS'
   fromName: '@EMAIL_SENDER'
@@ -451,6 +451,9 @@ matrixBlockTypes:
               d420edab-c758-4dce-8b02-e17b23ed0e60:
                 required: false
                 sortOrder: 2
+              efc1fd0a-3fd1-4379-84a0-e8cf931be331:
+                required: false
+                sortOrder: 3
             name: Content
             sortOrder: 1
     fields:
@@ -490,6 +493,52 @@ matrixBlockTypes:
         translationKeyFormat: null
         translationMethod: site
         type: craft\fields\PlainText
+      efc1fd0a-3fd1-4379-84a0-e8cf931be331:
+        contentColumnType: string
+        fieldGroup: null
+        handle: display
+        instructions: ''
+        name: Display
+        searchable: false
+        settings:
+          optgroups: true
+          options:
+            -
+              __assoc__:
+                -
+                  - label
+                  - Default
+                -
+                  - value
+                  - default
+                -
+                  - default
+                  - '1'
+            -
+              __assoc__:
+                -
+                  - label
+                  - 'Align left'
+                -
+                  - value
+                  - left
+                -
+                  - default
+                  - ''
+            -
+              __assoc__:
+                -
+                  - label
+                  - 'Align right'
+                -
+                  - value
+                  - right
+                -
+                  - default
+                  - ''
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\Dropdown
     handle: pullquote
     name: Pullquote
     sortOrder: 5
@@ -598,7 +647,7 @@ matrixBlockTypes:
               7a11b052-f8c9-46d7-8bb4-7c9a3916200c:
                 required: true
                 sortOrder: 1
-              d0e82890-7b4f-4771-a8a9-b4c4e8797271:
+              a6c330ac-aa61-44e4-a5fe-61b35e4eeb36:
                 required: false
                 sortOrder: 3
               d80ee1f4-e752-4e38-860a-c5f26790bf89:
@@ -638,30 +687,63 @@ matrixBlockTypes:
         translationKeyFormat: null
         translationMethod: site
         type: craft\fields\Assets
-      d0e82890-7b4f-4771-a8a9-b4c4e8797271:
+      a6c330ac-aa61-44e4-a5fe-61b35e4eeb36:
         contentColumnType: string
         fieldGroup: null
-        handle: options
+        handle: display
         instructions: ''
-        name: Options
+        name: Display
         searchable: false
         settings:
-          multi: true
+          optgroups: true
           options:
             -
               __assoc__:
                 -
                   - label
-                  - 'Show Full Height'
+                  - Default
                 -
                   - value
-                  - showFullHeight
+                  - default
+                -
+                  - default
+                  - '1'
+            -
+              __assoc__:
+                -
+                  - label
+                  - 'Full Height'
+                -
+                  - value
+                  - fullHeight
+                -
+                  - default
+                  - ''
+            -
+              __assoc__:
+                -
+                  - label
+                  - 'Align left'
+                -
+                  - value
+                  - left
+                -
+                  - default
+                  - ''
+            -
+              __assoc__:
+                -
+                  - label
+                  - 'Align right'
+                -
+                  - value
+                  - right
                 -
                   - default
                   - ''
         translationKeyFormat: null
         translationMethod: none
-        type: craft\fields\Checkboxes
+        type: craft\fields\Dropdown
       d80ee1f4-e752-4e38-860a-c5f26790bf89:
         contentColumnType: string
         fieldGroup: null
@@ -932,7 +1014,7 @@ matrixBlockTypes:
         tabs:
           -
             fields:
-              5b9f9bae-905b-4a83-be43-e9244a565aa6:
+              4230d05c-5e66-4718-8fa2-0371dc10d9cb:
                 required: false
                 sortOrder: 2
               a6d13a9f-d4ed-41e5-be7f-c93dcb679633:
@@ -941,23 +1023,68 @@ matrixBlockTypes:
             name: Content
             sortOrder: 1
     fields:
-      5b9f9bae-905b-4a83-be43-e9244a565aa6:
-        contentColumnType: boolean
+      4230d05c-5e66-4718-8fa2-0371dc10d9cb:
+        contentColumnType: string
         fieldGroup: null
-        handle: highlightBlock
-        instructions: 'Shows text block in colored box, with all formatting and links stripped.'
-        name: 'Highlight Block'
+        handle: display
+        instructions: ''
+        name: Display
         searchable: false
         settings:
-          default: ''
+          optgroups: true
+          options:
+            -
+              __assoc__:
+                -
+                  - label
+                  - Default
+                -
+                  - value
+                  - default
+                -
+                  - default
+                  - ''
+            -
+              __assoc__:
+                -
+                  - label
+                  - Highlight
+                -
+                  - value
+                  - highlight
+                -
+                  - default
+                  - ''
+            -
+              __assoc__:
+                -
+                  - label
+                  - 'Align left'
+                -
+                  - value
+                  - left
+                -
+                  - default
+                  - ''
+            -
+              __assoc__:
+                -
+                  - label
+                  - 'Align right'
+                -
+                  - value
+                  - right
+                -
+                  - default
+                  - ''
         translationKeyFormat: null
         translationMethod: none
-        type: craft\fields\Lightswitch
+        type: craft\fields\Dropdown
       a6d13a9f-d4ed-41e5-be7f-c93dcb679633:
         contentColumnType: text
         fieldGroup: null
         handle: text
-        instructions: 'You can use markdown and reference tags here, but html tag are stripped off.'
+        instructions: 'You can use markdown and reference tags here, but html tags are stripped off.'
         name: Text
         searchable: true
         settings:

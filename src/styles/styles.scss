@@ -86,21 +86,6 @@ tbody {
   }
 }
 
-blockquote {
-  @apply shadow-lg;
-  p {
-    @apply mt-0 text-2xl font-semibold italic;
-  }
-
-  cite {
-    @apply text-lg;
-
-    &:before {
-      content: "\2014 \00A0";
-    }
-  }
-}
-
 
 a:hover {
   @apply text-secondary;
