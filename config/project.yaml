@@ -1,6 +1,6 @@
 assets:
   tempVolumeUid: 35c3b3f5-30e7-4780-9ae1-286ee8bd275e
-dateModified: 1592042370
+dateModified: 1592130479
 email:
   fromEmail: '@EMAIL_ADDRESS'
   fromName: '@EMAIL_SENDER'
@@ -1456,13 +1456,6 @@ users:
         - 'deletepeerentrydrafts:0d69ffe4-360e-4d04-ac30-af0e4381b6ed'
         - 'editpeerentrydrafts:0d69ffe4-360e-4d04-ac30-af0e4381b6ed'
         - 'editentries:0d69ffe4-360e-4d04-ac30-af0e4381b6ed'
-        - 'saveassetinvolume:daa73603-4ab8-48c9-800c-139200d9c2e0'
-        - 'createfoldersinvolume:daa73603-4ab8-48c9-800c-139200d9c2e0'
-        - 'editimagesinvolume:daa73603-4ab8-48c9-800c-139200d9c2e0'
-        - 'editpeerfilesinvolume:daa73603-4ab8-48c9-800c-139200d9c2e0'
-        - 'editpeerimagesinvolume:daa73603-4ab8-48c9-800c-139200d9c2e0'
-        - 'viewpeerfilesinvolume:daa73603-4ab8-48c9-800c-139200d9c2e0'
-        - 'viewvolume:daa73603-4ab8-48c9-800c-139200d9c2e0'
         - 'saveassetinvolume:8136d7e9-1a74-464d-aef2-3a4f91a5cdda'
         - 'createfoldersinvolume:8136d7e9-1a74-464d-aef2-3a4f91a5cdda'
         - 'deletefilesandfoldersinvolume:8136d7e9-1a74-464d-aef2-3a4f91a5cdda'
@@ -1493,6 +1486,16 @@ users:
         - 'editpeerimagesinvolume:35c3b3f5-30e7-4780-9ae1-286ee8bd275e'
         - 'viewpeerfilesinvolume:35c3b3f5-30e7-4780-9ae1-286ee8bd275e'
         - 'viewvolume:35c3b3f5-30e7-4780-9ae1-286ee8bd275e'
+        - 'saveassetinvolume:cbbf12d2-97db-4750-8f2d-ea5a5ca1f975'
+        - 'createfoldersinvolume:cbbf12d2-97db-4750-8f2d-ea5a5ca1f975'
+        - 'deletefilesandfoldersinvolume:cbbf12d2-97db-4750-8f2d-ea5a5ca1f975'
+        - 'editimagesinvolume:cbbf12d2-97db-4750-8f2d-ea5a5ca1f975'
+        - 'editpeerfilesinvolume:cbbf12d2-97db-4750-8f2d-ea5a5ca1f975'
+        - 'replacepeerfilesinvolume:cbbf12d2-97db-4750-8f2d-ea5a5ca1f975'
+        - 'deletepeerfilesinvolume:cbbf12d2-97db-4750-8f2d-ea5a5ca1f975'
+        - 'editpeerimagesinvolume:cbbf12d2-97db-4750-8f2d-ea5a5ca1f975'
+        - 'viewpeerfilesinvolume:cbbf12d2-97db-4750-8f2d-ea5a5ca1f975'
+        - 'viewvolume:cbbf12d2-97db-4750-8f2d-ea5a5ca1f975'
     f8131459-0978-46ca-9cd2-9816c16a9a2f:
       handle: customer
       name: Customer
