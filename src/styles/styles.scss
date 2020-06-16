@@ -40,7 +40,7 @@ h6 {
 }
 
 p {
-  @apply leading-relaxed my-6;
+  @apply leading-relaxed my-4;
 }
 
 
@@ -68,10 +68,6 @@ p img {
   @apply block mx-auto;
 }
 
-p {
-  @apply my-6;
-}
-
 table,
 thead,
 tbody {
@@ -83,21 +79,6 @@ tbody {
 
   th {
     @apply font-bold text-left;
-  }
-}
-
-blockquote {
-  @apply shadow-lg;
-  p {
-    @apply mt-0 text-2xl font-semibold italic;
-  }
-
-  cite {
-    @apply text-lg;
-
-    &:before {
-      content: "\2014 \00A0";
-    }
   }
 }
 

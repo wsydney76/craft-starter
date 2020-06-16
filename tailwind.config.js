@@ -19,7 +19,8 @@ module.exports = {
                 '75': '25rem'
             },
             width: {
-                '75': '25rem'
+                '75': '25rem',
+                '300': '300px'
             },
 
             aspectRatio: { // defaults to {}

@@ -1,7 +1,7 @@
 {% extends "_layouts/base.twig" %}
 
 {% block body %}
-    <body class="text-base font-sans">
+    <body class="text-base font-sans antialiased">
     {% block nav %}
         {% include '_layouts/partials/nav.twig' %}
     {% endblock nav %}
@@ -73,8 +73,9 @@
                                                 <div id="content-nav">
                                                     {% block contentNav %}
                                                         {% if global_navCondition is defined %}
-                                                            {% include '_layouts/partials/entry_nav.twig'
-                                                                with {condition:global_navCondition} %}
+                                                            {% include '_layouts/partials/entry_nav.twig' with {
+                                                                condition:global_navCondition
+                                                            } %}
                                                         {% endif %}
                                                     {% endblock %}
                                                 </div>

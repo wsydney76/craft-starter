@@ -1,10 +1,17 @@
 {% set blocks = query.all %}
 
 {% for block in blocks %}
-    <div class="mb-5 block-{{ block.type }}" id="block-{{ block.id }}">
-        {% include "_blocks/#{block.type}.twig"
-            ignore missing
-            with {block:block} only %}
+    {% set display = block.display.value ?? 'default' %}
+
+    <div class="mb-5 block-display-{{ display }} block-{{ block.type }}" id="block-{{ block.id }}">
+
+        {% include "_blocks/#{block.type}.twig" ignore missing with {
+            block:block,
+            index: loop.index,
+            display: display
+        } only %}
+
     </div>
 {% endfor %}
 
+<div class="clear-both"></div>
