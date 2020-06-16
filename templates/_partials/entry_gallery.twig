@@ -11,8 +11,9 @@
     .with(with) as pageInfo, entries %}
 
 {% set navHtml %}
-    {% include '_layouts/partials/pagination.twig'
-        with {pageInfo: pageInfo} only %}
+    {% include '_layouts/partials/pagination.twig' with {
+        pageInfo: pageInfo
+    } only %}
 {% endset %}
 
 {{ navHtml }}

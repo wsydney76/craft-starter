@@ -73,8 +73,9 @@
                                                 <div id="content-nav">
                                                     {% block contentNav %}
                                                         {% if global_navCondition is defined %}
-                                                            {% include '_layouts/partials/entry_nav.twig'
-                                                                with {condition:global_navCondition} %}
+                                                            {% include '_layouts/partials/entry_nav.twig' with {
+                                                                condition:global_navCondition
+                                                            } %}
                                                         {% endif %}
                                                     {% endblock %}
                                                 </div>

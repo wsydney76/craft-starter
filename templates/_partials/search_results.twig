@@ -4,7 +4,9 @@
     <p>{{ found }} {{ '{count,plural,=1{result} other{results}} for'|t({count:found }) }}
         “{{ searchFor }}”:</p>
 
-    {% include '_partials/entry_gallery.twig' with {query:query} only %}
+    {% include '_partials/entry_gallery.twig' with {
+        query:query
+    } only %}
 
 {% else %}
     <p>{{ "Your search for"|t }} “{{ searchFor }}” {{ "didn’t return any results"|t }}.</p>

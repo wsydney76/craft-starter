@@ -4,9 +4,13 @@
     {% set display = block.display.value ?? 'default' %}
 
     <div class="mb-5 block-display-{{ display }} block-{{ block.type }}" id="block-{{ block.id }}">
-        {% include "_blocks/#{block.type}.twig"
-            ignore missing
-            with {block:block, index: loop.index, display: display} only %}
+
+        {% include "_blocks/#{block.type}.twig" ignore missing with {
+            block:block,
+            index: loop.index,
+            display: display
+        } only %}
+
     </div>
 {% endfor %}
 

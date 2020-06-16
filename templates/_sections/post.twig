@@ -4,8 +4,9 @@
 
 {% block contentBottom %}
 
-    {% include '_partials/entry_meta.twig'
-        with {entry:entry} only %}
+    {% include '_partials/entry_meta.twig' with {
+        entry:entry
+    } only %}
 
 {% endblock %}
 
