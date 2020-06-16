@@ -39,8 +39,10 @@
 
                     {% case "dropDown" %}
                         {% set index = index + 1 %}
-                        {% include '_layouts/partials/nav_dropdown.twig'
-                            with {block: block, index: index} only %}
+                        {% include '_layouts/partials/nav_dropdown.twig' with {
+                            block: block,
+                            index: index
+                        } only %}
                     {% endswitch %}
                 {% endfor %}
             {% endcache %}

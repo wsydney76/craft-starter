@@ -11,6 +11,8 @@
 {% set andWith = andWith ?? [] %}
 
 {% block contentBottom %}
-    {% include '_partials/entry_gallery.twig'
-        with {query:query, andWith:andWith } only %}
+    {% include '_partials/entry_gallery.twig' with {
+        query:query,
+        andWith:andWith
+    } only %}
 {% endblock %}
