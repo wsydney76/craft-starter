@@ -11,8 +11,16 @@
 use project\Env;
 
 return [
-    'dsn' => Env::DB_DSN,
+
+    'driver' => Env::DB_DRIVER,
+    'server' => Env::DB_SERVER,
+    'port' => Env::DB_PORT,
+    'database' => Env::DB_DATABASE,
+
+    'schema' => Env::DB_SCHEMA,
+    'tablePrefix' => Env::DB_TABLEPREFIX,
+
     'user' => Env::DB_USER,
     'password' => Env::DB_PASSWORD,
-    'tablePrefix' => Env::DB_TABLEPREFIX,
+
 ];
