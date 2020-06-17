@@ -1,4 +1,6 @@
-{% set transforms = ['featuredImageSm','featuredImageMd','featuredImageMd','featuredImage'] %}
+{% set baseTransform = 'featuredImage' %}
+{% set srcsetSizes = ['576w','768w','1160w','2000w'] %}
+{% set transforms = [baseTransform]|merge(srcsetSizes) %}
 {% set image = null %}
 
 {# 1. global_featured image contains asset query #}
@@ -21,17 +23,20 @@
     {% set heights = "h-32 sm:h-48 lg:h-64 xl:h-75" %}
     <header id="featured-image">
         {% if image.mimeType == 'image/svg+xml' %}
-            <div class="">
+            <div>
                 <img class="mx-auto {{ heights }}" src="{{ image.url }}" alt="">
             </div>
         {% else %}
-            <img
-                    class="object-cover {{ heights }}"
-                    srcset="{{ "#{image.url('featuredImageSm')} 576w, #{image.url('featuredImageMd')} 768w, #{image.url('featuredImageLg')} 1160w, #{image.url('featuredImage')} 2000w" }}"
-                    sizes="100vw"
-                    src="{{ image.url('featuredImageSm') }}"
-                    alt="{{ image.title|e('html_attr') }}">
-
+            {% do image.setTransform(baseTransform) %}
+            {{ tag('img', {
+                class: "object-cover #{heights}",
+                src: image.url,
+                width: image.width,
+                height: image.height,
+                srcset: image.srcset(srcsetSizes),
+                sizes: "100vw",
+                alt: image.title
+            }) }}
         {% endif %}
     </header>
 {% endif %}

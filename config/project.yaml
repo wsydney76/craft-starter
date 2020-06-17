@@ -1,6 +1,6 @@
 assets:
   tempVolumeUid: 35c3b3f5-30e7-4780-9ae1-286ee8bd275e
-dateModified: 1592218304
+dateModified: 1592307290
 email:
   fromEmail: '@EMAIL_ADDRESS'
   fromName: '@EMAIL_SENDER'
@@ -126,7 +126,7 @@ fields:
       contentTable: '{{%matrixcontent_bodycontent}}'
       maxBlocks: ''
       minBlocks: ''
-      propagationMethod: siteGroup
+      propagationMethod: all
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Matrix
@@ -1497,7 +1497,7 @@ sections:
     type: single
 siteGroups:
   de523b11-9903-415d-a140-fd5b18f5a28e:
-    name: Languages
+    name: Sites
 sites:
   97e0b749-86e3-49f1-918e-9b88758928f4:
     baseUrl: '@web/en'
