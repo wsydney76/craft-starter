@@ -1,6 +1,6 @@
 assets:
   tempVolumeUid: 35c3b3f5-30e7-4780-9ae1-286ee8bd275e
-dateModified: 1592307290
+dateModified: 1592381147
 email:
   fromEmail: '@EMAIL_ADDRESS'
   fromName: '@EMAIL_SENDER'
@@ -262,16 +262,6 @@ imageTransforms:
     position: center-center
     quality: null
     width: 60
-  3d179702-d8ce-424e-9db8-4d277aaaf3e7:
-    format: null
-    handle: featuredImageLg
-    height: 300
-    interlace: none
-    mode: crop
-    name: 'Featured Image LG'
-    position: center-center
-    quality: 82
-    width: 1160
   490e288d-90ad-4b1b-abbf-b8fe175c7f22:
     format: null
     handle: contentImage
@@ -282,16 +272,6 @@ imageTransforms:
     position: center-center
     quality: null
     width: 1160
-  6a28dec9-3856-4c82-a42e-022ee5f2c79e:
-    format: null
-    handle: contentImageXs
-    height: 210
-    interlace: none
-    mode: crop
-    name: 'Content Image Xs'
-    position: center-center
-    quality: null
-    width: 420
   90b94f80-c868-4c22-8bda-3abd94d99530:
     format: null
     handle: galleryThumbnail
@@ -312,16 +292,6 @@ imageTransforms:
     position: center-center
     quality: null
     width: 350
-  9cad6c77-31f1-435a-b36c-b7e9173d720d:
-    format: null
-    handle: contentImageFullHeightXs
-    height: null
-    interlace: none
-    mode: crop
-    name: 'Content Image Full Height XS'
-    position: center-center
-    quality: null
-    width: 420
   cb1283e0-fe53-4c82-9ba4-8eada6d76a1f:
     format: null
     handle: contentImageFullHeight
@@ -332,36 +302,6 @@ imageTransforms:
     position: center-center
     quality: null
     width: 1160
-  cc5904f5-2cdb-48e8-b7d5-9228d1036d81:
-    format: null
-    handle: featuredImageSm
-    height: 150
-    interlace: none
-    mode: crop
-    name: 'Featured Image SM'
-    position: center-center
-    quality: 82
-    width: 576
-  d1a1edc4-b8f0-4d81-8a96-2a5b8d7fa3d7:
-    format: null
-    handle: featuredImageMd
-    height: 220
-    interlace: none
-    mode: crop
-    name: 'Featured Image MD'
-    position: center-center
-    quality: 82
-    width: 768
-  d72ce36e-4d15-4683-9aaa-8bd359a101a2:
-    format: null
-    handle: contentImageMd
-    height: 384
-    interlace: none
-    mode: crop
-    name: 'Content Image Md'
-    position: center-center
-    quality: null
-    width: 768
   d7b42e42-18f7-4b59-a57e-c40b4d7766f7:
     format: null
     handle: featuredImage
@@ -372,16 +312,6 @@ imageTransforms:
     position: center-center
     quality: null
     width: 2000
-  df15d0c4-14c4-4d93-b7a5-430dda08b2d0:
-    format: null
-    handle: contentImageFullHeightMd
-    height: null
-    interlace: none
-    mode: crop
-    name: 'Content Image Full Height MD'
-    position: center-center
-    quality: null
-    width: 768
 matrixBlockTypes:
   08fc32b6-7f51-4b0f-8921-5f6cbdad10e3:
     field: ae7d91c8-8743-46bb-a954-438a27946b97
