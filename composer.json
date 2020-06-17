@@ -1,11 +1,11 @@
 {
   "name": "wsydney76/craft_starter",
-  "version": "1.0",
+  "version": "1.1",
   "description": "Simple multilingual project template for Craft CMS",
   "license": "Unlicense",
   "require": {
     "clubstudioltd/craft-asset-rev": "6.0.2",
-    "craftcms/cms": "3.5.0-beta.3",
+    "craftcms/cms": "3.5.x-dev",
     "doublesecretagency/craft-cpcss": "^2.2",
     "spicyweb/craft-embedded-assets": "^2.2"
   },

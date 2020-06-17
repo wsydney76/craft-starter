@@ -1,14 +1,15 @@
 {% set isFloat = display in ['left','right'] %}
 {% set query = block.image %}
 
-{% if not isFloat %}
-    {% set transform = display == 'fullHeight' ? 'contentImageFullHeight' : 'contentImage' %}
-    {% set transformMd = transform ~ 'Md' %}
-    {% set transformXs= transform ~ 'Xs' %}
-    {% set query = query.withTransforms([transform, transformMd, transformXs]) %}
+{% if isFloat %}
+    {% set transforms = ['galleryThumbnail'] %}
+{% else %}
+    {% set baseTransform = display == 'fullHeight' ? 'contentImageFullHeight' : 'contentImage' %}
+    {% set srcsetSizes = ['420w','768w','1160w'] %}
+    {% set transforms = [baseTransform]|merge(srcsetSizes) %}
 {% endif %}
 
-{% set image = query.one %}
+{% set image = block.image.withTransforms(transforms).one %}
 
 {% if image %}
     {% set caption = block.caption ?: image.title %}
@@ -23,9 +24,10 @@
             class: "figure bg-white pb-1 text-sm shadow"
         } %}
     {% else %}
+        {% do image.setTransform(baseTransform) %}
         {% set imgAttr = {
-            src: image.url(transformMd),
-            srcset: "#{image.url(transformXs)} 420w, #{image.url(transformMd)} 768w, #{image.url(transform)} 1160w",
+            src: image.url,
+            srcset: image.srcset(srcsetSizes),
             alt: caption != image.title ? image.title : '',
             loading: 'lazy'
         } %}
