@@ -2,11 +2,16 @@
 
 {% set global_navCondition = {section:'post'} %}
 
-{% block contentBottom %}
+{% block contentTop %}
+ 
 
     {% include '_partials/entry_meta.twig' with {
         entry:entry
     } only %}
+
+{% endblock %}
+
+{% block contentBottom %}
 
 {% endblock %}
 

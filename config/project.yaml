@@ -1,6 +1,6 @@
 assets:
   tempVolumeUid: 35c3b3f5-30e7-4780-9ae1-286ee8bd275e
-dateModified: 1592381147
+dateModified: 1592412956
 email:
   fromEmail: '@EMAIL_ADDRESS'
   fromName: '@EMAIL_SENDER'
@@ -193,6 +193,27 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Matrix
+  e4cf9f0d-54a6-4107-beac-daa51b8e5006:
+    contentColumnType: string
+    fieldGroup: f1d8d989-2bc0-4a0f-b58f-a348276a5596
+    handle: topics
+    instructions: ''
+    name: Topics
+    searchable: true
+    settings:
+      allowSelfRelations: ''
+      limit: ''
+      localizeRelations: ''
+      selectionLabel: 'Add a topic'
+      source: null
+      sources:
+        - 'section:338d4897-8545-48cd-bd31-951a6ed52197'
+      targetSiteId: null
+      validateRelatedElements: ''
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
 globalSets:
   5376aba9-df1d-4ebf-b6d2-927c147e0f0c:
     fieldLayouts:
@@ -1232,10 +1253,13 @@ sections:
                     sortOrder: 2
                   58b2e318-26cc-47b8-bee2-81369731d72f:
                     required: false
-                    sortOrder: 3
+                    sortOrder: 4
                   9a302fae-a3bf-4298-8a06-24f8c8f6f335:
                     required: false
                     sortOrder: 1
+                  e4cf9f0d-54a6-4107-beac-daa51b8e5006:
+                    required: false
+                    sortOrder: 3
                 name: Content
                 sortOrder: 1
         handle: post
@@ -1327,6 +1351,59 @@ sections:
         template: _sections/home
         uriFormat: __home__
     type: single
+  338d4897-8545-48cd-bd31-951a6ed52197:
+    enableVersioning: true
+    entryTypes:
+      f90b9645-97c8-4969-b1ee-149e79a745e7:
+        fieldLayouts:
+          ee443750-cc68-4ccf-904c-8348859bbe73:
+            tabs:
+              -
+                fields:
+                  3ef62a7b-6c6d-470f-88a6-31de5a099b38:
+                    required: false
+                    sortOrder: 2
+                  58b2e318-26cc-47b8-bee2-81369731d72f:
+                    required: false
+                    sortOrder: 3
+                  9a302fae-a3bf-4298-8a06-24f8c8f6f335:
+                    required: false
+                    sortOrder: 1
+                name: Content
+                sortOrder: 1
+        handle: topic
+        hasTitleField: true
+        name: Topic
+        sortOrder: 1
+        titleFormat: ''
+        titleLabel: Title
+    handle: topic
+    name: Topic
+    previewTargets:
+      -
+        __assoc__:
+          -
+            - label
+            - 'Primary entry page'
+          -
+            - urlFormat
+            - '{url}'
+          -
+            - refresh
+            - '1'
+    propagationMethod: all
+    siteSettings:
+      97e0b749-86e3-49f1-918e-9b88758928f4:
+        enabledByDefault: true
+        hasUrls: true
+        template: _sections/topic
+        uriFormat: 'topic/{slug}'
+      bbbb120d-5d71-4e7c-a164-487e401c4f2c:
+        enabledByDefault: true
+        hasUrls: true
+        template: _sections/topic
+        uriFormat: 'thema/{slug}'
+    type: channel
   3792f859-a1b5-44b2-a5d5-4f3df611e91f:
     enableVersioning: true
     entryTypes:
@@ -1424,6 +1501,59 @@ sections:
         hasUrls: true
         template: _sections\search
         uriFormat: suche
+    type: single
+  bda0f4f2-6388-4569-99b9-8f89727f61ca:
+    enableVersioning: true
+    entryTypes:
+      c70f1891-1a5f-40de-b80f-fa25adec5c26:
+        fieldLayouts:
+          5bf807b1-50fb-4919-9bdc-4eb8861bc4d4:
+            tabs:
+              -
+                fields:
+                  3ef62a7b-6c6d-470f-88a6-31de5a099b38:
+                    required: false
+                    sortOrder: 2
+                  58b2e318-26cc-47b8-bee2-81369731d72f:
+                    required: false
+                    sortOrder: 3
+                  9a302fae-a3bf-4298-8a06-24f8c8f6f335:
+                    required: false
+                    sortOrder: 1
+                name: Content
+                sortOrder: 1
+        handle: topicIndex
+        hasTitleField: true
+        name: 'Topic Index'
+        sortOrder: 1
+        titleFormat: '{section.name|raw}'
+        titleLabel: Title
+    handle: topicIndex
+    name: 'Topic Index'
+    previewTargets:
+      -
+        __assoc__:
+          -
+            - label
+            - 'Primary entry page'
+          -
+            - urlFormat
+            - '{url}'
+          -
+            - refresh
+            - '1'
+    propagationMethod: all
+    siteSettings:
+      97e0b749-86e3-49f1-918e-9b88758928f4:
+        enabledByDefault: true
+        hasUrls: true
+        template: _sections/sectionindex
+        uriFormat: topics
+      bbbb120d-5d71-4e7c-a164-487e401c4f2c:
+        enabledByDefault: true
+        hasUrls: true
+        template: _sections/sectionindex
+        uriFormat: themen
     type: single
 siteGroups:
   de523b11-9903-415d-a140-fd5b18f5a28e:
@@ -1563,6 +1693,16 @@ users:
         - 'deletepeerentrydrafts:0d69ffe4-360e-4d04-ac30-af0e4381b6ed'
         - 'editpeerentrydrafts:0d69ffe4-360e-4d04-ac30-af0e4381b6ed'
         - 'editentries:0d69ffe4-360e-4d04-ac30-af0e4381b6ed'
+        - 'createentries:338d4897-8545-48cd-bd31-951a6ed52197'
+        - 'publishentries:338d4897-8545-48cd-bd31-951a6ed52197'
+        - 'deleteentries:338d4897-8545-48cd-bd31-951a6ed52197'
+        - 'publishpeerentries:338d4897-8545-48cd-bd31-951a6ed52197'
+        - 'deletepeerentries:338d4897-8545-48cd-bd31-951a6ed52197'
+        - 'editpeerentries:338d4897-8545-48cd-bd31-951a6ed52197'
+        - 'publishpeerentrydrafts:338d4897-8545-48cd-bd31-951a6ed52197'
+        - 'deletepeerentrydrafts:338d4897-8545-48cd-bd31-951a6ed52197'
+        - 'editpeerentrydrafts:338d4897-8545-48cd-bd31-951a6ed52197'
+        - 'editentries:338d4897-8545-48cd-bd31-951a6ed52197'
         - 'saveassetinvolume:8136d7e9-1a74-464d-aef2-3a4f91a5cdda'
         - 'createfoldersinvolume:8136d7e9-1a74-464d-aef2-3a4f91a5cdda'
         - 'deletefilesandfoldersinvolume:8136d7e9-1a74-464d-aef2-3a4f91a5cdda'

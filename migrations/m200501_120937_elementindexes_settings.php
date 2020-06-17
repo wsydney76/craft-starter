@@ -39,13 +39,16 @@ class m200501_120937_elementindexes_settings extends Migration
                 ['key', 'singles'],
                 ['key', $s['page']],
                 ['key', $s['post']],
+                ['heading', 'Categories'],
+                ['key', $s['topic']],
             ],
             'sources' => [
                 '*' => ['tableAttributes' => ['section', 'postDate', 'link']],
                 'singles' => ['tableAttributes' => ['featuredImage', 'link']],
                 'drafts' => ['tableAttributes' => ['section', 'isUnsavedDraft','draftName','creatorId','dateCreated']],
                 $s['page'] => ['tableAttributes' => [$f['featuredImage'], $f['teaser'], 'postDate', 'link']],
-                $s['post'] => ['tableAttributes' => [$f['featuredImage'], $f['teaser'], 'author', 'postDate', 'link']]
+                $s['post'] => ['tableAttributes' => [$f['featuredImage'], $f['teaser'], 'author', 'postDate', 'link']],
+                $s['topic'] => ['tableAttributes' => [$f['featuredImage'], $f['teaser'], 'author', 'postDate', 'link']]
 
             ]
         ];
