@@ -16,6 +16,7 @@ return [
     'All' => 'Alle',
     'Topic' => 'Thema',
     'Topics' => 'Themen',
+    'Documents' => 'Dokumente',
     'Other Topics' => 'Weitere Themen',
     'By' => 'Von',
 

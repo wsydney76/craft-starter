@@ -1,6 +1,6 @@
 assets:
   tempVolumeUid: 35c3b3f5-30e7-4780-9ae1-286ee8bd275e
-dateModified: 1592412956
+dateModified: 1592574633
 email:
   fromEmail: '@EMAIL_ADDRESS'
   fromName: '@EMAIL_SENDER'
@@ -147,6 +147,38 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
+  6c2c7c89-c2ff-4ace-a3e6-aeddab27ab7b:
+    contentColumnType: string
+    fieldGroup: f1d8d989-2bc0-4a0f-b58f-a348276a5596
+    handle: documents
+    instructions: ''
+    name: Documents
+    searchable: true
+    settings:
+      allowSelfRelations: ''
+      allowedKinds:
+        - opendocument
+        - pdf
+      defaultUploadLocationSource: 'volume:8136d7e9-1a74-464d-aef2-3a4f91a5cdda'
+      defaultUploadLocationSubpath: ''
+      limit: ''
+      localizeRelations: '1'
+      restrictFiles: '1'
+      selectionLabel: 'Add a document'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:8136d7e9-1a74-464d-aef2-3a4f91a5cdda'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources:
+        - 'volume:2f4c2da0-9bf2-47da-a2fb-b13bad08739c'
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: ''
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
   9a302fae-a3bf-4298-8a06-24f8c8f6f335:
     contentColumnType: string
     fieldGroup: f1d8d989-2bc0-4a0f-b58f-a348276a5596
@@ -1254,6 +1286,9 @@ sections:
                   58b2e318-26cc-47b8-bee2-81369731d72f:
                     required: false
                     sortOrder: 4
+                  6c2c7c89-c2ff-4ace-a3e6-aeddab27ab7b:
+                    required: false
+                    sortOrder: 5
                   9a302fae-a3bf-4298-8a06-24f8c8f6f335:
                     required: false
                     sortOrder: 1
@@ -1299,12 +1334,12 @@ sections:
         enabledByDefault: true
         hasUrls: true
         template: _sections/post
-        uriFormat: '{postDate|date(''Y'')}/{postDate|date(''m'')}/{slug}'
+        uriFormat: 'post/{slug}'
       bbbb120d-5d71-4e7c-a164-487e401c4f2c:
         enabledByDefault: true
         hasUrls: true
         template: _sections/post
-        uriFormat: '{postDate|date(''Y'')}/{postDate|date(''m'')}/{slug}'
+        uriFormat: 'beitrag/{slug}'
     type: channel
   2c476892-24a5-43a5-ae3a-70f4609382e3:
     enableVersioning: true
@@ -1752,6 +1787,25 @@ users:
   photoVolumeUid: 99cbe848-2d62-42d0-ad15-948062a7561f
   requireEmailVerification: true
 volumes:
+  2f4c2da0-9bf2-47da-a2fb-b13bad08739c:
+    fieldLayouts:
+      163d927b-a3f4-45b6-8653-bc62f9d1a611:
+        tabs:
+          -
+            fields:
+              3ef62a7b-6c6d-470f-88a6-31de5a099b38:
+                required: false
+                sortOrder: 1
+            name: Content
+            sortOrder: 1
+    handle: documents
+    hasUrls: true
+    name: Documents
+    settings:
+      path: '@webroot/documents'
+    sortOrder: 6
+    type: craft\volumes\Local
+    url: '@web/documents'
   35c3b3f5-30e7-4780-9ae1-286ee8bd275e:
     handle: temporaryUploads
     hasUrls: true
@@ -1774,7 +1828,7 @@ volumes:
             sortOrder: 1
     handle: images
     hasUrls: true
-    name: 'Local Images'
+    name: Images
     settings:
       path: '@webroot/images'
     sortOrder: 2

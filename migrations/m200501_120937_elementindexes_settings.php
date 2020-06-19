@@ -5,6 +5,7 @@ namespace craft\contentmigrations;
 use Craft;
 use craft\base\Field;
 use craft\db\Migration;
+use craft\elements\User;
 use function var_dump;
 
 /**
@@ -52,6 +53,9 @@ class m200501_120937_elementindexes_settings extends Migration
 
             ]
         ];
+
+        $adminUser = User::find()->admin()->one();
+        Craft::$app->user->setIdentity($adminUser);
 
         Craft::$app->elementIndexes->saveSettings('craft\\elements\\Entry', $entrySettings);
     }
