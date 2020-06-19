@@ -2,7 +2,7 @@
 
 {% set global_navCondition = {section:'post'} %}
 
-{% block contentBottom %}
+{% block contentTop %}
 
     {% include '_partials/entry_meta.twig' with {
         entry:entry
@@ -10,3 +10,9 @@
 
 {% endblock %}
 
+{% block secondaryContentTop %}
+    {% include '_partials/documents_list.twig' with {
+        heading: 'Documents',
+        query: entry.documents
+    } only %}
+{% endblock %}

@@ -14,6 +14,11 @@ return [
     'Pages' => 'Seiten',
     'You did not enter a search criteria' => 'Sie haben keinen Suchbegriff eingegeben',
     'All' => 'Alle',
+    'Topic' => 'Thema',
+    'Topics' => 'Themen',
+    'Documents' => 'Dokumente',
+    'Other Topics' => 'Weitere Themen',
+    'By' => 'Von',
 
     'Channels' => 'Channels',
     'Structures' => 'Strukturen',

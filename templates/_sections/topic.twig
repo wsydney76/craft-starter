@@ -1,0 +1,19 @@
+{% extends "_layout.twig" %}
+
+{% block titleText %}
+    {{ 'Topic'|t }}: {{ entry.title }}
+{% endblock %}
+
+
+{% block contentBottom %}
+        {% include '_partials/entry_gallery.twig' with {
+            query:craft.entries.topics(entry),
+        } only %}
+{% endblock %}
+
+{% block secondaryContent %}
+    {% include '_partials/entries_list.twig' with {
+        heading: 'Other Topics',
+        query: craft.entries.section('topic').id('not ' ~ entry.id).orderBy('title')
+    } only %}
+{% endblock %}

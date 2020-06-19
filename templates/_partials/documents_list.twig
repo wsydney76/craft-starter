@@ -1,0 +1,23 @@
+{% set assets = query.all %}
+
+{% if assets %}
+    {% embed '_layouts/embeds/widget.twig' with {heading:'Documents'} %}
+        {% block content %}
+            {% for asset in assets %}
+                <div class="my-4">
+                    <div class="font-semibold">
+                        {{ asset.link }}
+                    </div>
+                    {% if asset.teaser %}
+                        <div>
+                            {{ asset.teaser }}
+                        </div>
+                    {% endif %}
+                    <div class="font-sm">
+                        {{ asset.filename|split('.')|last }}, {{ asset.formattedSize(0) }}
+                    </div>
+                </div>
+            {% endfor %}
+        {% endblock %}
+    {% endembed %}
+{% endif %}

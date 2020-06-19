@@ -99,6 +99,14 @@ return [
         // (see https://docs.craftcms.com/v3/project-config.html)
         'useProjectConfigFile' => true,
 
+        // Allow Open Document file types for upload
+        'extraFileKinds' => [
+            'opendocument' => [
+                'label' => 'Open Document',
+                'extensions' => ['odt', 'ods', 'odp', 'odg'],
+            ],
+        ],
+
         // project specific settings
         'project' => [
             // How many entries shall be show on index pages
