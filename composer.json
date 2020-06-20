@@ -7,7 +7,8 @@
     "clubstudioltd/craft-asset-rev": "6.0.2",
     "craftcms/cms": "3.5.x-dev",
     "doublesecretagency/craft-cpcss": "^2.2",
-    "spicyweb/craft-embedded-assets": "^2.2"
+    "spicyweb/craft-embedded-assets": "^2.2",
+    "wsydney76/elementmap": "^1.4"
   },
   "require-dev": {
     "yiisoft/yii2-shell": "^2.0.3"
@@ -28,5 +29,13 @@
     "post-install-cmd": [
       "@php -r \"file_exists('project/Env.php') || copy('project/Env.php.example', 'project/Env.php');\""
     ]
-  }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "repositories": [
+    {
+      "type": "path",
+      "url": "e:/craft/plugins/plugins/*"
+    }
+  ]
 }

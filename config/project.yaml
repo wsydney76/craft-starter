@@ -1,6 +1,6 @@
 assets:
   tempVolumeUid: 35c3b3f5-30e7-4780-9ae1-286ee8bd275e
-dateModified: 1592574633
+dateModified: 1592648207
 email:
   fromEmail: '@EMAIL_ADDRESS'
   fromName: '@EMAIL_SENDER'
@@ -1146,6 +1146,10 @@ plugins:
     settings:
       additionalCss: "html,body {\r\n  font-size: 15px;\r\n}\r\ninput.text, textarea.text, .text > input, .text > textarea, table.editable textarea, .selectize-text > .selectize-control > .selectize-input {\r\n  font-size: 16px;\r\n}\r\n#global-sidebar {\r\n background-color: #265077;\r\n}\r\n\r\n.sidebar .heading span {\r\n  color: #264a6c;\r\n  font-size: 14px;\r\n  letter-spacing: 1px\r\n}\r\n"
       cssFile: ''
+  elementmap:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
   embeddedassets:
     edition: standard
     enabled: true
@@ -1683,7 +1687,7 @@ system:
   edition: pro
   live: true
   name: '@SYSTEM_NAME'
-  schemaVersion: 3.5.2
+  schemaVersion: 3.5.5
   timeZone: Europe/Berlin
 users:
   allowPublicRegistration: true
