@@ -41,6 +41,16 @@ class m200213_103908_setup extends Migration
             Craft::$app->elements->saveElement($entry);
         }
 
+        $entry = Entry::find()->section('topicIndex')->site('en')->one();
+        if ($entry) {
+            $entry->title = 'Topics';
+            Craft::$app->elements->saveElement($entry);
+        }
+        $entry = Entry::find()->section('topicIndex')->site('de')->one();
+        if ($entry) {
+            $entry->title = 'Themen';
+            Craft::$app->elements->saveElement($entry);
+        }
 
         $global = GlobalSet::find()->handle('siteInfo')->one();
         if ($global) {

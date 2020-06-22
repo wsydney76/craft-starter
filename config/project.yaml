@@ -1,6 +1,6 @@
 assets:
   tempVolumeUid: 35c3b3f5-30e7-4780-9ae1-286ee8bd275e
-dateModified: 1592818658
+dateModified: 1592823424
 email:
   fromEmail: '@EMAIL_ADDRESS'
   fromName: '@EMAIL_SENDER'
@@ -1769,6 +1769,16 @@ users:
         - 'editpeerimagesinvolume:cbbf12d2-97db-4750-8f2d-ea5a5ca1f975'
         - 'viewpeerfilesinvolume:cbbf12d2-97db-4750-8f2d-ea5a5ca1f975'
         - 'viewvolume:cbbf12d2-97db-4750-8f2d-ea5a5ca1f975'
+        - 'saveassetinvolume:2f4c2da0-9bf2-47da-a2fb-b13bad08739c'
+        - 'createfoldersinvolume:2f4c2da0-9bf2-47da-a2fb-b13bad08739c'
+        - 'deletefilesandfoldersinvolume:2f4c2da0-9bf2-47da-a2fb-b13bad08739c'
+        - 'editimagesinvolume:2f4c2da0-9bf2-47da-a2fb-b13bad08739c'
+        - 'editpeerfilesinvolume:2f4c2da0-9bf2-47da-a2fb-b13bad08739c'
+        - 'replacepeerfilesinvolume:2f4c2da0-9bf2-47da-a2fb-b13bad08739c'
+        - 'deletepeerfilesinvolume:2f4c2da0-9bf2-47da-a2fb-b13bad08739c'
+        - 'editpeerimagesinvolume:2f4c2da0-9bf2-47da-a2fb-b13bad08739c'
+        - 'viewpeerfilesinvolume:2f4c2da0-9bf2-47da-a2fb-b13bad08739c'
+        - 'viewvolume:2f4c2da0-9bf2-47da-a2fb-b13bad08739c'
     f8131459-0978-46ca-9cd2-9816c16a9a2f:
       description: 'View the system when offline'
       handle: customer
