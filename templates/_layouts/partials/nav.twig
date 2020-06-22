@@ -16,17 +16,9 @@
 
                 {% set index = 0 %}
 
-                {% set navBlocks = siteNavigation
-                    .primaryNavigation
-                    .with([
-                    'topLevelLinks:entries',
-                    'dropDown:entries'
-                ])
-                    .all %}
-
                 <div class="nav-link" @mouseenter="dropDown=0">&nbsp;</div>
 
-                {% for block in navBlocks %}
+                {% for block in global_navBlocks %}
                     {% switch block.type %}
 
                     {% case "topLevelLinks" %}
@@ -47,7 +39,7 @@
                 {% endfor %}
             {% endcache %}
             <div @mouseenter="dropDown = 0">
-                {% include '_layouts/partials/search_form.twig' %}
+                {% include '_partials/search_form.twig' %}
             </div>
             {% include '_layouts/partials/languageswitcher.twig' %}
 
