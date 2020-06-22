@@ -1,7 +1,9 @@
 {% extends "_layouts/base.twig" %}
 
 {% block body %}
-    <body class="{{ global_bodyClass ?? 'text-base antialiased' }}">
+    <body dir="{{ craft.app.locale.orientation }}"
+          class="{{ global_bodyClass ?? 'text-base antialiased' }}">
+
     {% block nav %}
         {% include '_layouts/partials/nav.twig' %}
     {% endblock nav %}
@@ -16,14 +18,15 @@
                         {% block featured1 %}{% endblock %}
                     </div>
 
-                    <div id="title" class="{{ global_titleSectionClass ?? ''}}">
+                    <div id="title" class="{{ global_titleSectionClass ?? '' }}">
                         {% block title %}
                             <header>
                                 <div id="title-container" class="container mx-auto">
                                     {% block titleContainer %}
                                         <div class="pt-4 pl-2 pb-4">
                                             <div id="title-top">{% block titleTop %}{% endblock %}</div>
-                                            <h1 id="title-text" class="mb-3 {{ global_titleTextClass ?? 'font-light' }}">
+                                            <h1 id="title-text"
+                                                class="mb-3 {{ global_titleTextClass ?? 'font-light' }}">
                                                 {% block titleText %}{{ global_title }}{% endblock %}
                                             </h1>
                                             <div id="title-bottom">{% block titleBottom %}{% endblock %}</div>
