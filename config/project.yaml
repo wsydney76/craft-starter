@@ -1,6 +1,6 @@
 assets:
   tempVolumeUid: 35c3b3f5-30e7-4780-9ae1-286ee8bd275e
-dateModified: 1592823424
+dateModified: 1593073534
 email:
   fromEmail: '@EMAIL_ADDRESS'
   fromName: '@EMAIL_SENDER'
@@ -463,7 +463,7 @@ matrixBlockTypes:
         contentColumnType: string
         fieldGroup: null
         handle: textSource
-        instructions: 'A pullquote typically quotes from the current article, so it does not need a source. But in case...'
+        instructions: ''
         name: Source
         searchable: true
         settings:
@@ -523,8 +523,8 @@ matrixBlockTypes:
         translationKeyFormat: null
         translationMethod: none
         type: craft\fields\Dropdown
-    handle: pullquote
-    name: Pullquote
+    handle: quote
+    name: Quote
     sortOrder: 5
   3e04a640-3126-4284-b356-3b63c6349ffd:
     field: 58b2e318-26cc-47b8-bee2-81369731d72f

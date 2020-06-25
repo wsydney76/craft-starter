@@ -71,6 +71,7 @@ return [
             '@webroot' => dirname(__DIR__) . '/web',
 
             // Let craft cli commands find controllers
+            '@' => '@root/project/modules',
             '@project' => '@root/project',
             // '@modules' => '@root/project/modules',
             // '@resources' => '@root/project/resources',

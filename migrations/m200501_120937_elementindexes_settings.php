@@ -45,7 +45,7 @@ class m200501_120937_elementindexes_settings extends Migration
             ],
             'sources' => [
                 '*' => ['tableAttributes' => ['section', 'postDate', 'link']],
-                'singles' => ['tableAttributes' => ['featuredImage', 'link']],
+                'singles' => ['tableAttributes' => [$f['featuredImage'], 'link']],
                 'drafts' => ['tableAttributes' => ['section', 'isUnsavedDraft','draftName','creatorId','dateCreated']],
                 $s['page'] => ['tableAttributes' => [$f['featuredImage'], $f['teaser'], 'postDate', 'link']],
                 $s['post'] => ['tableAttributes' => [$f['featuredImage'], $f['teaser'], 'author', 'postDate', 'link']],
@@ -54,8 +54,6 @@ class m200501_120937_elementindexes_settings extends Migration
             ]
         ];
 
-        $adminUser = User::find()->admin()->one();
-        Craft::$app->user->setIdentity($adminUser);
 
         Craft::$app->elementIndexes->saveSettings('craft\\elements\\Entry', $entrySettings);
     }
