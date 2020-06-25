@@ -1,6 +1,6 @@
 assets:
   tempVolumeUid: 35c3b3f5-30e7-4780-9ae1-286ee8bd275e
-dateModified: 1593073534
+dateModified: 1593074647
 email:
   fromEmail: '@EMAIL_ADDRESS'
   fromName: '@EMAIL_SENDER'
@@ -1317,13 +1317,27 @@ sections:
     name: Post
     previewTargets:
       -
-        label: 'Primary entry page'
-        refresh: '1'
-        urlFormat: '{url}'
+        __assoc__:
+          -
+            - label
+            - 'Primary entry page'
+          -
+            - urlFormat
+            - '{url}'
+          -
+            - refresh
+            - '1'
       -
-        label: 'Post Index'
-        refresh: '1'
-        urlFormat: '{% set e = craft.entries.section(''postIndex'').site(object.site).one %}{{e ? e.url : ''''}}'
+        __assoc__:
+          -
+            - label
+            - 'Post Index'
+          -
+            - urlFormat
+            - '{% set e = craft.entries.section(''postIndex'').site(object.site).one %}{{e ? e.url : ''''}}'
+          -
+            - refresh
+            - '1'
     propagationMethod: all
     siteSettings:
       97e0b749-86e3-49f1-918e-9b88758928f4:
@@ -1467,9 +1481,16 @@ sections:
     name: Posts
     previewTargets:
       -
-        label: 'Primary entry page'
-        refresh: '1'
-        urlFormat: '{url}'
+        __assoc__:
+          -
+            - label
+            - 'Primary entry page'
+          -
+            - urlFormat
+            - '{url}'
+          -
+            - refresh
+            - '1'
     propagationMethod: all
     siteSettings:
       97e0b749-86e3-49f1-918e-9b88758928f4:
