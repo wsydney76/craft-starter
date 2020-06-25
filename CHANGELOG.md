@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.2 2020-06-24
+
+* Cleanup
+
 ## 1.1 2020-06-17
 
 * Use srcset image methods
