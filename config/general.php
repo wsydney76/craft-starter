@@ -71,6 +71,7 @@ return [
             '@webroot' => dirname(__DIR__) . '/web',
 
             // Let craft cli commands find controllers
+            '@' => '@root/project/modules',
             '@project' => '@root/project',
             // '@modules' => '@root/project/modules',
             // '@resources' => '@root/project/resources',
@@ -98,6 +99,14 @@ return [
         // Whether to save the project config out to config/project.yaml
         // (see https://docs.craftcms.com/v3/project-config.html)
         'useProjectConfigFile' => true,
+
+        // Allow Open Document file types for upload
+        'extraFileKinds' => [
+            'opendocument' => [
+                'label' => 'Open Document',
+                'extensions' => ['odt', 'ods', 'odp', 'odg'],
+            ],
+        ],
 
         // project specific settings
         'project' => [

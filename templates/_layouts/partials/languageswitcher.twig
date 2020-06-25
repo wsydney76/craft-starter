@@ -1,8 +1,8 @@
 {% if element %}
-    <ul class="list-none">
+    <ul class="list-none flex">
         {% for element in element.localized.all %}
             <li class="nav-item">
-                <a class="nav-link" href="{{ element.url }}" @click="isOpen = false">{{ element.language[:2] }}</a>
+                <a class="nav-link px-3" href="{{ element.url }}" @click="isOpen = false">{{ element.language[:2] }}</a>
             </li>
         {% endfor %}
     </ul>

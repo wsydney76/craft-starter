@@ -621,15 +621,6 @@ video {
 
 /* purgecss start ignore */
 
-#title {
-  --bg-opacity: 1;
-  background-color: #243c5a;
-  background-color: rgba(36, 60, 90, var(--bg-opacity));
-  --text-opacity: 1;
-  color: #fff;
-  color: rgba(255, 255, 255, var(--text-opacity));
-}
-
 .rich-text a {
   text-decoration: underline;
 }

@@ -1,12 +1,14 @@
 {% extends "_layouts/base.twig" %}
 
 {% block body %}
-    <body class="text-base font-sans antialiased">
+    <body dir="{{ craft.app.locale.orientation }}"
+          class="{{ global_bodyClass ?? 'text-base antialiased' }}">
+
     {% block nav %}
         {% include '_layouts/partials/nav.twig' %}
     {% endblock nav %}
 
-    <div id="canvas" class="bg-light">
+    <div id="canvas" class="{{ global_canvasClass ?? 'bg-light' }}">
         {% block canvas %}
 
             <div id="header">
@@ -16,14 +18,15 @@
                         {% block featured1 %}{% endblock %}
                     </div>
 
-                    <div id="title">
+                    <div id="title" class="{{ global_titleSectionClass ?? '' }}">
                         {% block title %}
                             <header>
                                 <div id="title-container" class="container mx-auto">
                                     {% block titleContainer %}
                                         <div class="pt-4 pl-2 pb-4">
                                             <div id="title-top">{% block titleTop %}{% endblock %}</div>
-                                            <h1 id="title-text" class="mb-3 font-light">
+                                            <h1 id="title-text"
+                                                class="mb-3 {{ global_titleTextClass ?? 'font-light' }}">
                                                 {% block titleText %}{{ global_title }}{% endblock %}
                                             </h1>
                                             <div id="title-bottom">{% block titleBottom %}{% endblock %}</div>
@@ -119,7 +122,7 @@
 
     <div id="footer">
         {% block footer %}
-            <footer class="border-t border-secondary px-12 py-3">
+            <footer class="px-12 py-3 {{ global_footerClass ?? '' }}">
                 <div class="mx-5">
                     <div class="grid grid-cols-1 lg:grid-cols-12">
                         <div id="footer1" class="lg:col-span-5 text-left">

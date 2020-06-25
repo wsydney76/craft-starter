@@ -1,0 +1,14 @@
+{% set user = entry.author %}
+{% if user %}
+    <div class="flex space-x-3 items-center">
+        {% set photo = user.photo %}
+        {% if photo %}
+            <div>
+                <img class="rounded" src="{{ photo.url({width:100,height:100}) }}" alt="{{ user.fullName }}">
+            </div>
+        {% endif %}
+        <div class="">
+            {{ 'By'|t }} {{ user.fullName }}<br>{{ entry.postDate|date }}
+        </div>
+    </div>
+{% endif %}

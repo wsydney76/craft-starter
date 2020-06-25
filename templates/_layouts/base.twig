@@ -1,6 +1,6 @@
+{% extends "_globals.twig" %}
 {% set element = element ?? entry ?? craft.app.urlManager.matchedElement %}
 {% set global_title = global_title ?? (element ? element.title) %}
-{% set global_siteName = global_siteName ?? systemName %}
 {% block html %}
 <!doctype html>
 <html lang="{{ currentSite.language[:2] }}">

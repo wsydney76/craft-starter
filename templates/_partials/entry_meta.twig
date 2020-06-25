@@ -1,17 +1,12 @@
-{% set user = entry.author %}
-{% if user %}
-    <div class="bg-white mt-10">
-        <div class="flex p-4 items-center">
-            {% set photo = user.photo %}
-            {% if photo %}
-                <div class="mr-4">
-                    <img class="rounded" src="{{ photo.url({width:100,height:100}) }}" alt="{{ user.fullName }}">
-                </div>
-            {% endif %}
+<div class="bg-white my-10">
+    <div class="flex p-4 justify-between">
+        {% include '_partials/entry_author.twig' with {
+            entry: entry
+        } only %}
 
-            <div class="">
-                {{ user.fullName }}<br>{{ entry.postDate|date }}
-            </div>
-        </div>
+        {% include '_partials/entry_topics.twig' with {
+            query: entry.topics.orderBy('title')
+        } only %}
     </div>
-{% endif %}
+</div>
+
