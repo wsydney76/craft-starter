@@ -1,17 +1,12 @@
 {% extends "_globals.twig" %}
 {% set element = element ?? entry ?? craft.app.urlManager.matchedElement %}
+{% set global_localizedElements = element ? element.localized.all : [] %}
 {% set global_title = global_title ?? (element ? element.title) %}
 {% block html %}
 <!doctype html>
-<html lang="{{ currentSite.language[:2] }}">
+<html lang="{{ currentSite.language }}">
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    {% if parseEnv('@ENVIRONMENT') != 'production' %}
-    <meta name="robots" content="noindex, nofollow">
-    {% endif %}
+    {% include '_layouts/partials/head.twig' %}
 
     {% include '_layouts/partials/icon.twig' %}
 
