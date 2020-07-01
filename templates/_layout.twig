@@ -19,7 +19,17 @@
     {% endif %}
 {% endblock %}
 
+{% block secondaryContentTop %}
+    {% if element and element.relatedEntries %}
+        {% include'_partials/entries_list.twig' with {
+            heading: 'Related Entries',
+            query: craft.entries.relatedTo({element: element, field: 'relatedEntries'}).orderBy('title')
+        } only %}
+    {% endif %}
+{% endblock %}
+
 {% block secondaryContent %}
+
     {% include'_partials/entries_list.twig' with {
         heading: 'Latest Posts',
         query: craft.entries.section('post').limit(5),
