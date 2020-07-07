@@ -1,6 +1,6 @@
 assets:
   tempVolumeUid: 35c3b3f5-30e7-4780-9ae1-286ee8bd275e
-dateModified: 1593588732
+dateModified: 1594043818
 email:
   fromEmail: '@EMAIL_ADDRESS'
   fromName: '@EMAIL_SENDER'
@@ -315,9 +315,11 @@ graphql:
       isPublic: true
       name: 'Public Schema'
     e047f4d9-786a-4636-9295-401868163243:
-      isPublic: false
+      isPublic: '0'
       name: Gatsby
       scope:
+        - 'sections.1d3e1ff8-2adc-4e4d-8796-e277ee738837:read'
+        - 'entrytypes.935c2010-5ffe-45c3-9d2a-acef8f654b9c:read'
         - 'sections.2c476892-24a5-43a5-ae3a-70f4609382e3:read'
         - 'entrytypes.eafd7029-f75a-42a9-9a04-a69b931b4250:read'
         - 'sections.09f97fdd-45fe-4221-982a-a2077c8460b1:read'
@@ -1389,6 +1391,17 @@ sections:
           -
             - refresh
             - '1'
+      -
+        __assoc__:
+          -
+            - label
+            - 'Gatsby Develop'
+          -
+            - urlFormat
+            - 'http://localhost:8000/{uri}'
+          -
+            - refresh
+            - '1'
     propagationMethod: all
     siteSettings:
       97e0b749-86e3-49f1-918e-9b88758928f4:
@@ -1402,6 +1415,62 @@ sections:
         template: _sections/post
         uriFormat: 'beitrag/{slug}'
     type: channel
+  1d3e1ff8-2adc-4e4d-8796-e277ee738837:
+    enableVersioning: true
+    entryTypes:
+      935c2010-5ffe-45c3-9d2a-acef8f654b9c:
+        fieldLayouts:
+          e51ac829-2194-411b-b432-c8c37afdded6:
+            tabs:
+              -
+                fields:
+                  3ef62a7b-6c6d-470f-88a6-31de5a099b38:
+                    required: false
+                    sortOrder: 2
+                  58b2e318-26cc-47b8-bee2-81369731d72f:
+                    required: false
+                    sortOrder: 3
+                  9a302fae-a3bf-4298-8a06-24f8c8f6f335:
+                    required: false
+                    sortOrder: 1
+                name: Content
+                sortOrder: 1
+        handle: about
+        hasTitleField: true
+        name: About
+        sortOrder: 1
+        titleFormat: '{section.name|raw}'
+        titleInstructions: ''
+        titleLabel: Title
+        titleTranslationKeyFormat: ''
+        titleTranslationMethod: site
+    handle: about
+    name: About
+    previewTargets:
+      -
+        __assoc__:
+          -
+            - label
+            - 'Primary entry page'
+          -
+            - urlFormat
+            - '{url}'
+          -
+            - refresh
+            - '1'
+    propagationMethod: all
+    siteSettings:
+      97e0b749-86e3-49f1-918e-9b88758928f4:
+        enabledByDefault: true
+        hasUrls: true
+        template: _layout
+        uriFormat: about
+      bbbb120d-5d71-4e7c-a164-487e401c4f2c:
+        enabledByDefault: true
+        hasUrls: true
+        template: _layout
+        uriFormat: ueber-uns
+    type: single
   2c476892-24a5-43a5-ae3a-70f4609382e3:
     enableVersioning: true
     entryTypes:
@@ -1746,7 +1815,7 @@ system:
   edition: pro
   live: true
   name: '@SYSTEM_NAME'
-  schemaVersion: 3.5.5
+  schemaVersion: 3.5.6
   timeZone: Europe/Berlin
 users:
   allowPublicRegistration: true

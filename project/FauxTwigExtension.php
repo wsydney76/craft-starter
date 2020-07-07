@@ -37,6 +37,7 @@ use craft\elements\Tag;
 use craft\elements\User;
 use craft\models\Site;
 use craft\web\twig\variables\CraftVariable;
+use craft\web\twig\variables\Paginate;
 use craft\web\view;
 use Twig\Extension\AbstractExtension;
 use Twig\Extension\GlobalsInterface;
@@ -68,6 +69,7 @@ class FauxTwigExtension extends AbstractExtension implements GlobalsInterface
             'currentSite' => new Site(),
             'site' => new Site(),
             'view' => new view(),
+            'pageInfo' => new Paginate(),
 
             // Commerce Elements
             //'lineItem' => new LineItem(),

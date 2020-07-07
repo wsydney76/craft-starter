@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3dff1113d2af0fcb26439dce1fd8a445",
+    "content-hash": "49989ec32904f8e217757964a556b600",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -432,12 +432,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "a2928c5d56ffd36d586fcef5989e344ae48e8a3b"
+                "reference": "1959d303944c84bafc3089e0ee32fdba0fba341e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/a2928c5d56ffd36d586fcef5989e344ae48e8a3b",
-                "reference": "a2928c5d56ffd36d586fcef5989e344ae48e8a3b",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/1959d303944c84bafc3089e0ee32fdba0fba341e",
+                "reference": "1959d303944c84bafc3089e0ee32fdba0fba341e",
                 "shasum": ""
             },
             "require": {
@@ -521,7 +521,7 @@
                 "craftcms",
                 "yii2"
             ],
-            "time": "2020-06-24T18:16:02+00:00"
+            "time": "2020-07-03T19:40:14+00:00"
         },
         {
             "name": "craftcms/oauth2-craftid",
@@ -955,16 +955,16 @@
         },
         {
             "name": "embed/embed",
-            "version": "v3.4.6",
+            "version": "v3.4.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oscarotero/Embed.git",
-                "reference": "fdf2039fd796e1f5ec6dee04254a8ed10293c63c"
+                "reference": "96aab555e399769b9d12c3c362a4232563ccbe76"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oscarotero/Embed/zipball/fdf2039fd796e1f5ec6dee04254a8ed10293c63c",
-                "reference": "fdf2039fd796e1f5ec6dee04254a8ed10293c63c",
+                "url": "https://api.github.com/repos/oscarotero/Embed/zipball/96aab555e399769b9d12c3c362a4232563ccbe76",
+                "reference": "96aab555e399769b9d12c3c362a4232563ccbe76",
                 "shasum": ""
             },
             "require": {
@@ -1005,7 +1005,7 @@
                 "opengraph",
                 "twitter cards"
             ],
-            "time": "2020-06-08T18:29:58+00:00"
+            "time": "2020-07-03T15:04:01+00:00"
         },
         {
             "name": "enshrined/svg-sanitize",
@@ -1050,16 +1050,16 @@
         },
         {
             "name": "ezyang/htmlpurifier",
-            "version": "v4.12.0",
+            "version": "v4.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ezyang/htmlpurifier.git",
-                "reference": "a617e55bc62a87eec73bd456d146d134ad716f03"
+                "reference": "08e27c97e4c6ed02f37c5b2b20488046c8d90d75"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ezyang/htmlpurifier/zipball/a617e55bc62a87eec73bd456d146d134ad716f03",
-                "reference": "a617e55bc62a87eec73bd456d146d134ad716f03",
+                "url": "https://api.github.com/repos/ezyang/htmlpurifier/zipball/08e27c97e4c6ed02f37c5b2b20488046c8d90d75",
+                "reference": "08e27c97e4c6ed02f37c5b2b20488046c8d90d75",
                 "shasum": ""
             },
             "require": {
@@ -1075,6 +1075,9 @@
                 },
                 "files": [
                     "library/HTMLPurifier.composer.php"
+                ],
+                "exclude-from-classmap": [
+                    "/library/HTMLPurifier/Language/"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1093,7 +1096,7 @@
             "keywords": [
                 "html"
             ],
-            "time": "2019-10-28T03:44:26+00:00"
+            "time": "2020-06-29T00:56:53+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -2169,25 +2172,25 @@
         },
         {
             "name": "phpdocumentor/reflection-common",
-            "version": "2.1.0",
+            "version": "2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionCommon.git",
-                "reference": "6568f4687e5b41b054365f9ae03fcb1ed5f2069b"
+                "reference": "1d01c49d4ed62f25aa84a747ad35d5a16924662b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionCommon/zipball/6568f4687e5b41b054365f9ae03fcb1ed5f2069b",
-                "reference": "6568f4687e5b41b054365f9ae03fcb1ed5f2069b",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionCommon/zipball/1d01c49d4ed62f25aa84a747ad35d5a16924662b",
+                "reference": "1d01c49d4ed62f25aa84a747ad35d5a16924662b",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1"
+                "php": "^7.2 || ^8.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.x-dev"
+                    "dev-2.x": "2.x-dev"
                 }
             },
             "autoload": {
@@ -2214,7 +2217,7 @@
                 "reflection",
                 "static analysis"
             ],
-            "time": "2020-04-27T09:25:28+00:00"
+            "time": "2020-06-27T09:03:43+00:00"
         },
         {
             "name": "phpdocumentor/reflection-docblock",
@@ -2271,25 +2274,24 @@
         },
         {
             "name": "phpdocumentor/type-resolver",
-            "version": "1.2.0",
+            "version": "1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/TypeResolver.git",
-                "reference": "30441f2752e493c639526b215ed81d54f369d693"
+                "reference": "e878a14a65245fbe78f8080eba03b47c3b705651"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/30441f2752e493c639526b215ed81d54f369d693",
-                "reference": "30441f2752e493c639526b215ed81d54f369d693",
+                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/e878a14a65245fbe78f8080eba03b47c3b705651",
+                "reference": "e878a14a65245fbe78f8080eba03b47c3b705651",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.2",
+                "php": "^7.2 || ^8.0",
                 "phpdocumentor/reflection-common": "^2.0"
             },
             "require-dev": {
-                "ext-tokenizer": "^7.2",
-                "mockery/mockery": "~1"
+                "ext-tokenizer": "*"
             },
             "type": "library",
             "extra": {
@@ -2313,7 +2315,7 @@
                 }
             ],
             "description": "A PSR-5 based resolver of Class names, Types and Structural Element Names",
-            "time": "2020-06-19T20:22:09+00:00"
+            "time": "2020-06-27T10:12:23+00:00"
         },
         {
             "name": "pimple/pimple",
@@ -2748,16 +2750,16 @@
         },
         {
             "name": "spicyweb/craft-embedded-assets",
-            "version": "2.2.6",
+            "version": "2.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spicywebau/craft-embedded-assets.git",
-                "reference": "50bc7de78a691d6588c9ed5263a94ca96d221525"
+                "reference": "3bd64b206b5b7510aeff2e8fb90face755f9a468"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spicywebau/craft-embedded-assets/zipball/50bc7de78a691d6588c9ed5263a94ca96d221525",
-                "reference": "50bc7de78a691d6588c9ed5263a94ca96d221525",
+                "url": "https://api.github.com/repos/spicywebau/craft-embedded-assets/zipball/3bd64b206b5b7510aeff2e8fb90face755f9a468",
+                "reference": "3bd64b206b5b7510aeff2e8fb90face755f9a468",
                 "shasum": ""
             },
             "require": {
@@ -2778,7 +2780,6 @@
                     "spicyweb\\embeddedassets\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2800,7 +2801,13 @@
                 "vimeo",
                 "youtube"
             ],
-            "time": "2020-05-31T12:30:10+00:00"
+            "support": {
+                "issues": "https://github.com/spicywebau/craft-embedded-assets/issues",
+                "source": "https://github.com/spicywebau/craft-embedded-assets",
+                "docs": "https://github.com/spicywebau/craft-embedded-assets/wiki",
+                "rss": "https://github.com/spicywebau/craft-embedded-assets/commits/master.atom"
+            },
+            "time": "2020-07-01T12:34:29+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -4200,16 +4207,16 @@
         },
         {
             "name": "voku/arrayy",
-            "version": "7.6.0",
+            "version": "7.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/voku/Arrayy.git",
-                "reference": "ece649a636f5e6538d96d8ec46d2fc2e38e2fd34"
+                "reference": "e19d42a6cef7efed4e2b1d436fb97c27a9107294"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/voku/Arrayy/zipball/ece649a636f5e6538d96d8ec46d2fc2e38e2fd34",
-                "reference": "ece649a636f5e6538d96d8ec46d2fc2e38e2fd34",
+                "url": "https://api.github.com/repos/voku/Arrayy/zipball/e19d42a6cef7efed4e2b1d436fb97c27a9107294",
+                "reference": "e19d42a6cef7efed4e2b1d436fb97c27a9107294",
                 "shasum": ""
             },
             "require": {
@@ -4274,7 +4281,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-06-19T21:43:51+00:00"
+            "time": "2020-07-04T23:34:09+00:00"
         },
         {
             "name": "voku/email-check",
@@ -5245,16 +5252,16 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v4.5.0",
+            "version": "v4.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "53c2753d756f5adb586dca79c2ec0e2654dd9463"
+                "reference": "c346bbfafe2ff60680258b631afb730d186ed864"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/53c2753d756f5adb586dca79c2ec0e2654dd9463",
-                "reference": "53c2753d756f5adb586dca79c2ec0e2654dd9463",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/c346bbfafe2ff60680258b631afb730d186ed864",
+                "reference": "c346bbfafe2ff60680258b631afb730d186ed864",
                 "shasum": ""
             },
             "require": {
@@ -5293,7 +5300,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2020-06-03T07:24:19+00:00"
+            "time": "2020-07-02T17:12:47+00:00"
         },
         {
             "name": "psy/psysh",
