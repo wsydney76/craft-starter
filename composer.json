@@ -5,9 +5,9 @@
   "license": "Unlicense",
   "require": {
     "clubstudioltd/craft-asset-rev": "6.0.2",
-    "craftcms/cms": "3.5.x-dev",
+    "craftcms/cms": "dev-develop#0c957f1787b60e2c63e8ca0d9ebb10067164eb38 as 3.5.0-beta.3",
     "doublesecretagency/craft-cpcss": "^2.2",
-    "spicyweb/craft-embedded-assets": "2.2.7",
+    "spicyweb/craft-embedded-assets": "2.3.0",
     "wsydney76/elementmap": "^1.4"
   },
   "require-dev": {
@@ -22,7 +22,7 @@
     "sort-packages": true,
     "optimize-autoloader": true,
     "platform": {
-      "php": "7.2"
+      "php": "7.4"
     }
   },
   "scripts": {
