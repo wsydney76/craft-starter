@@ -1,0 +1,19 @@
+fieldLayouts:
+  ba72cf4d-ef03-4524-8fe5-a631a85f9aca:
+    tabs:
+      -
+        fields:
+          ae7d91c8-8743-46bb-a954-438a27946b97:
+            required: false
+            sortOrder: 1
+        name: Primary
+        sortOrder: 1
+      -
+        fields:
+          15c0556c-f778-4258-ae84-ff8cef62b761:
+            required: false
+            sortOrder: 1
+        name: Footer
+        sortOrder: 2
+handle: siteNavigation
+name: 'Site Navigation'

@@ -1,0 +1,18 @@
+fieldLayouts:
+  163d927b-a3f4-45b6-8653-bc62f9d1a611:
+    tabs:
+      -
+        fields:
+          3ef62a7b-6c6d-470f-88a6-31de5a099b38:
+            required: false
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+handle: documents
+hasUrls: true
+name: Documents
+settings:
+  path: '@webroot/documents'
+sortOrder: 6
+type: craft\volumes\Local
+url: '@web/documents'

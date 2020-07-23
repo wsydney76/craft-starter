@@ -1,0 +1,105 @@
+field: 58b2e318-26cc-47b8-bee2-81369731d72f
+fieldLayouts:
+  d199692c-613e-45e8-9209-271e3b228c21:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: a6d13a9f-d4ed-41e5-be7f-c93dcb679633
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 75
+          -
+            fieldUid: 4230d05c-5e66-4718-8fa2-0371dc10d9cb
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
+        name: Content
+        sortOrder: 1
+fields:
+  4230d05c-5e66-4718-8fa2-0371dc10d9cb:
+    contentColumnType: string
+    fieldGroup: null
+    handle: display
+    instructions: ''
+    name: Display
+    searchable: false
+    settings:
+      optgroups: true
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Default
+            -
+              - value
+              - default
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Highlight
+            -
+              - value
+              - highlight
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Align left'
+            -
+              - value
+              - left
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Align right'
+            -
+              - value
+              - right
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  a6d13a9f-d4ed-41e5-be7f-c93dcb679633:
+    contentColumnType: text
+    fieldGroup: null
+    handle: text
+    instructions: 'You can use markdown and reference tags here, but html tags are stripped off.'
+    name: Text
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: '1'
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: language
+    type: craft\fields\PlainText
+handle: text
+name: Text
+sortOrder: 2

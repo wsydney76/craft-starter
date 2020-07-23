@@ -1,0 +1,31 @@
+fieldLayouts:
+  5bf807b1-50fb-4919-9bdc-4eb8861bc4d4:
+    tabs:
+      -
+        elements:
+          -
+            instructions: ''
+            label: Title
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: 9a302fae-a3bf-4298-8a06-24f8c8f6f335
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 3ef62a7b-6c6d-470f-88a6-31de5a099b38
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 58b2e318-26cc-47b8-bee2-81369731d72f
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Content
+        sortOrder: 1
+handle: topicIndex
+hasTitleField: true
+name: 'Topic Index'
+section: bda0f4f2-6388-4569-99b9-8f89727f61ca
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: ''
+titleTranslationMethod: language

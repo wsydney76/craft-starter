@@ -1,0 +1,11 @@
+contentColumnType: boolean
+fieldGroup: 5d1e7a8c-bdb7-48c9-b9a8-9ab55c900868
+handle: disableDraftHints
+instructions: 'Swith on to suppress hints about working with drafts.'
+name: 'Disable Draft Hints'
+searchable: false
+settings:
+  default: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

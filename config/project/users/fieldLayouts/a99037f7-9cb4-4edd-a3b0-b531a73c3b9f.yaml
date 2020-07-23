@@ -1,0 +1,8 @@
+tabs:
+  -
+    fields:
+      0929020c-32b9-4c07-b046-d314e04e7a1d:
+        required: false
+        sortOrder: 2
+    name: 'Project Settings'
+    sortOrder: 1

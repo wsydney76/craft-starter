@@ -1,0 +1,121 @@
+field: 58b2e318-26cc-47b8-bee2-81369731d72f
+fieldLayouts:
+  7a0f5fd9-ebee-468d-81ea-2f80b639ea1f:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: bc485c8b-4a0c-4c30-816a-8bb295727b36
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: d420edab-c758-4dce-8b02-e17b23ed0e60
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 75
+          -
+            fieldUid: efc1fd0a-3fd1-4379-84a0-e8cf931be331
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
+        name: Content
+        sortOrder: 1
+fields:
+  bc485c8b-4a0c-4c30-816a-8bb295727b36:
+    contentColumnType: text
+    fieldGroup: null
+    handle: text
+    instructions: ''
+    name: Text
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: language
+    type: craft\fields\PlainText
+  d420edab-c758-4dce-8b02-e17b23ed0e60:
+    contentColumnType: string
+    fieldGroup: null
+    handle: textSource
+    instructions: ''
+    name: Source
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: 40
+      code: ''
+      columnType: string
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: language
+    type: craft\fields\PlainText
+  efc1fd0a-3fd1-4379-84a0-e8cf931be331:
+    contentColumnType: string
+    fieldGroup: null
+    handle: display
+    instructions: ''
+    name: Display
+    searchable: false
+    settings:
+      optgroups: true
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Default
+            -
+              - value
+              - default
+            -
+              - default
+              - '1'
+        -
+          __assoc__:
+            -
+              - label
+              - 'Align left'
+            -
+              - value
+              - left
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Align right'
+            -
+              - value
+              - right
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+handle: quote
+name: Quote
+sortOrder: 5
