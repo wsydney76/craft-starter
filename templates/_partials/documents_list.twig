@@ -14,7 +14,7 @@
                         </div>
                     {% endif %}
                     <div class="font-sm">
-                        {{ asset.filename|split('.')|last }}, {{ asset.formattedSize(0) }}
+                        {{ asset.extension }}, {{ asset.formattedSize(0) }}
                     </div>
                 </div>
             {% endfor %}

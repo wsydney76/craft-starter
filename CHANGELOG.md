@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.2.1 2020-07-22
+
+* Fixpoint before changing to new project config
+
 ## 1.2 2020-06-24
 
 * Cleanup
