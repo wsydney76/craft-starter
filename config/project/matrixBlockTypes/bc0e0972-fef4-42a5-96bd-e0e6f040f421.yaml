@@ -3,16 +3,34 @@ fieldLayouts:
   373cf894-e8e4-4405-8f2f-9cf8e9c07c32:
     tabs:
       -
-        fields:
-          25c13312-e79c-4f00-b607-88fab9e35920:
+        elements:
+          -
+            fieldUid: ec6b5c42-b633-4465-8f26-2d43d78befe8
+            instructions: null
+            label: null
             required: false
-            sortOrder: 3
-          eb61a6f2-9d63-4730-8ccf-daebb6ba0824:
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
+          -
+            fieldUid: eb61a6f2-9d63-4730-8ccf-daebb6ba0824
+            instructions: null
+            label: null
             required: false
-            sortOrder: 2
-          ec6b5c42-b633-4465-8f26-2d43d78befe8:
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
+          -
+            fieldUid: 25c13312-e79c-4f00-b607-88fab9e35920
+            instructions: null
+            label: null
             required: false
-            sortOrder: 1
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
         name: Content
         sortOrder: 1
 fields:
@@ -48,15 +66,16 @@ fields:
     name: Asset
     searchable: false
     settings:
-      allowSelfRelations: ''
+      allowSelfRelations: false
       allowedKinds:
         - json
       defaultUploadLocationSource: 'volume:cbbf12d2-97db-4750-8f2d-ea5a5ca1f975'
       defaultUploadLocationSubpath: ''
       limit: '1'
-      localizeRelations: '1'
+      localizeRelations: true
       restrictFiles: '1'
       selectionLabel: ''
+      showSiteMenu: true
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
       singleUploadLocationSource: 'volume:8136d7e9-1a74-464d-aef2-3a4f91a5cdda'
@@ -66,7 +85,7 @@ fields:
         - 'volume:cbbf12d2-97db-4750-8f2d-ea5a5ca1f975'
       targetSiteId: null
       useSingleFolder: false
-      validateRelatedElements: ''
+      validateRelatedElements: false
       viewMode: large
     translationKeyFormat: null
     translationMethod: site

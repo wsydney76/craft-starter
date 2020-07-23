@@ -3,16 +3,34 @@ fieldLayouts:
   5019c24d-309a-4ed8-8c94-f62cf5fbbf1b:
     tabs:
       -
-        fields:
-          7a11b052-f8c9-46d7-8bb4-7c9a3916200c:
+        elements:
+          -
+            fieldUid: 7a11b052-f8c9-46d7-8bb4-7c9a3916200c
+            instructions: null
+            label: null
             required: true
-            sortOrder: 1
-          a6c330ac-aa61-44e4-a5fe-61b35e4eeb36:
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
+          -
+            fieldUid: d80ee1f4-e752-4e38-860a-c5f26790bf89
+            instructions: null
+            label: null
             required: false
-            sortOrder: 3
-          d80ee1f4-e752-4e38-860a-c5f26790bf89:
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: a6c330ac-aa61-44e4-a5fe-61b35e4eeb36
+            instructions: null
+            label: null
             required: false
-            sortOrder: 2
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
         name: Content
         sortOrder: 1
 fields:
@@ -24,15 +42,16 @@ fields:
     name: Image
     searchable: false
     settings:
-      allowSelfRelations: ''
+      allowSelfRelations: false
       allowedKinds:
         - image
       defaultUploadLocationSource: 'volume:8136d7e9-1a74-464d-aef2-3a4f91a5cdda'
       defaultUploadLocationSubpath: ''
       limit: '1'
-      localizeRelations: ''
+      localizeRelations: false
       restrictFiles: '1'
       selectionLabel: 'Select an image'
+      showSiteMenu: true
       showUnpermittedFiles: false
       showUnpermittedVolumes: true
       singleUploadLocationSource: 'volume:8136d7e9-1a74-464d-aef2-3a4f91a5cdda'
@@ -42,7 +61,7 @@ fields:
         - 'volume:8136d7e9-1a74-464d-aef2-3a4f91a5cdda'
       targetSiteId: null
       useSingleFolder: false
-      validateRelatedElements: '1'
+      validateRelatedElements: true
       viewMode: large
     translationKeyFormat: null
     translationMethod: site
