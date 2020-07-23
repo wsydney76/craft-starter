@@ -1,0 +1,46 @@
+field: 58b2e318-26cc-47b8-bee2-81369731d72f
+fieldLayouts:
+  34d4bac1-c414-452a-adfc-eb21c10b1fc4:
+    tabs:
+      -
+        fields:
+          25fbe2f8-c1c3-4e3e-8a39-0b06a6392428:
+            required: false
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  25fbe2f8-c1c3-4e3e-8a39-0b06a6392428:
+    contentColumnType: string
+    fieldGroup: null
+    handle: images
+    instructions: ''
+    name: Images
+    searchable: true
+    settings:
+      allowSelfRelations: ''
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:8136d7e9-1a74-464d-aef2-3a4f91a5cdda'
+      defaultUploadLocationSubpath: ''
+      limit: ''
+      localizeRelations: ''
+      restrictFiles: '1'
+      selectionLabel: 'Add an image'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:8136d7e9-1a74-464d-aef2-3a4f91a5cdda'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources:
+        - 'volume:8136d7e9-1a74-464d-aef2-3a4f91a5cdda'
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: ''
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: gallery
+name: Gallery
+sortOrder: 4

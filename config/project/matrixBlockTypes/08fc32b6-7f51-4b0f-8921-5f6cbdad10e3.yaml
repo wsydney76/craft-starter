@@ -1,0 +1,55 @@
+field: ae7d91c8-8743-46bb-a954-438a27946b97
+fieldLayouts:
+  a488e318-6b3c-4902-a35a-f96636141ea6:
+    tabs:
+      -
+        fields:
+          91e82c8e-91b5-456d-a06b-bd9e86bb5059:
+            required: false
+            sortOrder: 2
+          c6943610-b0b4-4588-88b9-c13480f83557:
+            required: false
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  91e82c8e-91b5-456d-a06b-bd9e86bb5059:
+    contentColumnType: string
+    fieldGroup: null
+    handle: entries
+    instructions: ''
+    name: Entries
+    searchable: false
+    settings:
+      limit: ''
+      localizeRelations: ''
+      selectionLabel: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: ''
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+  c6943610-b0b4-4588-88b9-c13480f83557:
+    contentColumnType: string(120)
+    fieldGroup: null
+    handle: caption
+    instructions: ''
+    name: Caption
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: 30
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+handle: dropDown
+name: 'Drop Down'
+sortOrder: 2

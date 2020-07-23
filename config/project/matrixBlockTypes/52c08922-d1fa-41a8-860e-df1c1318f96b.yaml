@@ -1,0 +1,127 @@
+field: 58b2e318-26cc-47b8-bee2-81369731d72f
+fieldLayouts:
+  5019c24d-309a-4ed8-8c94-f62cf5fbbf1b:
+    tabs:
+      -
+        fields:
+          7a11b052-f8c9-46d7-8bb4-7c9a3916200c:
+            required: true
+            sortOrder: 1
+          a6c330ac-aa61-44e4-a5fe-61b35e4eeb36:
+            required: false
+            sortOrder: 3
+          d80ee1f4-e752-4e38-860a-c5f26790bf89:
+            required: false
+            sortOrder: 2
+        name: Content
+        sortOrder: 1
+fields:
+  7a11b052-f8c9-46d7-8bb4-7c9a3916200c:
+    contentColumnType: string
+    fieldGroup: null
+    handle: image
+    instructions: 'Double click to edit title, copyright and focus point of the image'
+    name: Image
+    searchable: false
+    settings:
+      allowSelfRelations: ''
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:8136d7e9-1a74-464d-aef2-3a4f91a5cdda'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: ''
+      restrictFiles: '1'
+      selectionLabel: 'Select an image'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: true
+      singleUploadLocationSource: 'volume:8136d7e9-1a74-464d-aef2-3a4f91a5cdda'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources:
+        - 'volume:8136d7e9-1a74-464d-aef2-3a4f91a5cdda'
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: '1'
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  a6c330ac-aa61-44e4-a5fe-61b35e4eeb36:
+    contentColumnType: string
+    fieldGroup: null
+    handle: display
+    instructions: ''
+    name: Display
+    searchable: false
+    settings:
+      optgroups: true
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Default
+            -
+              - value
+              - default
+            -
+              - default
+              - '1'
+        -
+          __assoc__:
+            -
+              - label
+              - 'Full Height'
+            -
+              - value
+              - fullHeight
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Align left'
+            -
+              - value
+              - left
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Align right'
+            -
+              - value
+              - right
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  d80ee1f4-e752-4e38-860a-c5f26790bf89:
+    contentColumnType: string
+    fieldGroup: null
+    handle: caption
+    instructions: 'Leave blank to show the image''s title'
+    name: Caption
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: 30
+      code: ''
+      columnType: string
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: language
+    type: craft\fields\PlainText
+handle: image
+name: Image
+sortOrder: 3
