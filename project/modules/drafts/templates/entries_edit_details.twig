@@ -4,11 +4,18 @@
 {% set isUnsavedDraft = context['isUnsavedDraft'] %}
 {% set editable = entry.isEditable ? 'editable' : 'noteditable' %}
 
+{# Check if draft warning is set as UI element #}
+{% set hasDraftWarningElement = false %}
+{% set firstElement = entry.fieldLayout.tabs[0].elements[0] %}
+
+{% if firstElement is instance of('project\\modules\\drafts\\fieldlayoutelements\\DraftWarning') %}
+    {% set hasDraftWarningElement = true %}
+{% endif %}
 
 
 {# Show existing drafts --------------------------------------------------------------------- #}
 
-{% if (isCurrent or isDraft) and not isUnsavedDraft %}
+{% if (not hasDraftWarningElement) and  (isCurrent or isDraft) and not isUnsavedDraft %}
 
     {% set query = craft.entries.draftOf(entry.sourceId) %}
 
@@ -49,14 +56,14 @@
     </div>
 
     {% js %}
-        $('#save-btn-container .btn.submit').prop('value','{{ "msg_saveunsaveddrafttext_#{editable}"|t("drafts") }}');
+    $('#save-btn-container .btn.submit').prop('value', '{{ "msg_saveunsaveddrafttext_#{editable}"|t("drafts") }}');
     {% endjs %}
 {% endif %}
 
 {# Drafts for saved entries -------------------------------------------------------------------------------------- #}
 {% if isDraft and not isUnsavedDraft %}
     {% js %}
-        $('#header > .flex > .btn.submit').prop('value','{{ "msg_savedrafttext_#{editable}"|t("drafts") }}');
+    $('#header > .flex > .btn.submit').prop('value', '{{ "msg_savedrafttext_#{editable}"|t("drafts") }}');
         $('#draft-saved').css('display', '');
     {% endjs %}
 {% endif %}
@@ -66,7 +73,7 @@
 {# Current entry ----------------------------------------------------------------------------------------------- #}
 {% if isCurrent %}
     {% js %}
-        $('#save-btn-container .btn.submit').prop('value','{{ 'msg_savecurrenttext'|t('drafts') }}');
+    $('#save-btn-container .btn.submit').prop('value', '{{ 'msg_savecurrenttext'|t('drafts') }}');
     {% endjs %}
 {% endif %}
 

@@ -6,12 +6,15 @@ use Craft;
 use craft\base\Element;
 use craft\elements\Entry;
 use craft\elements\User;
+use craft\events\DefineFieldLayoutElementsEvent;
 use craft\events\RegisterElementSourcesEvent;
 use craft\events\RegisterElementTableAttributesEvent;
 use craft\events\RegisterTemplateRootsEvent;
 use craft\events\SetElementTableAttributeHtmlEvent;
 use craft\i18n\PhpMessageSource;
+use craft\models\FieldLayout;
 use craft\web\View;
+use project\modules\drafts\fieldlayoutelements\DraftWarning;
 use yii\base\Event;
 use yii\base\Module;
 
@@ -29,6 +32,15 @@ class DraftsModule extends Module
             View::class,
             View::EVENT_REGISTER_CP_TEMPLATE_ROOTS, function(RegisterTemplateRootsEvent $event) {
             $event->roots['drafts'] = __DIR__ . DIRECTORY_SEPARATOR . 'templates';
+        }
+        );
+
+        Event::on(
+            FieldLayout::class,
+            FieldLayout::EVENT_DEFINE_UI_ELEMENTS, function(DefineFieldLayoutElementsEvent $event) {
+            if ($event->sender->type == 'craft\\elements\\Entry') {
+                $event->elements[] = new DraftWarning();
+            }
         }
         );
 

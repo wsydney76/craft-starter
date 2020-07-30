@@ -4,6 +4,8 @@ fieldLayouts:
       -
         elements:
           -
+            type: project\modules\drafts\fieldlayoutelements\DraftWarning
+          -
             autocapitalize: true
             autocomplete: false
             autocorrect: true
@@ -61,7 +63,8 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            type: craft\fieldlayoutelements\HorizontalRule
+            heading: Relations
+            type: craft\fieldlayoutelements\Heading
           -
             fieldUid: e4cf9f0d-54a6-4107-beac-daa51b8e5006
             instructions: null
