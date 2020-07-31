@@ -6,11 +6,15 @@
 
 {# Check if draft warning is set as UI element #}
 {% set hasDraftWarningElement = false %}
-{% set firstElement = entry.fieldLayout.tabs[0].elements[0] %}
 
-{% if firstElement is instance of('project\\modules\\drafts\\fieldlayoutelements\\DraftWarning') %}
-    {% set hasDraftWarningElement = true %}
-{% endif %}
+
+{% for element in entry.fieldLayout.tabs[0].elements %}
+    {% if element is instance of('project\\modules\\drafts\\fieldlayoutelements\\DraftWarning') %}
+        {% set hasDraftWarningElement = true %}
+    {% endif %}
+
+{% endfor %}
+
 
 
 {# Show existing drafts --------------------------------------------------------------------- #}

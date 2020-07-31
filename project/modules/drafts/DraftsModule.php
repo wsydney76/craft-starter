@@ -35,6 +35,7 @@ class DraftsModule extends Module
         }
         );
 
+        // Add Drafts Warning to UI Elements
         Event::on(
             FieldLayout::class,
             FieldLayout::EVENT_DEFINE_UI_ELEMENTS, function(DefineFieldLayoutElementsEvent $event) {

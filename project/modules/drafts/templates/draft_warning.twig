@@ -3,8 +3,6 @@
 {% set isDraft = entry.isDraft %}
 {% set isUnsavedDraft = entry.isUnsavedDraft %}
 
-
-
 {% if (isCurrent or isDraft) and not isUnsavedDraft %}
 
     {% set query = craft.entries.draftOf(entry.sourceId) %}
@@ -19,21 +17,20 @@
         {% set textOne = 'msg_draftwarningone'|t('drafts') %}
         {% set textMultiple = 'msg_draftwarningmultiple'|t('drafts') %}
 
-        <div class="readable">
+        <div class="readable width-100">
             <blockquote class="note warning">
-
-                <div class="flex flex-wrap">
-                    <p>{{ 'msg_draftwarning'|t('drafts') }} {{ drafts|length == 1 ? textOne : textMultiple }}</p>
-                    {% for draft in drafts %}
-                        {{ tag('a', {
-                            title: draft.draftName,
-                            class: 'go',
-                            style: 'max-width:300px;overflow:hidden;text-overflow: ellipsis;',
-                            href:"#{ draft.cpEditUrl }&draftId=#{ draft.draftId }",
-                            text:  draft.draftName,
-                        }) }}
-                    {% endfor %}
-                </div>
+                <span style="padding-right:12px">
+                    {{ 'msg_draftwarning'|t('drafts') }} {{ drafts|length == 1 ? textOne : textMultiple }}
+                </span>
+                {% for draft in drafts %}
+                    {{ tag('a', {
+                        title: draft.draftName,
+                        class: 'go',
+                        style: 'max-width:300px;overflow:hidden;text-overflow: ellipsis;padding-right:12px',
+                        href:"#{ draft.cpEditUrl }&draftId=#{ draft.draftId }",
+                        text:  draft.draftName
+                    }) }}
+                {% endfor %}
             </blockquote>
         </div>
 

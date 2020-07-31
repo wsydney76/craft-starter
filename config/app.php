@@ -26,7 +26,7 @@ return [
         'cpDrafts' => DraftsModule::class
     ],
     'bootstrap' => [
-        // 'main',
+        'main',
         'cpDrafts'
 
     ]
