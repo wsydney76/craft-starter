@@ -3,38 +3,17 @@ handle: post
 name: Post
 previewTargets:
   -
-    __assoc__:
-      -
-        - label
-        - 'Primary entry page'
-      -
-        - urlFormat
-        - '{url}'
-      -
-        - refresh
-        - '1'
+    label: 'Primary entry page'
+    refresh: '1'
+    urlFormat: '{url}'
   -
-    __assoc__:
-      -
-        - label
-        - 'Post Index'
-      -
-        - urlFormat
-        - '{% set e = craft.entries.section(''postIndex'').site(object.site).one %}{{e ? e.url : ''''}}'
-      -
-        - refresh
-        - '1'
+    label: 'Post Index'
+    refresh: '1'
+    urlFormat: '{% set e = craft.entries.section(''postIndex'').site(object.site).one %}{{e ? e.url : ''''}}'
   -
-    __assoc__:
-      -
-        - label
-        - 'Gatsby Develop'
-      -
-        - urlFormat
-        - 'http://localhost:8000/{uri}'
-      -
-        - refresh
-        - '1'
+    label: 'Gatsby Develop'
+    refresh: '1'
+    urlFormat: 'http://localhost:8000/{uri}'
 propagationMethod: all
 siteSettings:
   97e0b749-86e3-49f1-918e-9b88758928f4:

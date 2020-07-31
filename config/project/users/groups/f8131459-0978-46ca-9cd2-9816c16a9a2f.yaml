@@ -1,4 +1,3 @@
-description: 'View the system when offline'
 handle: customer
 name: Customer
 permissions:

@@ -3,10 +3,16 @@ fieldLayouts:
   28608963-de7b-4a84-8c8f-b35c82ae5c17:
     tabs:
       -
-        fields:
-          29984fa1-b01d-42e8-80e8-6983cc5a498c:
-            required: true
-            sortOrder: 1
+        elements:
+          -
+            fieldUid: 29984fa1-b01d-42e8-80e8-6983cc5a498c
+            instructions: null
+            label: null
+            required: '1'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: Content
         sortOrder: 1
 fields:
@@ -18,13 +24,15 @@ fields:
     name: Entries
     searchable: false
     settings:
+      allowSelfRelations: false
       limit: ''
-      localizeRelations: ''
+      localizeRelations: false
       selectionLabel: ''
+      showSiteMenu: true
       source: null
       sources: '*'
       targetSiteId: null
-      validateRelatedElements: ''
+      validateRelatedElements: false
       viewMode: null
     translationKeyFormat: null
     translationMethod: site

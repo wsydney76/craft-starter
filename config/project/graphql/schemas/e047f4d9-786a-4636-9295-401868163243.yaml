@@ -1,4 +1,4 @@
-isPublic: '0'
+isPublic: false
 name: Gatsby
 scope:
   - 'sections.1d3e1ff8-2adc-4e4d-8796-e277ee738837:read'
