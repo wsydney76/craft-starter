@@ -1,0 +1,32 @@
+contentColumnType: string
+fieldGroup: f1d8d989-2bc0-4a0f-b58f-a348276a5596
+handle: documents
+instructions: ''
+name: Documents
+searchable: true
+settings:
+  allowSelfRelations: false
+  allowedKinds:
+    - opendocument
+    - pdf
+  defaultUploadLocationSource: 'volume:8136d7e9-1a74-464d-aef2-3a4f91a5cdda'
+  defaultUploadLocationSubpath: ''
+  limit: ''
+  localizeRelations: true
+  restrictFiles: '1'
+  selectionLabel: 'Add a document'
+  showSiteMenu: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  singleUploadLocationSource: 'volume:8136d7e9-1a74-464d-aef2-3a4f91a5cdda'
+  singleUploadLocationSubpath: ''
+  source: null
+  sources:
+    - 'volume:2f4c2da0-9bf2-47da-a2fb-b13bad08739c'
+  targetSiteId: null
+  useSingleFolder: false
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets

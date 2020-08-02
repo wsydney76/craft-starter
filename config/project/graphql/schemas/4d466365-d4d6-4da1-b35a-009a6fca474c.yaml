@@ -1,4 +1,4 @@
-isPublic: '1'
+isPublic: true
 name: 'Public Schema'
 scope:
   - 'sections.1d3e1ff8-2adc-4e4d-8796-e277ee738837:read'

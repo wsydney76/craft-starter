@@ -1,4 +1,0 @@
-handle: customer
-name: Customer
-permissions:
-  - accesssitewhensystemisoff

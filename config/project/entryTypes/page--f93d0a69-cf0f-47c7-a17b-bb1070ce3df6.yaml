@@ -1,0 +1,84 @@
+fieldLayouts:
+  930449b7-c7f2-4fc4-87ec-37bcc083b0e7:
+    tabs:
+      -
+        elements:
+          -
+            type: project\modules\drafts\fieldlayoutelements\DraftWarning
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            autofocus: false
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            required: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\EntryTitleField
+            warning: null
+            width: 100
+          -
+            heading: Heading
+            type: craft\fieldlayoutelements\Heading
+          -
+            fieldUid: 9a302fae-a3bf-4298-8a06-24f8c8f6f335
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
+          -
+            fieldUid: 3ef62a7b-6c6d-470f-88a6-31de5a099b38
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 75
+          -
+            fieldUid: 58b2e318-26cc-47b8-bee2-81369731d72f
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            heading: Relations
+            type: craft\fieldlayoutelements\Heading
+          -
+            fieldUid: 9b2aaaa8-c827-4881-955a-86f2df0ea79c
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: page
+hasTitleField: true
+name: Page
+section: 09f97fdd-45fe-4221-982a-a2077c8460b1
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: language

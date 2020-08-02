@@ -1,0 +1,20 @@
+contentColumnType: string
+fieldGroup: fea375f0-9f46-4952-b272-2dcf42b0cce5
+handle: footerNavigation
+instructions: ''
+name: 'Footer Navigation'
+searchable: false
+settings:
+  allowSelfRelations: false
+  limit: ''
+  localizeRelations: false
+  selectionLabel: ''
+  showSiteMenu: true
+  source: null
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

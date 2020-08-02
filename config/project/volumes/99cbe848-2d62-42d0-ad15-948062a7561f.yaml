@@ -1,8 +1,0 @@
-handle: userPhotos
-hasUrls: true
-name: 'User Photos'
-settings:
-  path: '@webroot/userphotos'
-sortOrder: 3
-type: craft\volumes\Local
-url: '@web/userphotos'
