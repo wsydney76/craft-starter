@@ -8,7 +8,7 @@
  * @see \craft\config\GeneralConfig
  */
 
-use project\Env;
+use config\Env;
 
 return [
     // Global settings

@@ -15,7 +15,8 @@
   },
   "autoload": {
     "psr-4": {
-      "project\\": "project/"
+      "project\\": "project/",
+      "config\\": "config/"
     }
   },
   "config": {
@@ -27,7 +28,7 @@
   },
   "scripts": {
     "post-install-cmd": [
-      "@php -r \"file_exists('project/Env.php') || copy('project/Env.php.example', 'project/Env.php');\""
+      "@php -r \"file_exists('config/Env.php') || copy('config/Env.php.example', 'config/Env.php');\""
     ]
   },
   "minimum-stability": "dev",
