@@ -1,5 +1,5 @@
 fieldLayouts:
-  1eadd194-d287-46c7-bd8f-d4d1b40e731b:
+  974afb79-459d-481a-ae16-9f12c4b61440:
     tabs:
       -
         elements:
@@ -26,6 +26,15 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\TitleField
+            warning: null
+            width: 100
+          -
+            fieldUid: 3f9c2f2a-8ab0-4aba-bf4e-02d5336d14c0
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
         name: Content
