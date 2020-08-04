@@ -60,6 +60,12 @@ class m200213_103908_setup extends Migration
             Craft::$app->elements->saveElement($entry);
         }
 
+        $entry = Entry::find()->section('contact')->site('de')->one();
+        if ($entry) {
+            $entry->title = 'Kontakt';
+            Craft::$app->elements->saveElement($entry);
+        }
+
         // Set Globals
         $global = GlobalSet::find()->handle('siteInfo')->one();
         if ($global) {
@@ -72,7 +78,7 @@ class m200213_103908_setup extends Migration
         $global = GlobalSet::find()->handle('siteNavigation')->one();
         if ($global) {
             $entryIds = [];
-            foreach (['postIndex', 'topicIndex', 'about'] as $handle) {
+            foreach (['postIndex', 'topicIndex', 'about', 'contact'] as $handle) {
                 $entry = Entry::find()->section($handle)->one();
                 if ($entry) {
                     $entryIds[] = $entry->id;
