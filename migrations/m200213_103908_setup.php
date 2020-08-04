@@ -52,10 +52,36 @@ class m200213_103908_setup extends Migration
             Craft::$app->elements->saveElement($entry);
         }
 
+        $entry = Entry::find()->section('about')->site('de')->one();
+        if ($entry) {
+            $entry->title = 'Über uns';
+            Craft::$app->elements->saveElement($entry);
+        }
+
         $global = GlobalSet::find()->handle('siteInfo')->one();
         if ($global) {
             $global->setFieldValue('siteName', 'Starter');
             $global->setFieldValue('copyright', 'Starter GmbH');
+            Craft::$app->elements->saveElement($global);
+        }
+
+        $global = GlobalSet::find()->handle('siteNavigation')->one();
+        if ($global) {
+            $entryIds = [];
+            foreach (['postIndex', 'topicIndex', 'about'] as $handle) {
+                $entry = Entry::find()->section($handle)->one();
+                if ($entry) {
+                    $entryIds[] = $entry->id;
+                }
+            }
+            $global->setFieldValue('primaryNavigation', [
+                'new1' => [
+                    'type' => 'topLevelLinks',
+                    'fields' => [
+                        'entries' => $entryIds
+                    ]
+                ]
+            ]);
             Craft::$app->elements->saveElement($global);
         }
 
