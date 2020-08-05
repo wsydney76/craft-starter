@@ -1,13 +1,13 @@
 <nav>
-
     {% cache globally %}
         {% set entries = siteNavigation.footerNavigation.all %}
-        {% for entry in entries %}
-            <div>
-                <a class="text-xs font-semibold uppercase" href="{{ entry.url }}"">{{ entry.title }}</a>
+        {% if entries %}
+            <div class="flex flex-wrap justify-end space-x-4">
+                {% for entry in entries %}
+                    <a class="text-xs font-semibold uppercase" href="{{ entry.url }}">{{ entry.title }}</a>
+                {% endfor %}
             </div>
-        {% endfor %}
+        {% endif %}
     {% endcache %}
-
 </nav>
 

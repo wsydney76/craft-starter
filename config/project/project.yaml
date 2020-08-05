@@ -1,6 +1,6 @@
 assets:
   tempVolumeUid: 35c3b3f5-30e7-4780-9ae1-286ee8bd275e
-dateModified: 1596448317
+dateModified: 1596536122
 email:
   fromEmail: '@EMAIL_ADDRESS'
   fromName: '@EMAIL_SENDER'
@@ -20,6 +20,16 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  contact-form:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+    settings:
+      allowAttachments: ''
+      prependSender: 'On behalf of'
+      prependSubject: 'New message from Starter'
+      successFlashMessage: 'Your message has been sent.'
+      toEmail: '@EMAIL_ADDRESS'
   cp-css:
     edition: standard
     enabled: true

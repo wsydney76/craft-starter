@@ -6,6 +6,7 @@ use Craft;
 use craft\db\Migration;
 use craft\elements\Entry;
 use craft\elements\GlobalSet;
+use craft\elements\User;
 
 /**
  * m200213_103908_setup migration.
@@ -22,6 +23,7 @@ class m200213_103908_setup extends Migration
     public function safeUp()
     {
 
+        // Set titles
         $entry = Entry::find()->section('search')->site('de')->one();
         if ($entry) {
             $entry->title = 'Suche';
@@ -58,6 +60,13 @@ class m200213_103908_setup extends Migration
             Craft::$app->elements->saveElement($entry);
         }
 
+        $entry = Entry::find()->section('contact')->site('de')->one();
+        if ($entry) {
+            $entry->title = 'Kontakt';
+            Craft::$app->elements->saveElement($entry);
+        }
+
+        // Set Globals
         $global = GlobalSet::find()->handle('siteInfo')->one();
         if ($global) {
             $global->setFieldValue('siteName', 'Starter');
@@ -65,10 +74,11 @@ class m200213_103908_setup extends Migration
             Craft::$app->elements->saveElement($global);
         }
 
+        // Set Primary navigation
         $global = GlobalSet::find()->handle('siteNavigation')->one();
         if ($global) {
             $entryIds = [];
-            foreach (['postIndex', 'topicIndex', 'about'] as $handle) {
+            foreach (['postIndex', 'topicIndex', 'about', 'contact'] as $handle) {
                 $entry = Entry::find()->section($handle)->one();
                 if ($entry) {
                     $entryIds[] = $entry->id;
@@ -85,6 +95,13 @@ class m200213_103908_setup extends Migration
             Craft::$app->elements->saveElement($global);
         }
 
+        // Set user full name
+        $user = User::find()->one();
+        $user->firstName = 'Sabine';
+        $user->lastName = 'Mustermann';
+
+        Craft::$app->elements->saveElement($user);
+
         return true;
     }
 
@@ -93,7 +110,7 @@ class m200213_103908_setup extends Migration
      */
     public function safeDown()
     {
-        echo "m200213_103908_setup cannot be reverted.\n";
-        return false;
+        echo "There is nothing to revert.\n";
+        return true;
     }
 }
