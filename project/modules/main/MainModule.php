@@ -3,6 +3,10 @@
 namespace project\modules\main;
 
 use Craft;
+use craft\events\DefineFieldLayoutElementsEvent;
+use craft\models\FieldLayout;
+use project\modules\main\fieldlayoutelements\NewRow;
+use yii\base\Event;
 use yii\base\Module;
 
 class MainModule extends Module
@@ -13,6 +17,16 @@ class MainModule extends Module
         $this->controllerNamespace = Craft::$app->request->isConsoleRequest ?
             'project\\modules\\main\\console\\controllers' :
             'project\\modules\\main\\controllers';
+
+        // Add Drafts Warning to UI Elements
+        Event::on(
+            FieldLayout::class,
+            FieldLayout::EVENT_DEFINE_UI_ELEMENTS, function(DefineFieldLayoutElementsEvent $event) {
+            if ($event->sender->type == 'craft\\elements\\Entry') {
+                $event->elements[] = new NewRow();
+            }
+        }
+        );
 
     }
 }

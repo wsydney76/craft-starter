@@ -8,7 +8,7 @@
  * @see craft\config\DbConfig
  */
 
-use project\Env;
+use config\Env;
 
 return [
 

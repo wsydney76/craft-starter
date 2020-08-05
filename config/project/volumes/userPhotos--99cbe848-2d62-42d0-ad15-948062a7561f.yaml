@@ -1,0 +1,40 @@
+fieldLayouts:
+  123d220f-b8fc-4d61-9624-4c69696f155e:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            autofocus: false
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            required: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: userPhotos
+hasUrls: true
+name: 'User Photos'
+settings:
+  path: '@webroot/userphotos'
+sortOrder: 3
+type: craft\volumes\Local
+url: '@web/userphotos'

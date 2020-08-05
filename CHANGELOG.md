@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.3.0 2020-08-05
+
+* Update to Craft 3.5.0
+* Added contact section with contact form
+
 ## 1.2.1 2020-07-22
 
 * Fixpoint before changing to new project config

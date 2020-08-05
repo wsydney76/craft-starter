@@ -2,6 +2,13 @@
 
 return [
 
+    'Your Name' => 'Ihr Name',
+    'Your Email' => 'Ihre E-Mail',
+    'Subject' => 'Betreff',
+    'Message' => 'Nachricht',
+    'Send' => 'Senden',
+    'Your message has been sent.' => 'Ihre Nachricht wurde gesendet.',
+
     'All Entries' => 'Alle Inhalte',
     'All' => 'Alle',
     'By' => 'Von',

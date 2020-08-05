@@ -21,7 +21,7 @@
  * @see https://github.com/clubstudioltd/craft-asset-rev
  */
 
-use project\Env;
+use config\Env;
 
 return [
     '*' => [

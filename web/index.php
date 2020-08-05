@@ -4,7 +4,7 @@
  */
 
 // Set path constants
-use project\Env;
+use config\Env;
 
 define('CRAFT_BASE_PATH', dirname(__DIR__));
 define('CRAFT_VENDOR_PATH', CRAFT_BASE_PATH . '/vendor');

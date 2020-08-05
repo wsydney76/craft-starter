@@ -4,5 +4,5 @@
 /vendor
 /web/cache
 /web/cpresources
-/project/Env.php
+/config/Env.php
 /snapshot*

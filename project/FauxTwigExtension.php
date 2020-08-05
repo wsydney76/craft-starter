@@ -27,6 +27,7 @@ namespace nystudio107\craft;
 //use craft\commerce\elements\Variant;
 //use craft\commerce\models\LineItem;
 //use craft\commerce\Plugin;
+use craft\contactform\models\Submission;
 use craft\elements\Asset;
 use craft\elements\Category;
 use craft\elements\db\EntryQuery;
@@ -71,6 +72,8 @@ class FauxTwigExtension extends AbstractExtension implements GlobalsInterface
             'site' => new Site(),
             'view' => new view(),
             'pageInfo' => new Paginate(),
+
+            'message' => new Submission(),
 
             // Commerce Elements
             //'lineItem' => new LineItem(),
