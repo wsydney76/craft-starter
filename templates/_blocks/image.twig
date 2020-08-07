@@ -29,6 +29,8 @@
             src: image.url,
             srcset: image.srcset(srcsetSizes),
             alt: caption != image.title ? image.title : '',
+            height: image.height,
+            width: image.width,
             loading: 'lazy'
         } %}
         {% set figureAttr = {
