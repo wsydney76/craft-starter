@@ -5,10 +5,10 @@
   "license": "Unlicense",
   "require": {
     "clubstudioltd/craft-asset-rev": "6.0.2",
-    "craftcms/cms": "3.5.0",
+    "craftcms/cms": "3.5.3",
     "craftcms/contact-form": "^2.2",
     "doublesecretagency/craft-cpcss": "2.2.1",
-    "spicyweb/craft-embedded-assets": "2.3.2",
+    "spicyweb/craft-embedded-assets": "2.3.3",
     "wsydney76/elementmap": "^1.4"
   },
   "require-dev": {
