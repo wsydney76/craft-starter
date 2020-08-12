@@ -27,13 +27,5 @@ class MainModule extends Module
             }
         }
         );
-
-        if (Craft::$app->request->getIsCpRequest()) {
-            $user = Craft::$app->user->identity;
-            if ($user && $user->disableFieldHandles) {
-                Craft::$app->view->registerCss('.field .heading .code.small.copytextbtn {display:none;}');
-            }
-        }
-
     }
 }

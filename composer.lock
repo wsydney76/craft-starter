@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "833e0062d9bb8a6b3b6c3181e8bbf266",
+    "content-hash": "c30e61491b8fbbbee1aac5f14cf07668",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -468,16 +468,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "3.5.3",
+            "version": "dev-develop",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "b43974522c8a29f2e6406e8c7dde999c037df39b"
+                "reference": "893ec755c5f0676bf01f0d30db2ab945df51a35d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/b43974522c8a29f2e6406e8c7dde999c037df39b",
-                "reference": "b43974522c8a29f2e6406e8c7dde999c037df39b",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/893ec755c5f0676bf01f0d30db2ab945df51a35d",
+                "reference": "893ec755c5f0676bf01f0d30db2ab945df51a35d",
                 "shasum": ""
             },
             "require": {
@@ -561,7 +561,7 @@
                 "craftcms",
                 "yii2"
             ],
-            "time": "2020-08-11T23:21:59+00:00"
+            "time": "2020-08-12T18:49:47+00:00"
         },
         {
             "name": "craftcms/contact-form",
@@ -6023,9 +6023,18 @@
             "time": "2020-05-02T11:43:24+00:00"
         }
     ],
-    "aliases": [],
+    "aliases": [
+        {
+            "alias": "3.5.3",
+            "alias_normalized": "3.5.3.0",
+            "version": "dev-develop",
+            "package": "craftcms/cms"
+        }
+    ],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "craftcms/cms": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
