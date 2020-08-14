@@ -39,10 +39,12 @@ fields:
     fieldGroup: null
     handle: showDescription
     instructions: ''
-    name: 'Show Description'
+    name: __blank__
     searchable: false
     settings:
-      default: ''
+      default: false
+      offLabel: null
+      onLabel: 'Show description'
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Lightswitch
@@ -51,10 +53,12 @@ fields:
     fieldGroup: null
     handle: showTitle
     instructions: ''
-    name: 'Show Title'
+    name: __blank__
     searchable: false
     settings:
-      default: ''
+      default: false
+      offLabel: null
+      onLabel: 'Show title'
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Lightswitch
