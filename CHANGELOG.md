@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.4.0 2020-08-14
+
+* Update to Craft 3.5.4
+
 ## 1.3.0 2020-08-05
 
 * Update to Craft 3.5.0
