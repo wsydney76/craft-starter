@@ -76,7 +76,7 @@ fields:
     fieldGroup: null
     handle: text
     instructions: ''
-    name: 'Heading Text'
+    name: Text
     searchable: true
     settings:
       byteLimit: null

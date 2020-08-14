@@ -8,7 +8,7 @@ fieldLayouts:
             fieldUid: 25fbe2f8-c1c3-4e3e-8a39-0b06a6392428
             instructions: null
             label: null
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null

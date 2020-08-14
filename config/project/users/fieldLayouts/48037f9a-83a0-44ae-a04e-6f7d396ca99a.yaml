@@ -3,9 +3,9 @@ tabs:
     elements:
       -
         fieldUid: 0929020c-32b9-4c07-b046-d314e04e7a1d
-        instructions: null
-        label: null
-        required: '0'
+        instructions: ''
+        label: ''
+        required: ''
         tip: null
         type: craft\fieldlayoutelements\CustomField
         warning: null

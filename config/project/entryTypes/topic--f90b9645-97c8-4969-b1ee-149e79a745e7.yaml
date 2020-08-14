@@ -4,6 +4,11 @@ fieldLayouts:
       -
         elements:
           -
+            type: project\modules\drafts\fieldlayoutelements\DraftWarning
+          -
+            heading: Header
+            type: craft\fieldlayoutelements\Heading
+          -
             autocapitalize: true
             autocomplete: false
             autocorrect: true
@@ -36,7 +41,7 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
-            width: 100
+            width: 25
           -
             fieldUid: 3ef62a7b-6c6d-470f-88a6-31de5a099b38
             instructions: null
@@ -45,7 +50,10 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
-            width: 100
+            width: 75
+          -
+            heading: Content
+            type: craft\fieldlayoutelements\Heading
           -
             fieldUid: 58b2e318-26cc-47b8-bee2-81369731d72f
             instructions: null

@@ -27,6 +27,5 @@ class MainModule extends Module
             }
         }
         );
-
     }
 }
