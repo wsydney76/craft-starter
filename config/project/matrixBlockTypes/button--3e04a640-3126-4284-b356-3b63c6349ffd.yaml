@@ -12,7 +12,7 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
-            width: 100
+            width: 25
           -
             fieldUid: fa76440e-c84c-4d11-b665-375f32514aaa
             instructions: null
@@ -21,7 +21,7 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
-            width: 50
+            width: 25
           -
             fieldUid: 7d7cf5ed-7c41-4d49-ba86-cef811f69683
             instructions: null
@@ -149,7 +149,7 @@ fields:
     contentColumnType: text
     fieldGroup: null
     handle: caption
-    instructions: 'If blank, the target title will be used.'
+    instructions: ''
     name: Caption
     searchable: true
     settings:
@@ -159,7 +159,7 @@ fields:
       columnType: null
       initialRows: '4'
       multiline: ''
-      placeholder: ''
+      placeholder: 'Leave blank to show title of target'
       uiMode: normal
     translationKeyFormat: null
     translationMethod: language
