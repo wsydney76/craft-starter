@@ -5,11 +5,10 @@
   "license": "Unlicense",
   "require": {
     "clubstudioltd/craft-asset-rev": "6.0.2",
-    "craftcms/cms": "3.5.4",
+    "craftcms/cms": "3.5.7",
     "craftcms/contact-form": "^2.2",
     "doublesecretagency/craft-cpcss": "2.2.1",
-    "spicyweb/craft-embedded-assets": "2.3.3",
-    "wsydney76/elementmap": "^1.4"
+    "spicyweb/craft-embedded-assets": "2.3.4"
   },
   "require-dev": {
     "yiisoft/yii2-shell": "^2.0.3"
@@ -30,6 +29,9 @@
   "scripts": {
     "post-install-cmd": [
       "@php -r \"file_exists('config/Env.php') || copy('config/Env.php.example', 'config/Env.php');\""
+    ],
+    "post-update-cmd": [
+      "@php craft migrate/all"
     ]
   },
   "minimum-stability": "dev",

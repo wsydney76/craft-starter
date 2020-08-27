@@ -1,9 +1,9 @@
 <?php
 return [
-    'msg_editunsaved_editable' => 'You are editing a draft, your edits will be autosaved. Click save to finish your work.',
-    'msg_editsaved_editable' => 'You are editing a draft, your edits will be autosaved. Click save to finish your work.',
+    'msg_editunsaved_editable' => 'You are editing a draft, your edits will be autosaved. Click publish to finish your work.',
+    'msg_editsaved_editable' => 'You are editing a draft, your edits will be autosaved. Click publish to finish your work.',
 
-    'msg_editunsaved_noteditable' => 'You are editing a draft, your edits will be autosaved. Click save to finish your work and create a disabled current version.',
+    'msg_editunsaved_noteditable' => 'You are editing a draft, your edits will be autosaved. Click publish to finish your work and create a disabled current version.',
     'msg_editsaved_noteditable' => 'You are editing a draft, your edits will be autosaved.',
 
     'msg_editcurrent' => 'Please use a draft if you are editing translatable fields, in order to avoid inconsistent translations.',
