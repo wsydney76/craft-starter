@@ -16,11 +16,11 @@ module.exports = {
                 'secondary-dark': '#666666',
             },
             height: {
-                '75': '25rem'
+                '100': '25rem'
             },
             width: {
-                '75': '25rem',
-                '300': '300px'
+                '100': '25rem',
+                '300px': '300px'
             },
 
             aspectRatio: { // defaults to {}
@@ -40,6 +40,14 @@ module.exports = {
         require("tailwindcss-responsive-embed"),
         require('tailwindcss-aspect-ratio'),
     ],
+
+    future: {
+        removeDeprecatedGapUtilities: true, // https://tailwindcss.com/docs/upcoming-changes
+    },
+
+    experimental: {
+        uniformColorPalette: true,
+    },
 
     purge: {
         content: [
