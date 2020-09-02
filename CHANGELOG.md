@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.4.1 2020-09-02
+
+* Update to Craft 3.5.8
+* Update to Tailwind CSS 1.7.6
+
 ## 1.4.0 2020-08-14
 
 * Update to Craft 3.5.4
