@@ -30,8 +30,13 @@
     "post-install-cmd": [
       "@php -r \"file_exists('config/Env.php') || copy('config/Env.php.example', 'config/Env.php');\""
     ],
+    "pre-update-cmd": [
+      "@php craft off --retry=30"
+    ],
     "post-update-cmd": [
-      "@php craft migrate/all"
+      "@php craft clear-caches/all",
+      "@php craft migrate/all",
+      "@php craft on"
     ]
   }
 }
