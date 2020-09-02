@@ -1,15 +1,14 @@
 {
   "name": "wsydney76/craft_starter",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "Simple multilingual project template for Craft CMS",
   "license": "Unlicense",
   "require": {
     "clubstudioltd/craft-asset-rev": "6.0.2",
-    "craftcms/cms": "3.5.4",
+    "craftcms/cms": "3.5.8",
     "craftcms/contact-form": "^2.2",
     "doublesecretagency/craft-cpcss": "2.2.1",
-    "spicyweb/craft-embedded-assets": "2.3.3",
-    "wsydney76/elementmap": "^1.4"
+    "spicyweb/craft-embedded-assets": "2.3.4"
   },
   "require-dev": {
     "yiisoft/yii2-shell": "^2.0.3"
@@ -30,14 +29,14 @@
   "scripts": {
     "post-install-cmd": [
       "@php -r \"file_exists('config/Env.php') || copy('config/Env.php.example', 'config/Env.php');\""
+    ],
+    "pre-update-cmd": [
+      "@php craft off --retry=30"
+    ],
+    "post-update-cmd": [
+      "@php craft clear-caches/all",
+      "@php craft migrate/all",
+      "@php craft on"
     ]
-  },
-  "minimum-stability": "dev",
-  "prefer-stable": true,
-  "repositories": [
-    {
-      "type": "path",
-      "url": "e:/craft/plugins/plugins/*"
-    }
-  ]
+  }
 }

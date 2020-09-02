@@ -55,9 +55,11 @@
 {# Unsaved drafts ------------------------------------------------------------------------------------------------ #}
 {% if isUnsavedDraft %}
 
-    <div class="meta read-only warning" id="draft-unsaved">
-        {{ "msg_editunsaved_#{editable}"|t('drafts') }}
-    </div>
+    {% if craft.app.config.general.autosaveDrafts %}
+        <div class="meta read-only warning" id="draft-unsaved">
+            {{ "msg_editunsaved_#{editable}"|t('drafts') }}
+        </div>
+    {% endif %}
 
     {% js %}
     $('#save-btn-container .btn.submit').prop('value', '{{ "msg_saveunsaveddrafttext_#{editable}"|t("drafts") }}');
@@ -98,7 +100,7 @@ if (window.draftEditor) {
     }
 {% endjs %}
 
-{# Current entry: show hint if multi-site  #}
+{# Current entry: show hint if multi-site #}
 {% if isCurrent and craft.app.sites.allSiteIds|length > 1 %}
     <div class="meta read-only warning" id="current-edit">
         {{ 'msg_editcurrent'|t('drafts') }}
@@ -108,6 +110,9 @@ if (window.draftEditor) {
 <div class="meta read-only warning" id="draft-new" style="display:none">
     {{ 'msg_newdraft'|t('drafts') }}: <b><span id="draft-name"></span></b>
 </div>
-<div class="meta read-only warning" id="draft-saved" style="display: none">
-    {{ "msg_editsaved_#{editable}"|t('drafts') }}
-</div>
+
+{% if craft.app.config.general.autosaveDrafts %}
+    <div class="meta read-only warning" id="draft-saved" style="display: none">
+        {{ "msg_editsaved_#{editable}"|t('drafts') }}
+    </div>
+{% endif %}

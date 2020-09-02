@@ -13,6 +13,6 @@
     {% endfor %}
 {% endif %}
 
-{% if element is defined and element.teaser %}
+{% if element is defined and element and element.teaser %}
     <meta name="description" content="{{ element.teaser }}">
 {% endif %}

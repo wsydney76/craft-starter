@@ -38,11 +38,11 @@
 @media (min-width: 576px) {
 
   .block-display-left {
-    @apply w-300 float-left clear-both mr-5 mb-5;
+    @apply w-300px float-left clear-both mr-5 mb-5;
   }
 
   .block-display-right {
-    @apply w-300 float-right clear-both ml-5 mb-5;
+    @apply w-300px float-right clear-both ml-5 mb-5;
   }
 }
 

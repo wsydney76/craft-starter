@@ -13,6 +13,7 @@ use config\Env;
 return [
     // Global settings
     '*' => [
+
         // Default Week Start Day (0 = Sunday, 1 = Monday...)
         'defaultWeekStartDay' => 1,
 
@@ -107,6 +108,9 @@ return [
                 'extensions' => ['odt', 'ods', 'odp', 'odg'],
             ],
         ],
+
+        // use JavaScript lib to preserve scroll positions in preview
+        'useIframeResizer' => true,
 
         // project specific settings
         'project' => [
