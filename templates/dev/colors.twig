@@ -1,0 +1,18 @@
+{% extends "_layout.twig" %}
+{% set global_title = 'Tailwind Colors' %}
+
+
+{% block content %}
+
+    {% for color in ['gray','red','orange','yellow','green','teal','blue','indigo','purple','pink'] %}
+        <h2>{{ color }}</h2>
+        <div class="flex">
+            {% for variant in 1..9 %}
+                <div class="w-24 h-24 bg-{{ color }}-{{ variant }}00">
+                    {{ color }}-{{ variant }}00
+                </div>
+            {% endfor %}
+        </div>
+    {% endfor %}
+
+{% endblock %}
