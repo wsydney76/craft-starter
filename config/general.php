@@ -70,13 +70,7 @@ return [
 
             // Lets `./craft clear-caches all` clear CP resources cache
             '@webroot' => dirname(__DIR__) . '/web',
-
-            // Let craft cli commands find controllers
-            '@' => '@root/project/modules',
-            '@project' => '@root/project',
-            // '@modules' => '@root/project/modules',
-            // '@resources' => '@root/project/resources',
-
+            
             // Variables
             '@SYSTEM_NAME' => Env::SYSTEM_NAME,
 

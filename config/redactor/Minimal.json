@@ -5,5 +5,6 @@
   "pasteLinks": false,
   "air": false,
   "autoparse": false,
-  "shortcuts": false
+  "shortcuts": false,
+  "toolbarFixed": true
 }
