@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.4.1 2020-09-11
+
+* Update to Craft 3.5.9
+* Update to Tailwind CSS 1.8.7
+* Update to Alpine JS 2.7.0
+
+### Changed
+
+* Use module aliases correctly
+
 ## 1.4.1 2020-09-02
 
 * Update to Craft 3.5.8
