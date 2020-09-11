@@ -43,6 +43,7 @@ module.exports = {
 
     future: {
         removeDeprecatedGapUtilities: true, // https://tailwindcss.com/docs/upcoming-changes
+        purgeLayersByDefault: true,
     },
 
     experimental: {

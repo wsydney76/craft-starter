@@ -23,7 +23,11 @@ class DraftsModule extends Module
     public function init()
     {
 
-        if (! Craft::$app->request->isCpRequest) {
+        Craft::setAlias('@project/modules/drafts', $this->getBasePath());
+
+        parent::init();
+
+        if (!Craft::$app->request->isCpRequest) {
             return;
         }
 

@@ -13,6 +13,9 @@ class MainModule extends Module
 {
     public function init()
     {
+
+        Craft::setAlias('@project/modules/main', $this->getBasePath());
+
         // Set the controllerNamespace based on whether this is a console or web request
         $this->controllerNamespace = Craft::$app->request->isConsoleRequest ?
             'project\\modules\\main\\console\\controllers' :
