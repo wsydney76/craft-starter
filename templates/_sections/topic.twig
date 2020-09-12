@@ -13,7 +13,7 @@
 
 {% block secondaryContent %}
     {% include '_partials/entries_list.twig' with {
-        heading: 'Other Topics',
+        heading: 'Other Topics'|t,
         query: craft.entries.section('topic').id('not ' ~ entry.id).orderBy('title')
     } only %}
 {% endblock %}

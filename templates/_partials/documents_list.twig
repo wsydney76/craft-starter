@@ -1,7 +1,15 @@
+{# @param heading #}
+{# @param query #}
+
 {% set assets = query.all %}
 
 {% if assets %}
-    {% embed '_layouts/embeds/widget.twig' with {heading:'Documents'} %}
+    {% embed '_layouts/embeds/widget.twig' %}
+
+        {% block heading %}
+            {{ heading }}
+        {% endblock %}
+
         {% block content %}
             {% for asset in assets %}
                 <div class="my-4">
