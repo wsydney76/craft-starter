@@ -1,6 +1,6 @@
 <?php
 
-namespace project\modules\main\fieldlayoutelements;
+namespace modules\main\fieldlayoutelements;
 
 use Craft;
 use craft\base\ElementInterface;

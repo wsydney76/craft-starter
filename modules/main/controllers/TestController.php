@@ -1,6 +1,6 @@
 <?php
 
-namespace project\modules\main\controllers;
+namespace modules\main\controllers;
 
 use craft\web\Controller;
 

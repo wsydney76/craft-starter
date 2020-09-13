@@ -9,7 +9,7 @@
 
 
 {% for element in entry.fieldLayout.tabs[0].elements %}
-    {% if element is instance of('project\\modules\\drafts\\fieldlayoutelements\\DraftWarning') %}
+    {% if element is instance of('modules\\drafts\\fieldlayoutelements\\DraftWarning') %}
         {% set hasDraftWarningElement = true %}
     {% endif %}
 

@@ -17,8 +17,8 @@
  * your config/ folder, alongside this one.
  */
 
-use project\modules\drafts\DraftsModule;
-use project\modules\main\MainModule;
+use modules\drafts\DraftsModule;
+use modules\main\MainModule;
 
 return [
     'modules' => [

@@ -1,6 +1,6 @@
 <?php
 
-namespace project\resources\site;
+namespace modules\resources\site;
 
 use craft\web\AssetBundle;
 

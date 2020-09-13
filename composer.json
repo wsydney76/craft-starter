@@ -15,7 +15,7 @@
   },
   "autoload": {
     "psr-4": {
-      "project\\": "project/",
+      "modules\\": "modules/",
       "config\\": "config/"
     }
   },
