@@ -32,11 +32,11 @@
     "sass-loader": "^7.1.0",
     "siema": "^1.5.1",
     "style-loader": "^0.23.1",
-    "tailwindcss": "^1.8.7",
+    "tailwindcss": "^1.8.10",
     "tailwindcss-aspect-ratio": "^3.0.0",
     "tailwindcss-responsive-embed": "^1.0.0",
     "terser-webpack-plugin": "^1.4.5",
-    "webpack": "^4.44.1",
+    "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.7.1",
     "webpack-manifest-plugin": "^2.0.4"
