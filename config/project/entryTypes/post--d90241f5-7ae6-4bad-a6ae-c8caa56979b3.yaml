@@ -4,7 +4,7 @@ fieldLayouts:
       -
         elements:
           -
-            type: project\modules\drafts\fieldlayoutelements\DraftWarning
+            type: modules\drafts\fieldlayoutelements\DraftWarning
           -
             heading: Header
             type: craft\fieldlayoutelements\Heading

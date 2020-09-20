@@ -44,4 +44,4 @@ settings:
   path: '@webroot/images'
 sortOrder: 2
 type: craft\volumes\Local
-url: '@web/images'
+url: '@baseurl/images'

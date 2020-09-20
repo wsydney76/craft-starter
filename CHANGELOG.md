@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.4.3 2020-09-18
+
+* Use @baseurl alias instead of @web, in order to avoid warnings in Campagne plugin.
+
 ## 1.4.2 2020-09-11
 
 * Update to Craft 3.5.9

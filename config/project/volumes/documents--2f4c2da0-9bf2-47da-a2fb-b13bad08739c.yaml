@@ -44,4 +44,4 @@ settings:
   path: '@webroot/documents'
 sortOrder: 6
 type: craft\volumes\Local
-url: '@web/documents'
+url: '@baseurl/documents'

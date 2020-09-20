@@ -66,7 +66,10 @@ return [
             '@ENVIRONMENT' => Env::ENVIRONMENT,
 
             // Prevent the @web alias from being set automatically (cache poisoning vulnerability)
-            '@web' => Env::DEFAULT_SITE_URL,
+            '@web' => Env::BASE_URL,
+
+            // Base Url
+            '@baseurl' => Env::BASE_URL,
 
             // Lets `./craft clear-caches all` clear CP resources cache
             '@webroot' => dirname(__DIR__) . '/web',
