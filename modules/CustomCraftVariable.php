@@ -1,6 +1,6 @@
 <?php
 
-namespace project;
+namespace modules;
 
 use craft\web\twig\variables\CraftVariable;
 use spicyweb\embeddedassets\Variable;

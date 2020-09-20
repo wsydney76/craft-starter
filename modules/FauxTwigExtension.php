@@ -20,7 +20,7 @@
  * @copyright Copyright (c) 2019 nystudio107
  */
 
-namespace nystudio107\craft;
+namespace modules;
 
 //use craft\commerce\elements\Order;
 //use craft\commerce\elements\Product;
@@ -30,17 +30,14 @@ namespace nystudio107\craft;
 use craft\contactform\models\Submission;
 use craft\elements\Asset;
 use craft\elements\Category;
-use craft\elements\db\EntryQuery;
 use craft\elements\Entry;
 use craft\elements\GlobalSet;
 use craft\elements\MatrixBlock;
 use craft\elements\Tag;
 use craft\elements\User;
 use craft\models\Site;
-use craft\web\twig\variables\CraftVariable;
 use craft\web\twig\variables\Paginate;
 use craft\web\view;
-use project\CustomCraftVariable;
 use Twig\Extension\AbstractExtension;
 use Twig\Extension\GlobalsInterface;
 
@@ -55,7 +52,7 @@ class FauxTwigExtension extends AbstractExtension implements GlobalsInterface
     {
         return [
             // Craft Variable
-            'craft' => new CustomCraftVariable(),
+            'craft' => new CustomCraftVariable() ,
             // Craft Elements
             'element' => new Entry(),
             'asset' => new Asset(),

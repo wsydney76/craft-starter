@@ -1,11 +1,11 @@
 <?php
 
-namespace project\modules\main;
+namespace modules\main;
 
 use Craft;
 use craft\events\DefineFieldLayoutElementsEvent;
 use craft\models\FieldLayout;
-use project\modules\main\fieldlayoutelements\NewRow;
+use modules\main\fieldlayoutelements\NewRow;
 use yii\base\Event;
 use yii\base\Module;
 
@@ -14,12 +14,12 @@ class MainModule extends Module
     public function init()
     {
 
-        Craft::setAlias('@project/modules/main', $this->getBasePath());
+        Craft::setAlias('@modules/main', $this->getBasePath());
 
         // Set the controllerNamespace based on whether this is a console or web request
         $this->controllerNamespace = Craft::$app->request->isConsoleRequest ?
-            'project\\modules\\main\\console\\controllers' :
-            'project\\modules\\main\\controllers';
+            'modules\\main\\console\\controllers' :
+            'modules\\main\\controllers';
 
         // Add Drafts Warning to UI Elements
         Event::on(

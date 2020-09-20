@@ -1,6 +1,13 @@
+{# @param heading #}
+{# @param query #}
+
 {% set entries = query.all %}
 {% if entries %}
-    {% embed "_layouts/embeds/widget.twig" with {heading:'Pages', entries:entries, entry:entry, boxed:boxed??true} only %}
+    {% embed "_layouts/embeds/widget.twig" %}
+        {% block heading %}
+            {{ heading }}
+        {% endblock %}
+
         {% block content %}
             <nav class="text-left">
                 <ul class="list-none">

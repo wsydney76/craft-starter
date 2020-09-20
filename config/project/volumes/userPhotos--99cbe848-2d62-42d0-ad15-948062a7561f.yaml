@@ -35,4 +35,4 @@ settings:
   path: '@webroot/userphotos'
 sortOrder: 3
 type: craft\volumes\Local
-url: '@web/userphotos'
+url: '@baseurl/userphotos'

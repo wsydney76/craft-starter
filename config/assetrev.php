@@ -31,7 +31,7 @@ return [
                 return '';
             }
         ],
-        'assetUrlPrefix' => Env::DEFAULT_SITE_URL,// . '/assets/dist/',
+        'assetUrlPrefix' => Env::BASE_URL,// . '/assets/dist/',
         'manifestPath' => 'web/assets/dist/manifest.json',
         'pipeline' => 'manifest|noManifest',
     ]

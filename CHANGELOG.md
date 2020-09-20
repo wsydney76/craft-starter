@@ -1,6 +1,12 @@
 # Changelog
 
-## 1.4.1 2020-09-11
+## 1.4.3 2020-09-18
+
+* Update to Craft 3.5.11.1
+* Use @baseurl alias instead of @web, in order to avoid warnings in Campagne plugin.
+* Update to Tailwind CSS 1.8.10
+
+## 1.4.2 2020-09-11
 
 * Update to Craft 3.5.9
 * Update to Tailwind CSS 1.8.7

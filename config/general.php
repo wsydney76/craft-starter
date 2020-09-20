@@ -66,11 +66,14 @@ return [
             '@ENVIRONMENT' => Env::ENVIRONMENT,
 
             // Prevent the @web alias from being set automatically (cache poisoning vulnerability)
-            '@web' => Env::DEFAULT_SITE_URL,
+            '@web' => Env::BASE_URL,
+
+            // Base Url
+            '@baseurl' => Env::BASE_URL,
 
             // Lets `./craft clear-caches all` clear CP resources cache
             '@webroot' => dirname(__DIR__) . '/web',
-            
+
             // Variables
             '@SYSTEM_NAME' => Env::SYSTEM_NAME,
 
@@ -91,9 +94,8 @@ return [
         // Use session instead of cookie for CSRF Protection (which is enabled by default)
         'enableCsrfCookie' => false,
 
-        // Whether to save the project config out to config/project.yaml
-        // (see https://docs.craftcms.com/v3/project-config.html)
-        'useProjectConfigFile' => true,
+        // Whether front end requests should respond with X-Robots-Tag: none HTTP headers
+        'disallowRobots' => true,
 
         // Allow Open Document file types for upload
         'extraFileKinds' => [
@@ -126,14 +128,13 @@ return [
     // Dev environment settings
     'dev' => [
         // Dev Mode (see https://craftcms.com/guides/what-dev-mode-does)
-        'devMode' => true,
+        'devMode' => true
     ],
 
     // Staging environment settings
     'staging' => [
         // Set this to `false` to prevent administrative changes from being made on staging
-        'allowAdminChanges' => false,
-
+        'allowAdminChanges' => false
     ],
 
     // Production environment settings
@@ -146,6 +147,9 @@ return [
         'cacheElementQueries' => true,
 
         // Whether to enable caching of GraphQL queries
-        'enableGraphQlCaching' => true
+        'enableGraphQlCaching' => true,
+
+        // Whether front end requests should respond with X-Robots-Tag: none HTTP headers
+        'disallowRobots' => false
     ],
 ];

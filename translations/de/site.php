@@ -19,6 +19,7 @@ return [
     'Page' => 'Seite',
     'Pages' => 'Seiten',
     'Post' => 'Beitrag',
+    'Related Entries' => 'Verwandte Beiträge',
     'Search for' => 'Suche nach',
     'Search' => 'Suchen',
     'Topic' => 'Thema',

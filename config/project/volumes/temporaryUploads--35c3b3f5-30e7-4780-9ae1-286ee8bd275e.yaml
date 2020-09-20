@@ -44,4 +44,4 @@ settings:
   path: '@webroot/temporaryuploads'
 sortOrder: 4
 type: craft\volumes\Local
-url: '@web/temporaryuploads'
+url: '@baseurl/temporaryuploads'

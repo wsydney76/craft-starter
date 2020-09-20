@@ -1,6 +1,6 @@
 <?php
 
-namespace project\modules\main\console\controllers;
+namespace modules\main\console\controllers;
 
 use Craft;
 use craft\console\Controller;

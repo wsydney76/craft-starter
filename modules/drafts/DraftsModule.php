@@ -1,6 +1,6 @@
 <?php
 
-namespace project\modules\drafts;
+namespace modules\drafts;
 
 use Craft;
 use craft\base\Element;
@@ -14,7 +14,7 @@ use craft\events\SetElementTableAttributeHtmlEvent;
 use craft\i18n\PhpMessageSource;
 use craft\models\FieldLayout;
 use craft\web\View;
-use project\modules\drafts\fieldlayoutelements\DraftWarning;
+use modules\drafts\fieldlayoutelements\DraftWarning;
 use yii\base\Event;
 use yii\base\Module;
 
@@ -23,7 +23,7 @@ class DraftsModule extends Module
     public function init()
     {
 
-        Craft::setAlias('@project/modules/drafts', $this->getBasePath());
+        Craft::setAlias('@modules/drafts', $this->getBasePath());
 
         parent::init();
 
