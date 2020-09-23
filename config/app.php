@@ -17,10 +17,12 @@
  * your config/ folder, alongside this one.
  */
 
+use config\Env;
 use modules\drafts\DraftsModule;
 use modules\main\MainModule;
 
 return [
+    'id' => Env::APP_ID,
     'modules' => [
         'main' => MainModule::class,
         'cpDrafts' => DraftsModule::class
@@ -28,6 +30,5 @@ return [
     'bootstrap' => [
        'main',
        'cpDrafts'
-
-    ]
+    ],
 ];
