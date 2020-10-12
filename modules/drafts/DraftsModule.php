@@ -125,7 +125,7 @@ class DraftsModule extends Module
                 /** @var Entry $entry */
                 $entry = $event->sender;
 
-                $count = Entry::find()->draftOf($entry->getSourceId())->count();
+                $count = Entry::find()->draftOf($entry->getSourceId())->site('*')->unique()->count();
                 $event->html = $count ? '<span class="status pending"></span> ' . $count : '';
             }
         }

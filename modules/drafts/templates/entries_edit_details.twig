@@ -21,7 +21,7 @@
 
 {% if (not hasDraftWarningElement) and  (isCurrent or isDraft) and not isUnsavedDraft %}
 
-    {% set query = craft.entries.draftOf(entry.sourceId) %}
+    {% set query = craft.entries.draftOf(entry.sourceId).site('*').unique().preferSites([entry.site.handle]) %}
 
     {% if isDraft %}
         {% set query = query.id("not #{entry.id}") %}
