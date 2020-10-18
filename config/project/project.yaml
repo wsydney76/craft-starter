@@ -1,19 +1,19 @@
 assets:
   tempVolumeUid: 35c3b3f5-30e7-4780-9ae1-286ee8bd275e
-dateModified: 1600591802
+dateModified: 1602923755
 email:
-  fromEmail: '@EMAIL_ADDRESS'
-  fromName: '@EMAIL_SENDER'
+  fromEmail: $EMAIL_ADDRESS
+  fromName: $EMAIL_SENDER
   replyToEmail: null
   template: ''
   transportSettings:
     encryptionMethod: tls
-    host: '@SMTP_HOST'
-    password: '@SMTP_PASSWORD'
-    port: '@SMTP_PORT'
+    host: $SMTP_HOST
+    password: $SMTP_PASSWORD
+    port: $SMTP_PORT
     timeout: '10'
     useAuthentication: '1'
-    username: '@SMTP_USER'
+    username: $SMTP_USER
   transportType: craft\mail\transportadapters\Smtp
 plugins:
   assetrev:
@@ -45,7 +45,7 @@ plugins:
       cacheDuration: 300
       embedlyKey: ''
       facebookKey: ''
-      googleKey: '@GOOGLE_API_KEY'
+      googleKey: $GOOGLE_API_KEY
       iframelyKey: ''
       maxAssetNameLength: 50
       maxFileNameLength: 50
@@ -116,7 +116,7 @@ plugins:
 system:
   edition: pro
   live: true
-  name: '@SYSTEM_NAME'
+  name: $SYSTEM_NAME
   retryDuration: 30
   schemaVersion: 3.5.13
   timeZone: Europe/Berlin

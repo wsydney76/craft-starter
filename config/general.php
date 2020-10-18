@@ -10,6 +10,9 @@
 
 use config\Env;
 
+// Set Variables for use in CP
+Env::setCpVars();
+
 return [
     // Global settings
     '*' => [
@@ -22,7 +25,6 @@ return [
 
         // Control Panel trigger word
         'cpTrigger' => 'admin',
-
 
         // The string preceding a number which Craft will look for when determining if the current request is for a particular page in a paginated list of pages.
         // 'pageTrigger' => 'page/',
@@ -62,8 +64,6 @@ return [
         'errorTemplatePrefix' => '_errors/',
 
         'aliases' => [
-            // Environment
-            '@ENVIRONMENT' => Env::ENVIRONMENT,
 
             // Prevent the @web alias from being set automatically (cache poisoning vulnerability)
             '@web' => Env::BASE_URL,
@@ -74,18 +74,6 @@ return [
             // Lets `./craft clear-caches all` clear CP resources cache
             '@webroot' => dirname(__DIR__) . '/web',
 
-            // Variables
-            '@SYSTEM_NAME' => Env::SYSTEM_NAME,
-
-            '@EMAIL_ADDRESS' => Env::EMAIL_ADDRESS,
-            '@EMAIL_SENDER' => Env::EMAIL_SENDER,
-
-            '@SMTP_HOST' => Env::SMTP_HOST,
-            '@SMTP_PORT' => Env::SMTP_PORT,
-            '@SMTP_USER' => Env::SMTP_USER,
-            '@SMTP_PASSWORD' => Env::SMTP_PASSWORD,
-
-            '@GOOGLE_API_KEY' => Env::GOOGLE_API_KEY
         ],
 
         // The secure key Craft will use for hashing and encrypting data
@@ -112,9 +100,10 @@ return [
         'project' => [
             // How many entries shall be show on index pages
             'entriesPerPage' => 5,
-            // How the entries on an section index page shall be sorted (defaults to title)
+            // How the entries on an section index page shall be sorted
+            // defaults to 'postDate desc' for channels, custom sort for structures
             'orderBy' => [
-                'post' => 'postDate desc'
+                'topic' => 'title'
             ]
         ]
 
@@ -123,6 +112,11 @@ return [
     // Temporary Settings for installing or upgrading the site
     'install' => [
         'isSystemLive' => false,
+    ],
+
+    'safe' => [
+        'devMode' => true,
+        'disabledPlugins' => '*'
     ],
 
     // Dev environment settings
