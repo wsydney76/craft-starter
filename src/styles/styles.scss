@@ -4,8 +4,9 @@
 @tailwind utilities;
 
 h1 {
-  @apply font-bold leading-tight;
+  @apply font-bold text-5xl tracking-wide leading-tight;
 }
+
 
 h2,
 h3,
@@ -13,10 +14,6 @@ h4,
 h5,
 h6 {
   @apply leading-tight py-2;
-}
-
-h1 {
-  @apply font-bold text-5xl tracking-wide leading-tight;
 }
 
 h2 {

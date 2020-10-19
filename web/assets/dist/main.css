@@ -24577,6 +24577,8 @@ video {
 
 h1 {
   font-weight: 700;
+  font-size: 3rem;
+  letter-spacing: 0.025em;
   line-height: 1.25;
 }
 
@@ -24588,13 +24590,6 @@ h6 {
   line-height: 1.25;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-}
-
-h1 {
-  font-weight: 700;
-  font-size: 3rem;
-  letter-spacing: 0.025em;
-  line-height: 1.25;
 }
 
 h2 {
