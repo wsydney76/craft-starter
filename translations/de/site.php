@@ -27,6 +27,8 @@ return [
     'You did not enter a search criteria' => 'Sie haben keinen Suchbegriff eingegeben',
     'Your search for' => 'Ihre Suche nach',
     '{count,plural,=1{result} other{results}} for' => '{count,plural,=1{Ergebnis} other{Ergebnisse}} für',
+    '“' => '„',
+    '”' => '“',
 
 
     // Backend

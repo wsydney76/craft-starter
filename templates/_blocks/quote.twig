@@ -1,5 +1,5 @@
 <blockquote class="border-l-4 border-secondary p-4 bg-white font-serif shadow-lg">
-    <p class="my-0 text-2xl font-semibold italic">{{ block.text }}</p>
+    <p class="my-0 text-2xl font-semibold italic">{{ '“'|t }}{{ block.text }}{{ '”'|t }}</p>
     {% if block.textSource %}
         <footer>
             <cite class="block text-lg mt-4" title="Source Title">&mdash; {{ block.textSource }}</cite>

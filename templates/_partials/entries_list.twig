@@ -1,11 +1,7 @@
 {% set entries = query.all %}
 
 {% if entries %}
-    {% embed '_layouts/embeds/widget.twig' %}
-        {% block heading %}
-            {{ heading }}
-        {% endblock %}
-
+    {% embed '_layouts/embeds/widget.twig' with {heading: heading} %}
         {% block content %}
             {% from '_macros/lib.twig' import linkList %}
             {{ linkList(entries|map(e => {text:e.title, href:e.url, postDate:e.postDate|date}), showPostDate??false) }}
