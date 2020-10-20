@@ -1,6 +1,14 @@
+{# @param heading #}
+{# @param headings - alternative to heading: Array 0:Singular, 1:Plural #}
+{# @param query #}
+
 {% set entries = query.all %}
 
 {% if entries %}
+    {% if headings is defined %}
+        {% set heading = entries|length == 1 ? headings[0] : headings[1] %}
+    {% endif %}
+
     {% embed '_layouts/embeds/widget.twig' with {heading: heading} %}
         {% block content %}
             {% from '_macros/lib.twig' import linkList %}

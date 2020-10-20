@@ -12,7 +12,7 @@
 
 {% block secondaryContentTop %}
     {% include '_partials/documents_list.twig' with {
-        heading: 'Documents'|t,
+        headings: ['Document'|t, 'Documents'|t],
         query: entry.documents
     } only %}
 

@@ -1,9 +1,14 @@
 {# @param heading #}
+{# @param headings - alternative to heading: Array 0:Singular, 1:Plural #}
 {# @param query #}
 
 {% set assets = query.all %}
 
 {% if assets %}
+    {% if headings is defined %}
+        {% set heading = assets|length == 1 ? headings[0] : headings[1] %}
+    {% endif %}
+
     {% embed '_layouts/embeds/widget.twig' with {heading: heading} %}
         {% block content %}
             {% for asset in assets %}

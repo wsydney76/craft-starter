@@ -62,14 +62,14 @@
     {% endif %}
 
     {% js %}
-    $('#save-btn-container .btn.submit').prop('value', '{{ "msg_saveunsaveddrafttext_#{editable}"|t("drafts") }}');
+    $('#save-btn-container .btn.submit[type=submit]').html('{{ "msg_saveunsaveddrafttext_#{editable}"|t("drafts") }}');
     {% endjs %}
 {% endif %}
 
 {# Drafts for saved entries -------------------------------------------------------------------------------------- #}
 {% if isDraft and not isUnsavedDraft %}
     {% js %}
-    $('#header > .flex > .btn.submit').prop('value', '{{ "msg_savedrafttext_#{editable}"|t("drafts") }}');
+    $('#header #publish-changes-btn-container .btn').html('{{ "msg_savedrafttext_#{editable}"|t("drafts") }}');
         $('#draft-saved').css('display', '');
     {% endjs %}
 {% endif %}
@@ -79,7 +79,7 @@
 {# Current entry ----------------------------------------------------------------------------------------------- #}
 {% if isCurrent %}
     {% js %}
-    $('#save-btn-container .btn.submit').prop('value', '{{ 'msg_savecurrenttext'|t('drafts') }}');
+    $('#save-btn-container .btn.submit[type=submit]').html( '{{ 'msg_savecurrenttext'|t('drafts') }}');
     {% endjs %}
 {% endif %}
 
