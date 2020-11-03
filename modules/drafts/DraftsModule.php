@@ -11,6 +11,7 @@ use craft\events\RegisterElementSourcesEvent;
 use craft\events\RegisterElementTableAttributesEvent;
 use craft\events\RegisterTemplateRootsEvent;
 use craft\events\SetElementTableAttributeHtmlEvent;
+use craft\helpers\UrlHelper;
 use craft\i18n\PhpMessageSource;
 use craft\models\FieldLayout;
 use craft\web\View;
