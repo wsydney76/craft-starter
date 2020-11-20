@@ -23,18 +23,6 @@
   }
 }
 
-.form-group {
-
-  .form-control {
-    @apply w-full p-2 my-3 shadow;
-
-  }
-
-  .form-check {
-    @apply my-3;
-  }
-}
-
 @media (min-width: 576px) {
 
   .block-display-left {
