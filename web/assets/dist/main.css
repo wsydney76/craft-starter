@@ -27901,7 +27901,6 @@ select{
 .select-all{
   -webkit-user-select: all;
      -moz-user-select: all;
-      -ms-user-select: all;
           user-select: all;
 }
 
@@ -59534,7 +59533,6 @@ a:hover {
   .sm\:select-all{
     -webkit-user-select: all;
        -moz-user-select: all;
-        -ms-user-select: all;
             user-select: all;
   }
 
@@ -90990,7 +90988,6 @@ a:hover {
   .md\:select-all{
     -webkit-user-select: all;
        -moz-user-select: all;
-        -ms-user-select: all;
             user-select: all;
   }
 
@@ -122446,7 +122443,6 @@ a:hover {
   .lg\:select-all{
     -webkit-user-select: all;
        -moz-user-select: all;
-        -ms-user-select: all;
             user-select: all;
   }
 
@@ -153902,7 +153898,6 @@ a:hover {
   .xl\:select-all{
     -webkit-user-select: all;
        -moz-user-select: all;
-        -ms-user-select: all;
             user-select: all;
   }
 
@@ -185358,7 +185353,6 @@ a:hover {
   .\32xl\:select-all{
     -webkit-user-select: all;
        -moz-user-select: all;
-        -ms-user-select: all;
             user-select: all;
   }
 
