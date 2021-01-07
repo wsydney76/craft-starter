@@ -7,8 +7,8 @@
     "clubstudioltd/craft-asset-rev": "6.0.2",
     "craftcms/cms": "3.5.17.1",
     "craftcms/contact-form": "2.2.7",
-    "doublesecretagency/craft-cpcss": "2.2.1",
-    "spicyweb/craft-embedded-assets": "2.4.4"
+    "doublesecretagency/craft-cpcss": "2.3.0",
+    "spicyweb/craft-embedded-assets": "2.4.5"
   },
   "require-dev": {
     "yiisoft/yii2-shell": "^2.0.3"
@@ -31,7 +31,7 @@
       "@php -r \"file_exists('config/Env.php') || copy('config/Env.php.example', 'config/Env.php');\""
     ],
     "pre-update-cmd": [
-      "@php craft off --retry=30"
+      "@php craft off"
     ],
     "post-update-cmd": [
       "@php craft clear-caches/all",
