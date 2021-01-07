@@ -21,7 +21,7 @@
                     <div id="title" class="{{ global_titleSectionClass ?? '' }}">
                         {% block title %}
                             <header>
-                                <div id="title-container" class="container mx-auto">
+                                <div id="title-container" class="container mx-auto  max-w-screen-xl">
                                     {% block titleContainer %}
                                         <div class="pt-4 pl-2 pb-4">
                                             <div id="title-top">{% block titleTop %}{% endblock %}</div>
@@ -48,7 +48,7 @@
             <article id="content-wrapper">
                 {% block contentWrapper %}
 
-                    <div id="content-container" class="container mx-auto px-2 py-5">
+                    <div id="content-container" class="container mx-auto max-w-screen-xl px-2 py-5">
                         {% block contentContainer %}
 
                             <div id="container-top">
