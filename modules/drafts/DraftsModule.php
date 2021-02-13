@@ -11,6 +11,7 @@ use craft\events\RegisterElementSourcesEvent;
 use craft\events\RegisterElementTableAttributesEvent;
 use craft\events\RegisterTemplateRootsEvent;
 use craft\events\SetElementTableAttributeHtmlEvent;
+use craft\helpers\ElementHelper;
 use craft\helpers\UrlHelper;
 use craft\i18n\PhpMessageSource;
 use craft\models\FieldLayout;
@@ -71,33 +72,14 @@ class DraftsModule extends Module
             });
         }
 
-        // Register element index source and table fields for drafts
-        Event::on(
-            Entry::class,
-            Element::EVENT_REGISTER_SOURCES, function(RegisterElementSourcesEvent $event) {
-            $event->sources[] = [
-                'key' => 'drafts',
-                'label' => Craft::t('drafts', 'All drafts'),
-                'criteria' => [
-                    'drafts' => true,
-                    'editable' => true
-
-                ],
-                'defaultSort' => [
-                    0 => 'dateCreated',
-                    1 => 'desc'
-                ]
-            ];
-        }
-        );
         Event::on(
             Entry::class,
             Element::EVENT_REGISTER_TABLE_ATTRIBUTES, function(RegisterElementTableAttributesEvent $event) {
-            $event->tableAttributes['isUnsavedDraft'] = ['label' => Craft::t('drafts', 'Unsaved?')];
+            $event->tableAttributes['isUnsavedDraft'] = ['label' => Craft::t('drafts', 'Unpublished')];
             $event->tableAttributes['draftName'] = ['label' => Craft::t('drafts', 'Draft Name')];
             $event->tableAttributes['draftNotes'] = ['label' => Craft::t('drafts', 'Draft Notes')];
             $event->tableAttributes['creatorId'] = ['label' => Craft::t('drafts', 'Draft Creator')];
-            $event->tableAttributes['hasDrafts'] = ['label' => Craft::t('drafts', 'Has Drafts')];
+
         }
         );
         Event::on(
@@ -121,14 +103,14 @@ class DraftsModule extends Module
                 $event->html = $user ? $user->name : '';
             }
 
-            if ($event->attribute == 'hasDrafts') {
+            if ($event->attribute == 'draftNotes') {
                 $event->handled = true;
                 /** @var Entry $entry */
                 $entry = $event->sender;
 
-                $count = Entry::find()->draftOf($entry->getSourceId())->site('*')->unique()->count();
-                $event->html = $count ? '<span class="status pending"></span> ' . $count : '';
+                $event->html = ElementHelper::isDraftOrRevision($entry) ? $entry->draftNotes : '';
             }
+
         }
         );
     }

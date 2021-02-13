@@ -48,8 +48,8 @@ return [
         // Max No. of revisions
         'maxRevisions' => 10,
 
-        // The amount of time to wait before Craft purges drafts of new elements that were never formally saved.
-        'purgeUnsavedDraftsDuration' => 86400,
+        // Whether drafts should be saved automatically as they are edited.
+        'autosaveDrafts' => false,
 
         // Whether uploaded filenames with non-ASCII characters should be converted to ASCII
         'convertFilenamesToAscii' => true,

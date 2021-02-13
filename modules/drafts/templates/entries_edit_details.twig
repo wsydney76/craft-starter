@@ -1,7 +1,7 @@
 {% set entry = context['entry'] %}
 {% set isCurrent = context['isCurrent'] %}
 {% set isDraft = context['isDraft'] %}
-{% set isUnsavedDraft = context['isUnsavedDraft'] %}
+
 {% set editable = entry.isEditable ? 'editable' : 'noteditable' %}
 
 {# Check if draft warning is set as UI element #}
@@ -12,14 +12,13 @@
     {% if element is instance of('modules\\drafts\\fieldlayoutelements\\DraftWarning') %}
         {% set hasDraftWarningElement = true %}
     {% endif %}
-
 {% endfor %}
 
 
 
 {# Show existing drafts --------------------------------------------------------------------- #}
 
-{% if (not hasDraftWarningElement) and  (isCurrent or isDraft) and not isUnsavedDraft %}
+{% if (not hasDraftWarningElement) and  (isCurrent or isDraft)  %}
 
     {% set query = craft.entries.draftOf(entry.sourceId).site('*').unique().preferSites([entry.site.handle]) %}
 
@@ -52,37 +51,6 @@
 {% endif %}
 
 
-{# Unsaved drafts ------------------------------------------------------------------------------------------------ #}
-{% if isUnsavedDraft %}
-
-    {% if craft.app.config.general.autosaveDrafts %}
-        <div class="meta read-only warning" id="draft-unsaved">
-            {{ "msg_editunsaved_#{editable}"|t('drafts') }}
-        </div>
-    {% endif %}
-
-    {% js %}
-    $('#save-btn-container .btn.submit[type=submit]').html('{{ "msg_saveunsaveddrafttext_#{editable}"|t("drafts") }}');
-    {% endjs %}
-{% endif %}
-
-{# Drafts for saved entries -------------------------------------------------------------------------------------- #}
-{% if isDraft and not isUnsavedDraft %}
-    {% js %}
-    $('#header #publish-changes-btn-container .btn').html('{{ "msg_savedrafttext_#{editable}"|t("drafts") }}');
-        $('#draft-saved').css('display', '');
-    {% endjs %}
-{% endif %}
-
-
-
-{# Current entry ----------------------------------------------------------------------------------------------- #}
-{% if isCurrent %}
-    {% js %}
-    $('#save-btn-container .btn.submit[type=submit]').html( '{{ 'msg_savecurrenttext'|t('drafts') }}');
-    {% endjs %}
-{% endif %}
-
 {% js %}
 if (window.draftEditor) {
     window.draftEditor.on('createDraft', function() {
@@ -90,9 +58,9 @@ if (window.draftEditor) {
         $('#draft-new').css('display', '');
         $('#draft-saved').css('display', '');
         $('#current-edit').css('display', 'none');
-        $('#header > .flex > .btn.submit').prop('value', '{{ "msg_savedrafttext_#{editable}"|t("drafts") }}');
+        Craft.cp.displayNotice($('#draft-new').html());
+
         if (window.draftEditor.isPreviewActive()) {
-            Craft.cp.displayNotice($('#draft-new').html());
             $('.lp-editor-container header').append('<div><b>' + $('#draft-name').html() + '</b></div>');
             }
         });
@@ -100,6 +68,20 @@ if (window.draftEditor) {
     }
 {% endjs %}
 
+{#
+{% js %}
+if (window.draftEditor) {
+    window.draftEditor.on('createDraft', function() {
+        if (window.draftEditor.isPreviewActive()) {
+            var draftName = window.draftEditor.settings.draftName;
+            Craft.cp.displayNotice('A new preview draft ' + draftName + ' was created for your preview edits');
+            $('.lp-editor-container header').append('<div style="margin-top:6px;"><b>New draft for preview edits: ' + draftName + '</b></div>');
+        }
+    });
+
+}
+{% endjs %}
+#}
 {# Current entry: show hint if multi-site #}
 {% if isCurrent and craft.app.sites.allSiteIds|length > 1 %}
     <div class="meta read-only warning" id="current-edit">

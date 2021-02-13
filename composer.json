@@ -5,9 +5,10 @@
   "license": "Unlicense",
   "require": {
     "clubstudioltd/craft-asset-rev": "6.0.2",
-    "craftcms/cms": "3.5.17.1",
+    "craftcms/cms": "3.6.5.1",
     "craftcms/contact-form": "2.2.7",
     "doublesecretagency/craft-cpcss": "2.3.0",
+    "ether/atom": "1.0.3",
     "spicyweb/craft-embedded-assets": "2.4.5"
   },
   "require-dev": {
@@ -35,7 +36,7 @@
     ],
     "post-update-cmd": [
       "@php craft clear-caches/all",
-      "@php craft migrate/all",
+      "@php craft migrate/all --interactive=0",
       "@php craft on"
     ]
   }
