@@ -18,7 +18,7 @@
 
 {# Show existing drafts --------------------------------------------------------------------- #}
 
-{% if (not hasDraftWarningElement) and  (isCurrent or isDraft)  %}
+{% if (not hasDraftWarningElement) and  (isCurrent or isDraft) %}
 
     {% set query = craft.entries.draftOf(entry.sourceId).site('*').unique().preferSites([entry.site.handle]) %}
 
@@ -62,11 +62,11 @@ if (window.draftEditor) {
         Craft.cp.displayNotice($('#draft-new').html());
 
         if (window.draftEditor.isPreviewActive()) {
-            $('.lp-editor-container header').append('<div><b>' + $('#draft-name').html() + '</b></div>');
-            }
-        });
+            $('.lp-editor-container header').append('<div style="margin-top: 6px;"><b>' + $('#draft-name').html() + '</b></div>');
+        }
+    });
 
-    }
+}
 {% endjs %}
 
 
