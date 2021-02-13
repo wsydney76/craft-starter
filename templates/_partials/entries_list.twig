@@ -1,7 +1,7 @@
 {# @param heading #}
 {# @param headings - alternative to heading: Array 0:Singular, 1:Plural #}
 {# @param query #}
-
+{% from '_macros/lib.twig' import linkList %}
 {% set entries = query.all %}
 
 {% if entries %}
@@ -9,10 +9,10 @@
         {% set heading = entries|length == 1 ? headings[0] : headings[1] %}
     {% endif %}
 
-    {% embed '_layouts/embeds/widget.twig' with {heading: heading} %}
-        {% block content %}
-            {% from '_macros/lib.twig' import linkList %}
-            {{ linkList(entries|map(e => {text:e.title, href:e.url, postDate:e.postDate|date}), showPostDate??false) }}
-        {% endblock %}
-    {% endembed %}
+    {% x:widget { heading } %}
+
+        {{ linkList(entries|map(e => {text:e.title, href:e.url, postDate:e.postDate|date}), showPostDate??false) }}
+
+    {% endx:widget %}
+
 {% endif %}
