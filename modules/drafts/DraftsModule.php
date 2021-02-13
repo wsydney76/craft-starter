@@ -7,11 +7,10 @@ use craft\base\Element;
 use craft\elements\Entry;
 use craft\elements\User;
 use craft\events\DefineFieldLayoutElementsEvent;
-use craft\events\RegisterElementSourcesEvent;
 use craft\events\RegisterElementTableAttributesEvent;
 use craft\events\RegisterTemplateRootsEvent;
 use craft\events\SetElementTableAttributeHtmlEvent;
-use craft\helpers\UrlHelper;
+use craft\helpers\ElementHelper;
 use craft\i18n\PhpMessageSource;
 use craft\models\FieldLayout;
 use craft\web\View;
@@ -71,63 +70,37 @@ class DraftsModule extends Module
             });
         }
 
-        // Register element index source and table fields for drafts
-        Event::on(
-            Entry::class,
-            Element::EVENT_REGISTER_SOURCES, function(RegisterElementSourcesEvent $event) {
-            $event->sources[] = [
-                'key' => 'drafts',
-                'label' => Craft::t('drafts', 'All drafts'),
-                'criteria' => [
-                    'drafts' => true,
-                    'editable' => true
-
-                ],
-                'defaultSort' => [
-                    0 => 'dateCreated',
-                    1 => 'desc'
-                ]
-            ];
-        }
-        );
         Event::on(
             Entry::class,
             Element::EVENT_REGISTER_TABLE_ATTRIBUTES, function(RegisterElementTableAttributesEvent $event) {
-            $event->tableAttributes['isUnsavedDraft'] = ['label' => Craft::t('drafts', 'Unsaved?')];
-            $event->tableAttributes['draftName'] = ['label' => Craft::t('drafts', 'Draft Name')];
             $event->tableAttributes['draftNotes'] = ['label' => Craft::t('drafts', 'Draft Notes')];
             $event->tableAttributes['creatorId'] = ['label' => Craft::t('drafts', 'Draft Creator')];
-            $event->tableAttributes['hasDrafts'] = ['label' => Craft::t('drafts', 'Has Drafts')];
         }
         );
         Event::on(
             Entry::class,
             Element::EVENT_SET_TABLE_ATTRIBUTE_HTML, function(SetElementTableAttributeHtmlEvent $event) {
-            // TODO: avoid error if draft fields are added to a non draft source
 
-            if ($event->attribute == 'isUnsavedDraft') {
-                $event->handled = true;
-                /** @var Entry $entry */
-                $entry = $event->sender;
-                $event->html = $entry->isUnsavedDraft ? '<span class="status active"></span>' : '';
-            }
             if ($event->attribute == 'creatorId') {
                 $event->handled = true;
                 /** @var Entry $entry */
                 $entry = $event->sender;
-                /** @var User $user */
-                $user = User::find()->id($entry->creatorId)->one();
 
-                $event->html = $user ? $user->name : '';
+                if (ElementHelper::isDraftOrRevision($entry)) {
+                    /** @var User $user */
+                    $user = User::find()->id($entry->creatorId)->one();
+                    $event->html = $user ? $user->name : '';
+                } else {
+                    $event->html = '';
+                }
             }
 
-            if ($event->attribute == 'hasDrafts') {
+            if ($event->attribute == 'draftNotes') {
                 $event->handled = true;
                 /** @var Entry $entry */
                 $entry = $event->sender;
 
-                $count = Entry::find()->draftOf($entry->getSourceId())->site('*')->unique()->count();
-                $event->html = $count ? '<span class="status pending"></span> ' . $count : '';
+                $event->html = ElementHelper::isDraftOrRevision($entry) ? $entry->draftNotes : '';
             }
         }
         );

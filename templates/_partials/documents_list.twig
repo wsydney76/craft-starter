@@ -9,23 +9,24 @@
         {% set heading = assets|length == 1 ? headings[0] : headings[1] %}
     {% endif %}
 
-    {% embed '_layouts/embeds/widget.twig' with {heading: heading} %}
-        {% block content %}
-            {% for asset in assets %}
-                <div class="my-4">
-                    <div class="font-semibold">
-                        {{ asset.link }}
-                    </div>
-                    {% if asset.teaser %}
-                        <div>
-                            {{ asset.teaser }}
-                        </div>
-                    {% endif %}
-                    <div class="font-sm">
-                        {{ asset.extension }}, {{ asset.formattedSize(0) }}
-                    </div>
+    {% x:widget { heading } %}
+
+        {% for asset in assets %}
+            <div class="my-4">
+                <div class="font-semibold">
+                    {{ asset.link }}
                 </div>
-            {% endfor %}
-        {% endblock %}
-    {% endembed %}
+                {% if asset.teaser %}
+                    <div>
+                        {{ asset.teaser }}
+                    </div>
+                {% endif %}
+                <div class="font-sm">
+                    {{ asset.extension }}, {{ asset.formattedSize(0) }}
+                </div>
+            </div>
+        {% endfor %}
+
+    {% endx:widget %}
+
 {% endif %}

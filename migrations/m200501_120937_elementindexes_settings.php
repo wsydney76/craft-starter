@@ -35,7 +35,6 @@ class m200501_120937_elementindexes_settings extends Migration
         $entrySettings = [
             'sourceOrder' => [
                 ['key', '*'],
-                ['key', 'drafts'],
                 ['heading', 'Site'],
                 ['key', 'singles'],
                 ['key', $s['page']],
@@ -45,11 +44,10 @@ class m200501_120937_elementindexes_settings extends Migration
             ],
             'sources' => [
                 '*' => ['tableAttributes' => ['section', 'postDate', 'link']],
-                'singles' => ['tableAttributes' => [$f['featuredImage'], 'link']],
-                'drafts' => ['tableAttributes' => ['section', 'isUnsavedDraft','draftName','creatorId','dateCreated']],
-                $s['page'] => ['tableAttributes' => [$f['featuredImage'], $f['teaser'], 'postDate', 'link']],
-                $s['post'] => ['tableAttributes' => [$f['featuredImage'], $f['teaser'], 'author', 'postDate', 'link']],
-                $s['topic'] => ['tableAttributes' => [$f['featuredImage'], $f['teaser'], 'author', 'postDate', 'link']]
+                'singles' => ['tableAttributes' => ['drafts', $f['featuredImage'], 'link']],
+                $s['page'] => ['tableAttributes' => ['drafts', $f['featuredImage'], $f['teaser'], 'postDate', 'link']],
+                $s['post'] => ['tableAttributes' => ['drafts', $f['featuredImage'], $f['teaser'], 'author', 'postDate', 'link']],
+                $s['topic'] => ['tableAttributes' => ['drafts', $f['featuredImage'], $f['teaser'], 'author', 'postDate', 'link']]
 
             ]
         ];
