@@ -7,12 +7,10 @@ use craft\base\Element;
 use craft\elements\Entry;
 use craft\elements\User;
 use craft\events\DefineFieldLayoutElementsEvent;
-use craft\events\RegisterElementSourcesEvent;
 use craft\events\RegisterElementTableAttributesEvent;
 use craft\events\RegisterTemplateRootsEvent;
 use craft\events\SetElementTableAttributeHtmlEvent;
 use craft\helpers\ElementHelper;
-use craft\helpers\UrlHelper;
 use craft\i18n\PhpMessageSource;
 use craft\models\FieldLayout;
 use craft\web\View;
@@ -75,32 +73,26 @@ class DraftsModule extends Module
         Event::on(
             Entry::class,
             Element::EVENT_REGISTER_TABLE_ATTRIBUTES, function(RegisterElementTableAttributesEvent $event) {
-            $event->tableAttributes['isUnsavedDraft'] = ['label' => Craft::t('drafts', 'Unpublished')];
-            $event->tableAttributes['draftName'] = ['label' => Craft::t('drafts', 'Draft Name')];
             $event->tableAttributes['draftNotes'] = ['label' => Craft::t('drafts', 'Draft Notes')];
             $event->tableAttributes['creatorId'] = ['label' => Craft::t('drafts', 'Draft Creator')];
-
         }
         );
         Event::on(
             Entry::class,
             Element::EVENT_SET_TABLE_ATTRIBUTE_HTML, function(SetElementTableAttributeHtmlEvent $event) {
-            // TODO: avoid error if draft fields are added to a non draft source
 
-            if ($event->attribute == 'isUnsavedDraft') {
-                $event->handled = true;
-                /** @var Entry $entry */
-                $entry = $event->sender;
-                $event->html = $entry->isUnsavedDraft ? '<span class="status active"></span>' : '';
-            }
             if ($event->attribute == 'creatorId') {
                 $event->handled = true;
                 /** @var Entry $entry */
                 $entry = $event->sender;
-                /** @var User $user */
-                $user = User::find()->id($entry->creatorId)->one();
 
-                $event->html = $user ? $user->name : '';
+                if (ElementHelper::isDraftOrRevision($entry)) {
+                    /** @var User $user */
+                    $user = User::find()->id($entry->creatorId)->one();
+                    $event->html = $user ? $user->name : '';
+                } else {
+                    $event->html = '';
+                }
             }
 
             if ($event->attribute == 'draftNotes') {
@@ -110,7 +102,6 @@ class DraftsModule extends Module
 
                 $event->html = ElementHelper::isDraftOrRevision($entry) ? $entry->draftNotes : '';
             }
-
         }
         );
     }

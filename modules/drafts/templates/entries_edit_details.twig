@@ -58,6 +58,7 @@ if (window.draftEditor) {
         $('#draft-new').css('display', '');
         $('#draft-saved').css('display', '');
         $('#current-edit').css('display', 'none');
+
         Craft.cp.displayNotice($('#draft-new').html());
 
         if (window.draftEditor.isPreviewActive()) {
@@ -68,20 +69,7 @@ if (window.draftEditor) {
     }
 {% endjs %}
 
-{#
-{% js %}
-if (window.draftEditor) {
-    window.draftEditor.on('createDraft', function() {
-        if (window.draftEditor.isPreviewActive()) {
-            var draftName = window.draftEditor.settings.draftName;
-            Craft.cp.displayNotice('A new preview draft ' + draftName + ' was created for your preview edits');
-            $('.lp-editor-container header').append('<div style="margin-top:6px;"><b>New draft for preview edits: ' + draftName + '</b></div>');
-        }
-    });
 
-}
-{% endjs %}
-#}
 {# Current entry: show hint if multi-site #}
 {% if isCurrent and craft.app.sites.allSiteIds|length > 1 %}
     <div class="meta read-only warning" id="current-edit">
