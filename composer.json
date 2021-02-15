@@ -8,7 +8,6 @@
     "craftcms/cms": "3.6.5.1",
     "craftcms/contact-form": "2.2.7",
     "doublesecretagency/craft-cpcss": "2.3.0",
-    "ether/atom": "1.0.3",
     "spicyweb/craft-embedded-assets": "2.4.5"
   },
   "require-dev": {

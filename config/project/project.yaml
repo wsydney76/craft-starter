@@ -1,6 +1,6 @@
 assets:
   tempVolumeUid: 35c3b3f5-30e7-4780-9ae1-286ee8bd275e
-dateModified: 1613210931
+dateModified: 1613402067
 email:
   fromEmail: $EMAIL_ADDRESS
   fromName: $EMAIL_SENDER
@@ -17,10 +17,6 @@ email:
   transportType: craft\mail\transportadapters\Smtp
 plugins:
   assetrev:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
-  atom:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0

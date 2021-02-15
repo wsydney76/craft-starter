@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "886470d4d5a4e6a0db5f12170313d05d",
+    "content-hash": "b6fe2e2d4b8e2228932c43da993f762c",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -1288,49 +1288,6 @@
                 "source": "https://github.com/darylldoyle/svg-sanitizer/tree/0.14.0"
             },
             "time": "2021-01-21T10:13:20+00:00"
-        },
-        {
-            "name": "ether/atom",
-            "version": "1.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ethercreative/atom.git",
-                "reference": "178419fa47914335d9f031b8174904c26aa1818e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ethercreative/atom/zipball/178419fa47914335d9f031b8174904c26aa1818e",
-                "reference": "178419fa47914335d9f031b8174904c26aa1818e",
-                "shasum": ""
-            },
-            "require": {
-                "craftcms/cms": "^3.5.0"
-            },
-            "type": "craft-plugin",
-            "extra": {
-                "handle": "atom",
-                "name": "Atom",
-                "developer": "Ether Creative",
-                "developerUrl": "https://ethercreative.co.uk",
-                "class": "ether\\atom\\Atom",
-                "schemaVersion": "1.0.0"
-            },
-            "autoload": {
-                "psr-4": {
-                    "ether\\atom\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Adding enhanced modularity to Craft CMS Twig templating",
-            "support": {
-                "email": "help@ethercreative.co.uk",
-                "issues": "https://github.com/ethercreative/atom/issues",
-                "source": "https://github.com/ethercreative/atom"
-            },
-            "time": "2021-02-12T15:07:07+00:00"
         },
         {
             "name": "ezyang/htmlpurifier",
