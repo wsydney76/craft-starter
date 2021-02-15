@@ -3,9 +3,12 @@
 {% if query is not defined %}
     {% set indexSection = entry.section.handle|replace({'Index':''}) %}
 
-    {% set orderBy = craft.app.config.general.project['orderBy'][indexSection] ?? 'title' %}
+    {% set orderBy = craft.app.config.general.project['orderBy'][indexSection] ?? null %}
 
-    {% set query = craft.entries.section(indexSection).orderBy(orderBy) %}
+    {% set query = craft.entries.section(indexSection) %}
+    {% if orderBy %}
+        {% set query = query.orderBy(orderBy) %}
+    {% endif %}
 {% endif %}
 
 {% set andWith = andWith ?? [] %}

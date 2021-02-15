@@ -10,6 +10,11 @@
   ul, ol {
     @apply pl-6;
   }
+
+  p {
+    @apply my-4;
+  }
+
 }
 
 .nav-link {
@@ -20,18 +25,6 @@
   @apply my-4 flex flex-wrap border-l border-primary;
   .pagination-link {
     @apply text-xs font-semibold flex w-8 h-8 mx-0 p-0 items-center justify-center leading-tight relative border-t border-b border-r border-solid border-primary;
-  }
-}
-
-.form-group {
-
-  .form-control {
-    @apply w-full p-2 my-3 shadow;
-
-  }
-
-  .form-check {
-    @apply my-3;
   }
 }
 

@@ -1,22 +1,26 @@
 assets:
   tempVolumeUid: 35c3b3f5-30e7-4780-9ae1-286ee8bd275e
-dateModified: 1600591802
+dateModified: 1613210931
 email:
-  fromEmail: '@EMAIL_ADDRESS'
-  fromName: '@EMAIL_SENDER'
+  fromEmail: $EMAIL_ADDRESS
+  fromName: $EMAIL_SENDER
   replyToEmail: null
   template: ''
   transportSettings:
     encryptionMethod: tls
-    host: '@SMTP_HOST'
-    password: '@SMTP_PASSWORD'
-    port: '@SMTP_PORT'
+    host: $SMTP_HOST
+    password: $SMTP_PASSWORD
+    port: $SMTP_PORT
     timeout: '10'
     useAuthentication: '1'
-    username: '@SMTP_USER'
+    username: $SMTP_USER
   transportType: craft\mail\transportadapters\Smtp
 plugins:
   assetrev:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  atom:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
@@ -35,7 +39,7 @@ plugins:
     enabled: true
     schemaVersion: 2.0.0
     settings:
-      additionalCss: "html,body {\r\n  font-size: 15px;\r\n}\r\ninput.text, textarea.text, .text > input, .text > textarea, table.editable textarea, .selectize-text > .selectize-control > .selectize-input {\r\n  font-size: 16px;\r\n}\r\n#global-sidebar {\r\n background-color: #265077;\r\n}\r\n\r\n.sidebar .heading span {\r\n  color: #264a6c;\r\n  font-size: 14px;\r\n  letter-spacing: 1px\r\n}\r\n#main-form h2 {\r\n\tfont-size:17px;\r\n}\r\n\r\n.blocktype {\r\n\tpadding:12px;\r\n    color:#fff !important;\r\n    background-color: #265077;\r\n}"
+      additionalCss: "html,body {\r\n  font-size: 15px;\r\n}\r\ninput.text, textarea.text, .text > input, .text > textarea, table.editable textarea, .selectize-text > .selectize-control > .selectize-input {\r\n  font-size: 16px;\r\n}\r\n#global-sidebar {\r\n background-color: #265077;\r\n}\r\n\r\n.sidebar .heading span {\r\n  color: #264a6c;\r\n  font-size: 14px;\r\n  letter-spacing: 1px\r\n}\r\n#main-form h2 {\r\n\tfont-size:17px;\r\n}\r\n\r\n.blocktype {\r\n\tpadding:12px;\r\n    color:#fff !important;\r\n    background-color: #265077;\r\n}\r\n\r\nbody.ltr #fields .element.small.hasstatus .icon {\r\n    left: auto !important;\r\n}"
       cssFile: ''
   embeddedassets:
     edition: standard
@@ -45,7 +49,7 @@ plugins:
       cacheDuration: 300
       embedlyKey: ''
       facebookKey: ''
-      googleKey: '@GOOGLE_API_KEY'
+      googleKey: $GOOGLE_API_KEY
       iframelyKey: ''
       maxAssetNameLength: 50
       maxFileNameLength: 50
@@ -116,7 +120,7 @@ plugins:
 system:
   edition: pro
   live: true
-  name: '@SYSTEM_NAME'
+  name: $SYSTEM_NAME
   retryDuration: 30
-  schemaVersion: 3.5.13
+  schemaVersion: 3.6.2
   timeZone: Europe/Berlin

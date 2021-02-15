@@ -4,8 +4,6 @@
 
 {% if images %}
 
-    {% do view.registerAssetBundle('modules\\resources\\site\\LightboxAssets') %}
-
     <div class="gallery-{{ block.id }} grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-3 gap-2">
         {% for image in images %}
 
@@ -24,7 +22,7 @@
     </div>
 
     {% js %}
-        baguetteBox.run('.gallery-{{ block.id }}');
+        initLightBox('.gallery-{{ block.id }}');
     {% endjs %}
 
 {% endif %}

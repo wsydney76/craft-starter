@@ -2,14 +2,17 @@
 
 <a class="sr-only focus:not-sr-only" href="#title">{{ 'Skip to content'|t }}</a>
 
-<div class="w-full bg-white">
+<div class="w-full bg-white sticky top-0 opacity-95 py-4">
+
     <div x-data="{ open: false, dropDown: 0 }"
          class="flex flex-col px-4 mx-auto lg:items-center lg:justify-between lg:flex-row lg:px-6 lg:px-8">
-        <div class="flex flex-row items-center justify-between p-4">
+
+        <div class="flex flex-row items-center justify-between">
             <a href="{{ url('') }}"
                class="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white ">{{ siteInfo.siteName }}</a>
             {% include '_layouts/partials/nav_mobilebutton_svg.twig' %}
         </div>
+
         <nav :class="{'flex': open, 'hidden': !open}"
              class="lg:items-center flex-col flex-grow hidden pb-4 lg:pb-0 lg:flex lg:justify-end lg:flex-row">
             {% cache globally %}
@@ -38,9 +41,11 @@
                     {% endswitch %}
                 {% endfor %}
             {% endcache %}
+
             <div @mouseenter="dropDown = 0">
                 {% include '_partials/search_form.twig' %}
             </div>
+
             {% include '_layouts/partials/languageswitcher.twig' %}
 
 

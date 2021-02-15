@@ -22,6 +22,7 @@
  */
 
 use config\Env;
+use craft\helpers\App;
 
 return [
     '*' => [

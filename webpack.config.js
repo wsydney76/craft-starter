@@ -30,25 +30,9 @@ config = {
         rules: [
             {
                 test: /\.js$/,
-                exclude: /node_modules/,
                 use: {
                     loader: "babel-loader"
                 }
-            },
-            {
-                test: /\.css$/,
-                use: ['style-loader', 'css-loader']
-            },
-            {
-                test: /\.(png|jpe?g|gif)$/,
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            name: '[name].[ext]',
-                        },
-                    },
-                ],
             }
         ]
     },
@@ -66,7 +50,6 @@ module.exports = (env, argv) => {
     if (argv.hot) {
         config.module.rules.push({
             test: /\.scss$/,
-            exclude: /project/,
             use: [
                 "style-loader",
                 "css-loader",
@@ -77,7 +60,6 @@ module.exports = (env, argv) => {
     } else {
         config.module.rules.push({
             test: /\.scss$/,
-            exclude: /project/,
             use: [
                 MiniCssExtractPlugin.loader,
                 "css-loader",

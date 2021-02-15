@@ -37,34 +37,14 @@ module.exports = {
         aspectRatio: ['responsive'], // defaults to ['responsive']
     },
     plugins: [
+        require('@tailwindcss/forms'),
         require("tailwindcss-responsive-embed"),
         require('tailwindcss-aspect-ratio'),
     ],
 
-    future: {
-        removeDeprecatedGapUtilities: true, // https://tailwindcss.com/docs/upcoming-changes
-        purgeLayersByDefault: true,
-    },
-
-    experimental: {
-        uniformColorPalette: true,
-    },
-
     purge: {
         content: [
-            './templates/**/*.html',
             './templates/**/*.twig'
-        ],
-
-        // These options are passed through directly to PurgeCSS
-        options: {
-            whitelistPatterns: [
-                /embed-\w+/,
-                /position-\w/,
-                /iframe/,
-                /bg-primary/,
-                /bg-secondary/
-            ]
-        }
+        ]
     }
 }

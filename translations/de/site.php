@@ -13,12 +13,15 @@ return [
     'All' => 'Alle',
     'By' => 'Von',
     'didn’t return any results' => 'ergab keine Treffer',
+    'Document' => 'Dokument',
     'Documents' => 'Dokumente',
+    'Latest Post' => 'Aktueller Beitrag',
     'Latest Posts' => 'Aktuelle Beiträge',
     'Other Topics' => 'Weitere Themen',
     'Page' => 'Seite',
     'Pages' => 'Seiten',
     'Post' => 'Beitrag',
+    'Related Entry' => 'Verwandter Beitrag',
     'Related Entries' => 'Verwandte Beiträge',
     'Search for' => 'Suche nach',
     'Search' => 'Suchen',
@@ -27,6 +30,8 @@ return [
     'You did not enter a search criteria' => 'Sie haben keinen Suchbegriff eingegeben',
     'Your search for' => 'Ihre Suche nach',
     '{count,plural,=1{result} other{results}} for' => '{count,plural,=1{Ergebnis} other{Ergebnisse}} für',
+    '“' => '„',
+    '”' => '“',
 
 
     // Backend
