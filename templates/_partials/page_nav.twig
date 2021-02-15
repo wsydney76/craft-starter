@@ -4,24 +4,27 @@
 {% set entries = query.all %}
 {% if entries %}
 
-    {% x:widget { heading } %}
-
-        <nav class="text-left">
-            <ul class="list-none">
-                {% nav item in entries %}
-                    <li class="truncate">
-                        <a class="pl-3 {{ item.id == entry.id ? 'font-bold' }}"
-                           href="{{ item.url }}">{{ item.title }}</a>
-                        {% ifchildren %}
-                            <ul class="list-none pl-4">
-                                {% children %}
-                            </ul>
-                        {% endifchildren %}
-                    </li>
-                {% endnav %}
-            </ul>
-        </nav>
-
-    {% endx:widget %}
+    {% embed '_layouts/embeds/widget.twig' %}
+        {% block heading %}
+            {{ heading }}
+        {% endblock %}
+        {% block content %}
+            <nav class="text-left">
+                <ul class="list-none">
+                    {% nav item in entries %}
+                        <li class="truncate">
+                            <a class="pl-3 {{ item.id == entry.id ? 'font-bold' }}"
+                               href="{{ item.url }}">{{ item.title }}</a>
+                            {% ifchildren %}
+                                <ul class="list-none pl-4">
+                                    {% children %}
+                                </ul>
+                            {% endifchildren %}
+                        </li>
+                    {% endnav %}
+                </ul>
+            </nav>
+        {% endblock %}
+    {% endembed %}
 
 {% endif %}
