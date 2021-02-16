@@ -1,8 +1,8 @@
 # Changelog
 
-## 1.5 2021-02-15
+## 1.5.1 2021-02-16
 
-* Update to Craft 3.6.5.1
+* Update to Craft 3.6.6
 * Updated drafts module, reflects drafts improvements in 3.6
 
 ## 1.4.3 2020-09-18
