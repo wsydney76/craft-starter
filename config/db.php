@@ -17,6 +17,9 @@ return [
     'port' => Env::DB_PORT,
     'database' => Env::DB_DATABASE,
 
+    'charset' => Env::DB_CHARSET,
+    'collation' => Env::DB_COLLATION,
+
     'schema' => Env::DB_SCHEMA,
     'tablePrefix' => Env::DB_TABLEPREFIX,
 
