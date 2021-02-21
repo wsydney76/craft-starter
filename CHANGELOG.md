@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.5.3 2021-02-21
+
+* Tweaks
+
 ## 1.5.2 2021-02-16
 
 * Update to Craft 3.6.6
