@@ -18,9 +18,9 @@
 
 {{ navHtml }}
 
-<div class="mb-5">
+<div class="mb-8">
     {% for entry in entries %}
-        <article class="mb-5">
+        <article class="mb-8">
             {% embed "_partials/gallery_item.twig" with {entry:entry} only %}
                 {% block content %}
                     {% include "_partials/index/#{entry.section.handle}.twig" ignore missing %}

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c7f4b377d7db5f7443867d64a8b79dbb",
+    "content-hash": "64787051a0dac022bc1726c7bb771e99",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -735,16 +735,16 @@
         },
         {
             "name": "craftcms/plugin-installer",
-            "version": "1.5.6",
+            "version": "1.5.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/plugin-installer.git",
-                "reference": "4d24e227a086db3d8784a705f59060c49cf989ad"
+                "reference": "23ec472acd4410b70b07d5a02b2b82db9ee3f66b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/plugin-installer/zipball/4d24e227a086db3d8784a705f59060c49cf989ad",
-                "reference": "4d24e227a086db3d8784a705f59060c49cf989ad",
+                "url": "https://api.github.com/repos/craftcms/plugin-installer/zipball/23ec472acd4410b70b07d5a02b2b82db9ee3f66b",
+                "reference": "23ec472acd4410b70b07d5a02b2b82db9ee3f66b",
                 "shasum": ""
             },
             "require": {
@@ -784,7 +784,7 @@
                 "rss": "https://craftcms.com/changelog.rss",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2020-10-26T23:34:21+00:00"
+            "time": "2021-02-18T02:01:38+00:00"
         },
         {
             "name": "craftcms/server-check",
@@ -2977,16 +2977,16 @@
         },
         {
             "name": "spicyweb/craft-embedded-assets",
-            "version": "2.4.5",
+            "version": "2.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spicywebau/craft-embedded-assets.git",
-                "reference": "54ed458aac02f099682386b3c2f708ec3ebbf06e"
+                "reference": "db73f3ce679eda6409d85d92286dfad54003f898"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spicywebau/craft-embedded-assets/zipball/54ed458aac02f099682386b3c2f708ec3ebbf06e",
-                "reference": "54ed458aac02f099682386b3c2f708ec3ebbf06e",
+                "url": "https://api.github.com/repos/spicywebau/craft-embedded-assets/zipball/db73f3ce679eda6409d85d92286dfad54003f898",
+                "reference": "db73f3ce679eda6409d85d92286dfad54003f898",
                 "shasum": ""
             },
             "require": {
@@ -3035,7 +3035,7 @@
                 "rss": "https://github.com/spicywebau/craft-embedded-assets/commits/master.atom",
                 "source": "https://github.com/spicywebau/craft-embedded-assets"
             },
-            "time": "2020-12-28T13:11:42+00:00"
+            "time": "2021-02-17T06:54:54+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",

@@ -56,9 +56,9 @@ fields:
   d420edab-c758-4dce-8b02-e17b23ed0e60:
     contentColumnType: string
     fieldGroup: null
-    handle: textSource
+    handle: attribution
     instructions: ''
-    name: Source
+    name: Attribution
     searchable: true
     settings:
       byteLimit: null

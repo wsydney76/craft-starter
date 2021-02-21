@@ -71,12 +71,14 @@ fields:
     searchable: false
     settings:
       allowSelfRelations: false
+      allowUploads: true
       allowedKinds:
         - json
       defaultUploadLocationSource: 'volume:cbbf12d2-97db-4750-8f2d-ea5a5ca1f975'
       defaultUploadLocationSubpath: ''
       limit: '1'
       localizeRelations: true
+      previewMode: full
       restrictFiles: '1'
       selectionLabel: ''
       showSiteMenu: true
