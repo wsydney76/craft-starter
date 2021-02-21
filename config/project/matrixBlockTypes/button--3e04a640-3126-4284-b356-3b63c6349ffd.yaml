@@ -149,7 +149,7 @@ fields:
     contentColumnType: text
     fieldGroup: null
     handle: caption
-    instructions: ''
+    instructions: 'Leave blank to show title of target'
     name: Caption
     searchable: true
     settings:
@@ -159,7 +159,7 @@ fields:
       columnType: null
       initialRows: '4'
       multiline: ''
-      placeholder: 'Leave blank to show title of target'
+      placeholder: ''
       uiMode: normal
     translationKeyFormat: null
     translationMethod: language
