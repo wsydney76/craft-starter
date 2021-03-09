@@ -8,8 +8,18 @@
          class="flex flex-col px-4 mx-auto lg:items-center lg:justify-between lg:flex-row lg:px-6 lg:px-8">
 
         <div class="flex flex-row items-center justify-between">
-            <a href="{{ url('') }}"
-               class="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white ">{{ siteInfo.siteName }}</a>
+            {% set logo = siteInfo.siteLogo.one %}
+            {% if logo %}
+                <a href="{{ url('') }}">
+                    {{ svg(logo)|attr({class:'text-black fill-current h-10'}) }}
+                </a>
+            {% else %}
+                <a href="{{ url('') }}"
+                   class="text-lg font-semibold tracking-widest text-gray-900 uppercase">
+                    {{ siteInfo.siteName }}
+                </a>
+            {% endif %}
+
             {% include '_layouts/partials/nav_mobilebutton_svg.twig' %}
         </div>
 

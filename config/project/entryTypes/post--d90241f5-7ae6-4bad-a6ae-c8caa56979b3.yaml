@@ -32,7 +32,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 9a302fae-a3bf-4298-8a06-24f8c8f6f335
+            fieldUid: 9a302fae-a3bf-4298-8a06-24f8c8f6f335 # Featured Image
             instructions: null
             label: null
             required: '0'
@@ -41,7 +41,7 @@ fieldLayouts:
             warning: null
             width: 25
           -
-            fieldUid: 3ef62a7b-6c6d-470f-88a6-31de5a099b38
+            fieldUid: 3ef62a7b-6c6d-470f-88a6-31de5a099b38 # Teaser
             instructions: ''
             label: ''
             required: ''
@@ -53,7 +53,7 @@ fieldLayouts:
             heading: Content
             type: craft\fieldlayoutelements\Heading
           -
-            fieldUid: 58b2e318-26cc-47b8-bee2-81369731d72f
+            fieldUid: 58b2e318-26cc-47b8-bee2-81369731d72f # Body Content
             instructions: ''
             label: ''
             required: ''
@@ -65,7 +65,7 @@ fieldLayouts:
             heading: Relations
             type: craft\fieldlayoutelements\Heading
           -
-            fieldUid: e4cf9f0d-54a6-4107-beac-daa51b8e5006
+            fieldUid: e4cf9f0d-54a6-4107-beac-daa51b8e5006 # Topics
             instructions: null
             label: null
             required: '0'
@@ -74,7 +74,7 @@ fieldLayouts:
             warning: null
             width: 25
           -
-            fieldUid: 6c2c7c89-c2ff-4ace-a3e6-aeddab27ab7b
+            fieldUid: 6c2c7c89-c2ff-4ace-a3e6-aeddab27ab7b # Documents
             instructions: null
             label: null
             required: '0'
@@ -83,7 +83,7 @@ fieldLayouts:
             warning: null
             width: 25
           -
-            fieldUid: 9b2aaaa8-c827-4881-955a-86f2df0ea79c
+            fieldUid: 9b2aaaa8-c827-4881-955a-86f2df0ea79c # Related Entries
             instructions: null
             label: null
             required: '0'
@@ -96,7 +96,7 @@ fieldLayouts:
 handle: post
 hasTitleField: true
 name: Post
-section: 0d69ffe4-360e-4d04-ac30-af0e4381b6ed
+section: 0d69ffe4-360e-4d04-ac30-af0e4381b6ed # Post
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null

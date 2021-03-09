@@ -1,5 +1,5 @@
 contentColumnType: string
-fieldGroup: f1d8d989-2bc0-4a0f-b58f-a348276a5596
+fieldGroup: f1d8d989-2bc0-4a0f-b58f-a348276a5596 # Content
 handle: featuredImage
 instructions: 'Check focal point for best use.'
 name: 'Featured Image'
@@ -9,7 +9,7 @@ settings:
   allowUploads: true
   allowedKinds:
     - image
-  defaultUploadLocationSource: 'volume:8136d7e9-1a74-464d-aef2-3a4f91a5cdda'
+  defaultUploadLocationSource: 'volume:8136d7e9-1a74-464d-aef2-3a4f91a5cdda' # Images
   defaultUploadLocationSubpath: ''
   limit: '1'
   localizeRelations: false
@@ -19,11 +19,11 @@ settings:
   showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: true
-  singleUploadLocationSource: 'volume:8136d7e9-1a74-464d-aef2-3a4f91a5cdda'
+  singleUploadLocationSource: 'volume:8136d7e9-1a74-464d-aef2-3a4f91a5cdda' # Images
   singleUploadLocationSubpath: '{section.handle|lower}{folderName?''/''~folderName:''''}'
   source: null
   sources:
-    - 'volume:8136d7e9-1a74-464d-aef2-3a4f91a5cdda'
+    - 'volume:8136d7e9-1a74-464d-aef2-3a4f91a5cdda' # Images
   targetSiteId: null
   useSingleFolder: false
   validateRelatedElements: false
