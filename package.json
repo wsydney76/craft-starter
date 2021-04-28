@@ -1,6 +1,6 @@
 {
   "name": "craftcms-starter",
-  "version": "1.4.2",
+  "version": "1.6",
   "description": "Simple multilingual project template for Craft CMS",
   "main": "index.js",
   "keywords": [
