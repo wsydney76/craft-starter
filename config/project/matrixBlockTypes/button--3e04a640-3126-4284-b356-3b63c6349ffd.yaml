@@ -1,11 +1,11 @@
-field: 58b2e318-26cc-47b8-bee2-81369731d72f
+field: 58b2e318-26cc-47b8-bee2-81369731d72f # Body Content
 fieldLayouts:
   54740fa7-c999-46cf-ac6d-9d485820899c:
     tabs:
       -
         elements:
           -
-            fieldUid: b026d20d-f781-469f-8c4c-5f5c65c66027
+            fieldUid: b026d20d-f781-469f-8c4c-5f5c65c66027 # Target
             instructions: null
             label: null
             required: true
@@ -14,7 +14,7 @@ fieldLayouts:
             warning: null
             width: 25
           -
-            fieldUid: fa76440e-c84c-4d11-b665-375f32514aaa
+            fieldUid: fa76440e-c84c-4d11-b665-375f32514aaa # Caption
             instructions: null
             label: null
             required: false
@@ -23,7 +23,7 @@ fieldLayouts:
             warning: null
             width: 25
           -
-            fieldUid: 7d7cf5ed-7c41-4d49-ba86-cef811f69683
+            fieldUid: 7d7cf5ed-7c41-4d49-ba86-cef811f69683 # Color
             instructions: null
             label: null
             required: false
@@ -32,7 +32,7 @@ fieldLayouts:
             warning: null
             width: 25
           -
-            fieldUid: 133bba22-df33-4432-a49f-198e9c071f22
+            fieldUid: 133bba22-df33-4432-a49f-198e9c071f22 # Display
             instructions: null
             label: null
             required: false
@@ -43,7 +43,42 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  133bba22-df33-4432-a49f-198e9c071f22:
+  7d7cf5ed-7c41-4d49-ba86-cef811f69683: # Color
+    contentColumnType: string
+    fieldGroup: null
+    handle: color
+    instructions: ''
+    name: Color
+    searchable: true
+    settings:
+      optgroups: true
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Primary
+            -
+              - value
+              - primary
+            -
+              - default
+              - '1'
+        -
+          __assoc__:
+            -
+              - label
+              - Secondary
+            -
+              - value
+              - secondary
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  133bba22-df33-4432-a49f-198e9c071f22: # Display
     contentColumnType: string
     fieldGroup: null
     handle: display
@@ -89,42 +124,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Dropdown
-  7d7cf5ed-7c41-4d49-ba86-cef811f69683:
-    contentColumnType: string
-    fieldGroup: null
-    handle: color
-    instructions: ''
-    name: Color
-    searchable: true
-    settings:
-      optgroups: true
-      options:
-        -
-          __assoc__:
-            -
-              - label
-              - Primary
-            -
-              - value
-              - primary
-            -
-              - default
-              - '1'
-        -
-          __assoc__:
-            -
-              - label
-              - Secondary
-            -
-              - value
-              - secondary
-            -
-              - default
-              - ''
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\Dropdown
-  b026d20d-f781-469f-8c4c-5f5c65c66027:
+  b026d20d-f781-469f-8c4c-5f5c65c66027: # Target
     contentColumnType: string
     fieldGroup: null
     handle: target
@@ -145,7 +145,7 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Entries
-  fa76440e-c84c-4d11-b665-375f32514aaa:
+  fa76440e-c84c-4d11-b665-375f32514aaa: # Caption
     contentColumnType: text
     fieldGroup: null
     handle: caption
@@ -159,7 +159,7 @@ fields:
       columnType: null
       initialRows: '4'
       multiline: ''
-      placeholder: ''
+      placeholder: null
       uiMode: normal
     translationKeyFormat: null
     translationMethod: language

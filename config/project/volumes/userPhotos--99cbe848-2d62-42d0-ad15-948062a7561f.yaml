@@ -34,5 +34,7 @@ name: 'User Photos'
 settings:
   path: '@webroot/userphotos'
 sortOrder: 3
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
 type: craft\volumes\Local
 url: '@baseurl/userphotos'

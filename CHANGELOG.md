@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.6
+
+* Update to Craft 3.6.12
+* Update to Tailwind 2.1 (jit)
+
 ## 1.5.3 2021-02-21
 
 * Tweaks

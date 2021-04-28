@@ -1,6 +1,6 @@
 assets:
-  tempVolumeUid: 35c3b3f5-30e7-4780-9ae1-286ee8bd275e
-dateModified: 1613924729
+  tempVolumeUid: 35c3b3f5-30e7-4780-9ae1-286ee8bd275e # Temporary Uploads
+dateModified: 1619596029
 email:
   fromEmail: $EMAIL_ADDRESS
   fromName: $EMAIL_SENDER
@@ -44,7 +44,7 @@ plugins:
     settings:
       cacheDuration: 300
       embedlyKey: ''
-      facebookKey: ''
+      facebookKey: $FACEBOOK_API_KEY
       googleKey: $GOOGLE_API_KEY
       iframelyKey: ''
       maxAssetNameLength: 50
@@ -67,6 +67,7 @@ plugins:
             -
               - value
               - '1080'
+      referer: ''
       showThumbnailsInCp: true
       soundcloudKey: ''
       whitelist:
@@ -118,5 +119,5 @@ system:
   live: true
   name: $SYSTEM_NAME
   retryDuration: 30
-  schemaVersion: 3.6.4
+  schemaVersion: 3.6.8
   timeZone: Europe/Berlin

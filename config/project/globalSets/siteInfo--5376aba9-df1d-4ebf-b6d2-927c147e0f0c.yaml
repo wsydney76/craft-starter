@@ -4,7 +4,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: 64c37a78-14f3-4dba-874a-4d4bdd5ba1ee
+            fieldUid: 64c37a78-14f3-4dba-874a-4d4bdd5ba1ee # Site Name
             instructions: null
             label: null
             required: '1'
@@ -13,25 +13,34 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 9a302fae-a3bf-4298-8a06-24f8c8f6f335
+            fieldUid: 9a302fae-a3bf-4298-8a06-24f8c8f6f335 # Featured Image
             instructions: null
             label: null
             required: '0'
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
-            width: 100
+            width: 25
           -
-            fieldUid: 2a586bbf-019e-4c87-bc15-d0b5db0efc98
+            fieldUid: 72fdc33e-481f-40c0-80ad-c531e3a557c7 # Site Logo
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
+          -
+            fieldUid: 2a586bbf-019e-4c87-bc15-d0b5db0efc98 # Site Icon
             instructions: null
             label: null
             required: '0'
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
-            width: 100
+            width: 25
           -
-            fieldUid: 3f9c2f2a-8ab0-4aba-bf4e-02d5336d14c0
+            fieldUid: 3f9c2f2a-8ab0-4aba-bf4e-02d5336d14c0 # Copyright
             instructions: null
             label: null
             required: '1'

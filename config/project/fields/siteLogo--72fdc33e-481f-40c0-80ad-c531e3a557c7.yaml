@@ -1,9 +1,9 @@
 contentColumnType: string
 fieldGroup: fea375f0-9f46-4952-b272-2dcf42b0cce5 # Site Info
-handle: siteIcon
+handle: siteLogo
 instructions: ''
-name: 'Site Icon'
-searchable: true
+name: 'Site Logo'
+searchable: false
 settings:
   allowSelfRelations: false
   allowUploads: true
@@ -16,11 +16,11 @@ settings:
   previewMode: full
   restrictFiles: '1'
   selectionLabel: ''
-  showSiteMenu: true
+  showSiteMenu: false
   showUnpermittedFiles: false
-  showUnpermittedVolumes: true
+  showUnpermittedVolumes: false
   singleUploadLocationSource: 'volume:8136d7e9-1a74-464d-aef2-3a4f91a5cdda' # Images
-  singleUploadLocationSubpath: icons
+  singleUploadLocationSubpath: logos
   source: null
   sources: '*'
   targetSiteId: null

@@ -1,11 +1,11 @@
-field: 58b2e318-26cc-47b8-bee2-81369731d72f
+field: 58b2e318-26cc-47b8-bee2-81369731d72f # Body Content
 fieldLayouts:
   5019c24d-309a-4ed8-8c94-f62cf5fbbf1b:
     tabs:
       -
         elements:
           -
-            fieldUid: 7a11b052-f8c9-46d7-8bb4-7c9a3916200c
+            fieldUid: 7a11b052-f8c9-46d7-8bb4-7c9a3916200c # Image
             instructions: null
             label: null
             required: true
@@ -14,7 +14,7 @@ fieldLayouts:
             warning: null
             width: 25
           -
-            fieldUid: d80ee1f4-e752-4e38-860a-c5f26790bf89
+            fieldUid: d80ee1f4-e752-4e38-860a-c5f26790bf89 # Caption
             instructions: null
             label: null
             required: false
@@ -23,7 +23,7 @@ fieldLayouts:
             warning: null
             width: 50
           -
-            fieldUid: a6c330ac-aa61-44e4-a5fe-61b35e4eeb36
+            fieldUid: a6c330ac-aa61-44e4-a5fe-61b35e4eeb36 # Display
             instructions: null
             label: null
             required: false
@@ -34,7 +34,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  7a11b052-f8c9-46d7-8bb4-7c9a3916200c:
+  7a11b052-f8c9-46d7-8bb4-7c9a3916200c: # Image
     contentColumnType: string
     fieldGroup: null
     handle: image
@@ -46,7 +46,7 @@ fields:
       allowUploads: true
       allowedKinds:
         - image
-      defaultUploadLocationSource: 'volume:8136d7e9-1a74-464d-aef2-3a4f91a5cdda'
+      defaultUploadLocationSource: 'volume:8136d7e9-1a74-464d-aef2-3a4f91a5cdda' # Images
       defaultUploadLocationSubpath: ''
       limit: '1'
       localizeRelations: false
@@ -56,11 +56,11 @@ fields:
       showSiteMenu: true
       showUnpermittedFiles: false
       showUnpermittedVolumes: true
-      singleUploadLocationSource: 'volume:8136d7e9-1a74-464d-aef2-3a4f91a5cdda'
+      singleUploadLocationSource: 'volume:8136d7e9-1a74-464d-aef2-3a4f91a5cdda' # Images
       singleUploadLocationSubpath: ''
       source: null
       sources:
-        - 'volume:8136d7e9-1a74-464d-aef2-3a4f91a5cdda'
+        - 'volume:8136d7e9-1a74-464d-aef2-3a4f91a5cdda' # Images
       targetSiteId: null
       useSingleFolder: false
       validateRelatedElements: true
@@ -68,7 +68,7 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Assets
-  a6c330ac-aa61-44e4-a5fe-61b35e4eeb36:
+  a6c330ac-aa61-44e4-a5fe-61b35e4eeb36: # Display
     contentColumnType: string
     fieldGroup: null
     handle: display
@@ -125,7 +125,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Dropdown
-  d80ee1f4-e752-4e38-860a-c5f26790bf89:
+  d80ee1f4-e752-4e38-860a-c5f26790bf89: # Caption
     contentColumnType: string
     fieldGroup: null
     handle: caption
@@ -139,7 +139,7 @@ fields:
       columnType: string
       initialRows: '4'
       multiline: ''
-      placeholder: ''
+      placeholder: null
       uiMode: normal
     translationKeyFormat: null
     translationMethod: language

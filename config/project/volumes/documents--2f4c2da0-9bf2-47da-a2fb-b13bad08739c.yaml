@@ -27,7 +27,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 3ef62a7b-6c6d-470f-88a6-31de5a099b38
+            fieldUid: 3ef62a7b-6c6d-470f-88a6-31de5a099b38 # Teaser
             instructions: null
             label: null
             required: '0'
@@ -43,5 +43,7 @@ name: Documents
 settings:
   path: '@webroot/documents'
 sortOrder: 6
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
 type: craft\volumes\Local
 url: '@baseurl/documents'

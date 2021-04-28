@@ -27,7 +27,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 3f9c2f2a-8ab0-4aba-bf4e-02d5336d14c0
+            fieldUid: 3f9c2f2a-8ab0-4aba-bf4e-02d5336d14c0 # Copyright
             instructions: null
             label: null
             required: '1'
@@ -43,5 +43,7 @@ name: Images
 settings:
   path: '@webroot/images'
 sortOrder: 2
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
 type: craft\volumes\Local
 url: '@baseurl/images'

@@ -1,28 +1,30 @@
 contentColumnType: string
-fieldGroup: f1d8d989-2bc0-4a0f-b58f-a348276a5596
+fieldGroup: f1d8d989-2bc0-4a0f-b58f-a348276a5596 # Content
 handle: documents
 instructions: ''
 name: Documents
 searchable: true
 settings:
   allowSelfRelations: false
+  allowUploads: true
   allowedKinds:
     - opendocument
     - pdf
-  defaultUploadLocationSource: 'volume:8136d7e9-1a74-464d-aef2-3a4f91a5cdda'
+  defaultUploadLocationSource: 'volume:8136d7e9-1a74-464d-aef2-3a4f91a5cdda' # Images
   defaultUploadLocationSubpath: ''
   limit: ''
   localizeRelations: true
+  previewMode: full
   restrictFiles: '1'
   selectionLabel: 'Add a document'
   showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
-  singleUploadLocationSource: 'volume:8136d7e9-1a74-464d-aef2-3a4f91a5cdda'
+  singleUploadLocationSource: 'volume:8136d7e9-1a74-464d-aef2-3a4f91a5cdda' # Images
   singleUploadLocationSubpath: ''
   source: null
   sources:
-    - 'volume:2f4c2da0-9bf2-47da-a2fb-b13bad08739c'
+    - 'volume:2f4c2da0-9bf2-47da-a2fb-b13bad08739c' # Documents
   targetSiteId: null
   useSingleFolder: false
   validateRelatedElements: false

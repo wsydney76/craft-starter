@@ -1,5 +1,5 @@
 contentColumnType: string
-fieldGroup: fea375f0-9f46-4952-b272-2dcf42b0cce5
+fieldGroup: fea375f0-9f46-4952-b272-2dcf42b0cce5 # Site Info
 handle: copyright
 instructions: ''
 name: Copyright
@@ -11,7 +11,7 @@ settings:
   columnType: string
   initialRows: '4'
   multiline: ''
-  placeholder: ''
+  placeholder: null
   uiMode: normal
 translationKeyFormat: null
 translationMethod: none

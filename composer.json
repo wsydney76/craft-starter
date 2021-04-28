@@ -1,14 +1,14 @@
 {
   "name": "wsydney76/craft_starter",
-  "version": "1.5.3",
+  "version": "1.6",
   "description": "Simple multilingual project template for Craft CMS",
   "license": "Unlicense",
   "require": {
     "clubstudioltd/craft-asset-rev": "6.0.2",
-    "craftcms/cms": "3.6.6",
+    "craftcms/cms": "3.6.12",
     "craftcms/contact-form": "2.2.7",
     "doublesecretagency/craft-cpcss": "2.3.0",
-    "spicyweb/craft-embedded-assets": "2.5.0"
+    "spicyweb/craft-embedded-assets": "2.5.3"
   },
   "require-dev": {
     "yiisoft/yii2-shell": "^2.0.3"

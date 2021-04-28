@@ -27,7 +27,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 9a302fae-a3bf-4298-8a06-24f8c8f6f335
+            fieldUid: 9a302fae-a3bf-4298-8a06-24f8c8f6f335 # Featured Image
             instructions: null
             label: null
             required: false
@@ -36,7 +36,7 @@ fieldLayouts:
             warning: null
             width: 25
           -
-            fieldUid: 3ef62a7b-6c6d-470f-88a6-31de5a099b38
+            fieldUid: 3ef62a7b-6c6d-470f-88a6-31de5a099b38 # Teaser
             instructions: null
             label: null
             required: false
@@ -45,7 +45,7 @@ fieldLayouts:
             warning: null
             width: 75
           -
-            fieldUid: 58b2e318-26cc-47b8-bee2-81369731d72f
+            fieldUid: 58b2e318-26cc-47b8-bee2-81369731d72f # Body Content
             instructions: null
             label: null
             required: false
@@ -58,7 +58,7 @@ fieldLayouts:
 handle: contact
 hasTitleField: true
 name: Contact
-section: 8feefff2-af30-4215-853b-2581c71afb57
+section: 8feefff2-af30-4215-853b-2581c71afb57 # Contact
 sortOrder: 1
 titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null
