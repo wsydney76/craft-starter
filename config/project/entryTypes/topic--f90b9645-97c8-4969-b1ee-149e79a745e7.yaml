@@ -4,8 +4,6 @@ fieldLayouts:
       -
         elements:
           -
-            type: project\modules\drafts\fieldlayoutelements\DraftWarning
-          -
             heading: Header
             type: craft\fieldlayoutelements\Heading
           -
@@ -32,7 +30,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 9a302fae-a3bf-4298-8a06-24f8c8f6f335
+            fieldUid: 9a302fae-a3bf-4298-8a06-24f8c8f6f335 # Featured Image
             instructions: null
             label: null
             required: '0'
@@ -41,7 +39,7 @@ fieldLayouts:
             warning: null
             width: 25
           -
-            fieldUid: 3ef62a7b-6c6d-470f-88a6-31de5a099b38
+            fieldUid: 3ef62a7b-6c6d-470f-88a6-31de5a099b38 # Teaser
             instructions: null
             label: null
             required: '0'
@@ -53,7 +51,7 @@ fieldLayouts:
             heading: Content
             type: craft\fieldlayoutelements\Heading
           -
-            fieldUid: 58b2e318-26cc-47b8-bee2-81369731d72f
+            fieldUid: 58b2e318-26cc-47b8-bee2-81369731d72f # Body Content
             instructions: null
             label: null
             required: '0'
@@ -66,7 +64,7 @@ fieldLayouts:
 handle: topic
 hasTitleField: true
 name: Topic
-section: 338d4897-8545-48cd-bd31-951a6ed52197
+section: 338d4897-8545-48cd-bd31-951a6ed52197 # Topic
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null

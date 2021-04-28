@@ -1,11 +1,11 @@
-field: ae7d91c8-8743-46bb-a954-438a27946b97
+field: ae7d91c8-8743-46bb-a954-438a27946b97 # Primary Navigation
 fieldLayouts:
   a488e318-6b3c-4902-a35a-f96636141ea6:
     tabs:
       -
         elements:
           -
-            fieldUid: c6943610-b0b4-4588-88b9-c13480f83557
+            fieldUid: c6943610-b0b4-4588-88b9-c13480f83557 # Caption
             instructions: null
             label: null
             required: '0'
@@ -14,7 +14,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 91e82c8e-91b5-456d-a06b-bd9e86bb5059
+            fieldUid: 91e82c8e-91b5-456d-a06b-bd9e86bb5059 # Entries
             instructions: null
             label: null
             required: '0'
@@ -25,7 +25,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  91e82c8e-91b5-456d-a06b-bd9e86bb5059:
+  91e82c8e-91b5-456d-a06b-bd9e86bb5059: # Entries
     contentColumnType: string
     fieldGroup: null
     handle: entries
@@ -46,7 +46,7 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Entries
-  c6943610-b0b4-4588-88b9-c13480f83557:
+  c6943610-b0b4-4588-88b9-c13480f83557: # Caption
     contentColumnType: string(120)
     fieldGroup: null
     handle: caption
@@ -60,7 +60,7 @@ fields:
       columnType: null
       initialRows: '4'
       multiline: ''
-      placeholder: ''
+      placeholder: null
       uiMode: normal
     translationKeyFormat: null
     translationMethod: site

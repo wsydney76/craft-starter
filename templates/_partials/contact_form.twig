@@ -3,8 +3,6 @@
 
 {% set message = message ?? create('craft\\contactform\\models\\Submission') %}
 
-{% set classes = 'w-full focus:shadow-xl focus:ring-1 focus:ring-primary' %}
-
 {{ showFlash() }}
 
 {# Avoid PhpStorm killing syntax awareness, so output form tag as twig string #}
@@ -15,13 +13,13 @@
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
 
     <div class=""><label for="from-name">{{ 'Your Name'|t }}</label>
-        <input class="{{ classes }}" id="from-name" type="text" name="fromName" value="{{ message.fromName }}">
+        <input id="from-name" type="text" name="fromName" value="{{ message.fromName }}">
         {{ errorList(message.getErrors('fromName')) }}
     </div>
 
     {% set errors = message.getErrors('fromEmail') %}
     <div class=""><label for="from-email">{{ 'Your Email'|t }} <span class="text-red-500">*</span> </label>
-        <input class="{{ classes }} {{ errors ? 'bg-red-200 border border-red-700' }}"
+        <input class="{{ errors ? 'bg-red-200 border border-red-700' }}"
                id="from-email" type="email" name="fromEmail" value="{{ message.fromEmail }}">
         {{ errorList(errors) }}
     </div>
@@ -29,19 +27,19 @@
 </div>
 
 <div class="my-4"><label for="subject">{{ 'Subject'|t }}</label>
-    <input class="{{ classes }}" id="subject" type="text" name="subject" value="{{ message.subject }}">
+    <input id="subject" type="text" name="subject" value="{{ message.subject }}">
     {{ errorList(message.getErrors('subject')) }}
 </div>
 
 {% set errors = message.getErrors('message') %}
 <div class="my-4"><label for="message">{{ 'Message'|t }} <span class="text-red-500">*</span></label>
-    <textarea class="{{ classes }} {{ errors ? 'bg-red-200 border border-red-700' }}" rows="5"
+    <textarea class="{{ errors ? 'bg-red-200 border border-red-700' }}" rows="5"
               id="message" name="message"
               oninput='this.style.height = "";this.style.height = this.scrollHeight  + "px"'>{{ message.message }}</textarea>
     {{ errorList(errors) }}
 </div>
 <div>
-    <input class="cursor-pointer bg-primary text-white px-4 py-2 hover:bg-primary-dark" type="submit"
+    <input type="submit"
            value="{{ 'Send'|t }}">
 </div>
 {{ '</form>' }}

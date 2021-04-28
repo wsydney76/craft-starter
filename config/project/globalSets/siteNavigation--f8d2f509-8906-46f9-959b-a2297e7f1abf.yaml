@@ -4,7 +4,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: ae7d91c8-8743-46bb-a954-438a27946b97
+            fieldUid: ae7d91c8-8743-46bb-a954-438a27946b97 # Primary Navigation
             instructions: null
             label: null
             required: '0'
@@ -17,7 +17,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: 15c0556c-f778-4258-ae84-ff8cef62b761
+            fieldUid: 15c0556c-f778-4258-ae84-ff8cef62b761 # Footer Navigation
             instructions: null
             label: null
             required: '0'

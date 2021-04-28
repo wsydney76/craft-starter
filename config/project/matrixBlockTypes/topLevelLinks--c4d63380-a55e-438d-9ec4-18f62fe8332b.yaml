@@ -1,11 +1,11 @@
-field: ae7d91c8-8743-46bb-a954-438a27946b97
+field: ae7d91c8-8743-46bb-a954-438a27946b97 # Primary Navigation
 fieldLayouts:
   28608963-de7b-4a84-8c8f-b35c82ae5c17:
     tabs:
       -
         elements:
           -
-            fieldUid: 29984fa1-b01d-42e8-80e8-6983cc5a498c
+            fieldUid: 29984fa1-b01d-42e8-80e8-6983cc5a498c # Entries
             instructions: null
             label: null
             required: '1'
@@ -16,7 +16,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  29984fa1-b01d-42e8-80e8-6983cc5a498c:
+  29984fa1-b01d-42e8-80e8-6983cc5a498c: # Entries
     contentColumnType: string
     fieldGroup: null
     handle: entries

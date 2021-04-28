@@ -1,5 +1,5 @@
 contentColumnType: string
-fieldGroup: f1d8d989-2bc0-4a0f-b58f-a348276a5596
+fieldGroup: f1d8d989-2bc0-4a0f-b58f-a348276a5596 # Content
 handle: topics
 instructions: ''
 name: Topics
@@ -12,7 +12,7 @@ settings:
   showSiteMenu: true
   source: null
   sources:
-    - 'section:338d4897-8545-48cd-bd31-951a6ed52197'
+    - 'section:338d4897-8545-48cd-bd31-951a6ed52197' # Topic
   targetSiteId: null
   validateRelatedElements: false
   viewMode: null

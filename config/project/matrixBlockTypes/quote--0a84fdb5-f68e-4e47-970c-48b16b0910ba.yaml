@@ -1,11 +1,11 @@
-field: 58b2e318-26cc-47b8-bee2-81369731d72f
+field: 58b2e318-26cc-47b8-bee2-81369731d72f # Body Content
 fieldLayouts:
   7a0f5fd9-ebee-468d-81ea-2f80b639ea1f:
     tabs:
       -
         elements:
           -
-            fieldUid: bc485c8b-4a0c-4c30-816a-8bb295727b36
+            fieldUid: bc485c8b-4a0c-4c30-816a-8bb295727b36 # Text
             instructions: null
             label: null
             required: true
@@ -14,7 +14,7 @@ fieldLayouts:
             warning: null
             width: 75
           -
-            fieldUid: efc1fd0a-3fd1-4379-84a0-e8cf931be331
+            fieldUid: efc1fd0a-3fd1-4379-84a0-e8cf931be331 # Display
             instructions: null
             label: null
             required: false
@@ -23,7 +23,7 @@ fieldLayouts:
             warning: null
             width: 25
           -
-            fieldUid: d420edab-c758-4dce-8b02-e17b23ed0e60
+            fieldUid: d420edab-c758-4dce-8b02-e17b23ed0e60 # Attribution
             instructions: null
             label: null
             required: false
@@ -34,7 +34,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  bc485c8b-4a0c-4c30-816a-8bb295727b36:
+  bc485c8b-4a0c-4c30-816a-8bb295727b36: # Text
     contentColumnType: text
     fieldGroup: null
     handle: text
@@ -48,12 +48,12 @@ fields:
       columnType: text
       initialRows: '4'
       multiline: ''
-      placeholder: ''
+      placeholder: null
       uiMode: normal
     translationKeyFormat: null
     translationMethod: language
     type: craft\fields\PlainText
-  d420edab-c758-4dce-8b02-e17b23ed0e60:
+  d420edab-c758-4dce-8b02-e17b23ed0e60: # Attribution
     contentColumnType: string
     fieldGroup: null
     handle: attribution
@@ -67,12 +67,12 @@ fields:
       columnType: string
       initialRows: '4'
       multiline: ''
-      placeholder: ''
+      placeholder: null
       uiMode: normal
     translationKeyFormat: null
     translationMethod: language
     type: craft\fields\PlainText
-  efc1fd0a-3fd1-4379-84a0-e8cf931be331:
+  efc1fd0a-3fd1-4379-84a0-e8cf931be331: # Display
     contentColumnType: string
     fieldGroup: null
     handle: display
