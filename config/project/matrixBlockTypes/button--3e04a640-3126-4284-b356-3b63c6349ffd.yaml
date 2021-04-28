@@ -43,6 +43,41 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
+  7d7cf5ed-7c41-4d49-ba86-cef811f69683: # Color
+    contentColumnType: string
+    fieldGroup: null
+    handle: color
+    instructions: ''
+    name: Color
+    searchable: true
+    settings:
+      optgroups: true
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Primary
+            -
+              - value
+              - primary
+            -
+              - default
+              - '1'
+        -
+          __assoc__:
+            -
+              - label
+              - Secondary
+            -
+              - value
+              - secondary
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
   133bba22-df33-4432-a49f-198e9c071f22: # Display
     contentColumnType: string
     fieldGroup: null
@@ -83,41 +118,6 @@ fields:
             -
               - value
               - right
-            -
-              - default
-              - ''
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\Dropdown
-  7d7cf5ed-7c41-4d49-ba86-cef811f69683: # Color
-    contentColumnType: string
-    fieldGroup: null
-    handle: color
-    instructions: ''
-    name: Color
-    searchable: true
-    settings:
-      optgroups: true
-      options:
-        -
-          __assoc__:
-            -
-              - label
-              - Primary
-            -
-              - value
-              - primary
-            -
-              - default
-              - '1'
-        -
-          __assoc__:
-            -
-              - label
-              - Secondary
-            -
-              - value
-              - secondary
             -
               - default
               - ''
