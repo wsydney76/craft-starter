@@ -31,17 +31,20 @@
 
                 <div class="nav-link" @mouseenter="dropDown=0">&nbsp;</div>
 
-                {% for block in global_navBlocks %}
+                {% set navBlocks = siteNavigation.primaryNavigation
+                    .with([
+                        'topLevelLinks:entries',
+                        'dropDown:entries'
+                    ])
+                .all %}
+
+                {% for block in navBlocks %}
                     {% switch block.type %}
-
                     {% case "topLevelLinks" %}
-
                         {% for navEntry in block.entries %}
                             <a @mouseenter="dropDown = 0" class="nav-link"
                                href="{{ navEntry.url }}">{{ navEntry.title }}</a>
                         {% endfor %}
-
-
                     {% case "dropDown" %}
                         {% set index = index + 1 %}
                         {% include '_layouts/partials/nav_dropdown.twig' with {
@@ -57,7 +60,6 @@
             </div>
 
             {% include '_layouts/partials/languageswitcher.twig' %}
-
 
         </nav>
     </div>

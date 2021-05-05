@@ -1,12 +1,13 @@
 {
   "name": "craftcms-starter",
-  "version": "1.6",
+  "version": "1.6.0",
+  "private": true,
   "description": "Simple multilingual project template for Craft CMS",
   "main": "index.js",
   "keywords": [
     "craftcms"
   ],
-  "author": "Pixel & Tonic",
+  "author": "wsydney76",
   "license": "MIT",
   "scripts": {
     "dev": "cross-env NODE_ENV=development TAILWIND_MODE=build webpack --mode=development",

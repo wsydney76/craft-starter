@@ -1,4 +1,3 @@
-{% extends "_globals.twig" %}
 {% set element = element ?? entry ?? craft.app.urlManager.matchedElement %}
 {% set global_localizedElements = element ? element.localized.all : [] %}
 {% set global_title = global_title ?? (element ? element.title) %}
@@ -12,7 +11,7 @@
 
     {% include '_layouts/partials/assets.twig' %}
 
-    <title>{{ global_title }} {% if  global_title %} | {{ global_siteName }}{% endif %}</title>
+    <title>{{ global_title }} {% if  global_title %} | {{ siteInfo.siteName }}{% endif %}</title>
 
 </head>
 

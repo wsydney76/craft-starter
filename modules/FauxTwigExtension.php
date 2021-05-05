@@ -83,13 +83,6 @@ class FauxTwigExtension extends AbstractExtension implements GlobalsInterface
             'global_featuredImage' => '',
             'global_title' => '',
             'global_navCondition' => [],
-            'global_siteName' => '',
-            'global_siteIcon' => new Asset(),
-            'global_bodyClass' => '',
-            'global_canvasClass' => '',
-            'global_titleSectionClass' => '',
-            'global_titleTextClass' => '',
-            'global_footerClass' => ''
 
             // Third party globals
             //'seomatic' => new \nystudio107\seomatic\variables\SeomaticVariable(),
