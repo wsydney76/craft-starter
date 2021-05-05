@@ -5,8 +5,8 @@ instructions: ''
 name: Teaser
 searchable: true
 settings:
-  byteLimit: 100
-  charLimit: null
+  byteLimit: null
+  charLimit: 60
   code: ''
   columnType: string
   initialRows: '4'
