@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.7.0
+* Update to Craft 3.6.13
+* Drop some global variables for clarity
+
 ## 1.6
 
 * Update to Craft 3.6.12
