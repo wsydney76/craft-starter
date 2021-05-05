@@ -2,13 +2,13 @@
 
 {% block body %}
     <body dir="{{ craft.app.locale.orientation }}"
-          class="{{ global_bodyClass ?? 'text-base antialiased' }}">
+          class="text-base antialiased">
 
     {% block nav %}
         {% include '_layouts/partials/nav.twig' %}
     {% endblock nav %}
 
-    <div id="canvas" class="{{ global_canvasClass ?? 'bg-light' }}">
+    <div id="canvas" class="bg-light">
         {% block canvas %}
 
             <div id="header">
@@ -18,7 +18,7 @@
                         {% block featured1 %}{% endblock %}
                     </div>
 
-                    <div id="title" class="{{ global_titleSectionClass ?? '' }}">
+                    <div id="title" class="bg-primary text-white">
                         {% block title %}
                             <header>
                                 <div id="title-container" class="container mx-auto  max-w-screen-xl">
@@ -26,7 +26,7 @@
                                         <div class="pt-4 pl-2 pb-4">
                                             <div id="title-top">{% block titleTop %}{% endblock %}</div>
                                             <h1 id="title-text"
-                                                class="mb-3 {{ global_titleTextClass ?? 'font-light' }}">
+                                                class="mb-3 font-light">
                                                 {% block titleText %}{{ global_title }}{% endblock %}
                                             </h1>
                                             <div id="title-bottom">{% block titleBottom %}{% endblock %}</div>
@@ -122,16 +122,16 @@
 
     <div id="footer">
         {% block footer %}
-            <footer class="px-12 py-3 {{ global_footerClass ?? '' }}">
+            <footer class="px-12 py-3">
                 <div class="mx-5">
                     <div class="grid grid-cols-1 lg:grid-cols-12">
                         <div id="footer1" class="lg:col-span-5 text-left">
                             {% block footer1 %}
-                                &copy; {{ now|date('Y') }} {{ global_siteName }}
+                                &copy; {{ now|date('Y') }} {{ siteInfo.siteName }}
                             {% endblock %}
                         </div>
 
-                        <div id="footer2" class="lg:col-span-2  lg:text-center">
+                        <div id="footer2" class="lg:col-span-2 lg:text-center">
                             {% block footer2 %}
                                 {% if entry is defined and entry.isEditable %}
                                     <a href="{{ entry.cpEditUrl }}" target="_blank">Edit</a>

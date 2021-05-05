@@ -1,3 +1,4 @@
-{% if global_siteIcon is defined and global_siteIcon %}
-    <link rel="icon" href="{{ global_siteIcon.url }}" type="{{ global_siteIcon.mimeType }}">
+{% set siteIcon = siteInfo.siteIcon.one %}
+{% if siteIcon %}
+    <link rel="icon" href="{{ siteIcon.url }}" type="{{ siteIcon.mimeType }}">
 {% endif %}
