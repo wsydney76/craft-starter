@@ -17,7 +17,7 @@
     {% if isFloat %}
         {% set imgAttr = {
             src: image.url('galleryThumbnail'),
-            alt: caption != image.title ? image.title : '',
+            alt: caption != image.altText ? image.altText : '',
             loading: 'lazy'
         } %}
         {% set figureAttr = {
@@ -28,7 +28,7 @@
         {% set imgAttr = {
             src: image.url,
             srcset: image.srcset(srcsetSizes),
-            alt: caption != image.title ? image.title : '',
+            alt: caption != image.altText ? image.altText : '',
             height: image.height,
             width: image.width,
             loading: 'lazy'

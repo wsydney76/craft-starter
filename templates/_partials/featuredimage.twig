@@ -24,19 +24,26 @@
     <header id="featured-image">
         {% if image.mimeType == 'image/svg+xml' %}
             <div>
-                <img class="mx-auto {{ heights }}" src="{{ image.url }}" alt="">
+                <img class="mx-auto {{ heights }}" src="{{ image.url }}" alt="{{ image.altText }}">
             </div>
         {% else %}
             {% do image.setTransform(baseTransform) %}
-            {{ tag('img', {
-                class: "object-cover #{heights}",
-                src: image.url,
-                width: image.width,
-                height: image.height,
-                srcset: image.srcset(srcsetSizes),
-                sizes: "100vw",
-                alt: image.title
-            }) }}
+            <div class="relative">
+                {{ tag('img', {
+                    class: "object-cover #{heights}",
+                    src: image.url,
+                    width: image.width,
+                    height: image.height,
+                    srcset: image.srcset(srcsetSizes),
+                    sizes: "100vw",
+                    alt: image.altText
+                }) }}
+                {% if image.copyright %}
+                    <div class="absolute bottom-0 right-0 p-2 text-white text-sm bg-gray-900 bg-opacity-50">
+                        &copy; {{ image.copyright }}
+                    </div>
+                {% endif %}
+            </div>
         {% endif %}
     </header>
 {% endif %}

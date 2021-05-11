@@ -795,6 +795,9 @@ h4{
 .bottom-0{
 	bottom: 0px;
 }
+.right-0{
+	right: 0px;
+}
 .top-0{
 	top: 0px;
 }
@@ -1077,10 +1080,6 @@ h4{
 	--tw-border-opacity: 1;
 	border-color: rgba(185, 28, 28, var(--tw-border-opacity));
 }
-.bg-primary{
-	--tw-bg-opacity: 1;
-	background-color: rgba(36, 60, 90, var(--tw-bg-opacity));
-}
 .bg-blue-700{
 	--tw-bg-opacity: 1;
 	background-color: rgba(29, 78, 216, var(--tw-bg-opacity));
@@ -1097,6 +1096,10 @@ h4{
 	--tw-bg-opacity: 1;
 	background-color: rgba(239, 68, 68, var(--tw-bg-opacity));
 }
+.bg-primary{
+	--tw-bg-opacity: 1;
+	background-color: rgba(36, 60, 90, var(--tw-bg-opacity));
+}
 .bg-light{
 	--tw-bg-opacity: 1;
 	background-color: rgba(244, 244, 244, var(--tw-bg-opacity));
@@ -1108,6 +1111,13 @@ h4{
 .bg-red-200{
 	--tw-bg-opacity: 1;
 	background-color: rgba(254, 202, 202, var(--tw-bg-opacity));
+}
+.bg-gray-900{
+	--tw-bg-opacity: 1;
+	background-color: rgba(17, 24, 39, var(--tw-bg-opacity));
+}
+.bg-opacity-50{
+	--tw-bg-opacity: 0.5;
 }
 .fill-current{
 	fill: currentColor;
