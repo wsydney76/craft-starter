@@ -1,6 +1,6 @@
 {
   "name": "craftcms-starter",
-  "version": "1.6.1",
+  "version": "1.8.0",
   "private": true,
   "description": "Simple multilingual project template for Craft CMS",
   "main": "index.js",
@@ -41,7 +41,7 @@
     "alpinejs": "^2.8.2",
     "autoprefixer": "^10.2.5",
     "baguettebox.js": "^1.11.1",
-    "postcss": "^8.2.13",
+    "postcss": "^8.2.15",
     "sane": "^4.1.0",
     "tailwindcss": "^2.1.1",
     "tailwindcss-aspect-ratio": "^3.0.0",
