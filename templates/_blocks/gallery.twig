@@ -11,7 +11,7 @@
 
             <div class="relative">
                 <a href="{{ image.url('galleryFullHeight') }}" data-caption="{{ caption }}">
-                    {{ image.img('galleryThumbnail') }}
+                    {{ image.img('galleryThumbnail')|attr({alt: image.altText}) }}
                 </a>
                 <div style="left:50%;transform: translate(-50%);"
                      class="absolute bottom-0 text-center text-white pb-2 text-sm">{{ caption }}</div>

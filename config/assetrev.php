@@ -21,18 +21,20 @@
  * @see https://github.com/clubstudioltd/craft-asset-rev
  */
 
+use club\assetrev\utilities\strategies\ManifestFileStrategy;
 use config\Env;
-use craft\helpers\App;
+// use craft\helpers\App;
 
 return [
     '*' => [
         'strategies' => [
-            'manifest' => \club\assetrev\utilities\strategies\ManifestFileStrategy::class,
+            'manifest' => ManifestFileStrategy::class,
             'noManifest' => function() {
                 return '';
             }
         ],
         'assetUrlPrefix' => Env::BASE_URL,// . '/assets/dist/',
+        //'assetUrlPrefix' =>App::env('PRIMARY_SITE_URL')// . '/assets/dist/',
         'manifestPath' => 'web/assets/dist/manifest.json',
         'pipeline' => 'manifest|noManifest',
     ]

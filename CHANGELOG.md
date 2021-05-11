@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.8.0
+* Updates to Craft 3.6.14 / Embedded Assets 2.6.1
+* Added alt text field for images
+* Show copyright for featured images
+
 ## 1.7.0
 * Update to Craft 3.6.13
 * Drop some global variables for clarity

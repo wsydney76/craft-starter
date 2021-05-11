@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b75bdccb13a07c8f79bf1e3d1c9c5350",
+    "content-hash": "20d4a88764f887ed4c054c2e9d00b473",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -590,16 +590,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "3.6.13",
+            "version": "3.6.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "ba3b1e704194e7e6a056595d0d9cededc7e9b9c3"
+                "reference": "bfe9a55f217fac0a9f208c2196e1ffba4cacd98c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/ba3b1e704194e7e6a056595d0d9cededc7e9b9c3",
-                "reference": "ba3b1e704194e7e6a056595d0d9cededc7e9b9c3",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/bfe9a55f217fac0a9f208c2196e1ffba4cacd98c",
+                "reference": "bfe9a55f217fac0a9f208c2196e1ffba4cacd98c",
                 "shasum": ""
             },
             "require": {
@@ -633,9 +633,9 @@
                 "voku/stringy": "^6.4.0",
                 "webonyx/graphql-php": "~14.4.1",
                 "yii2tech/ar-softdelete": "^1.0.4",
-                "yiisoft/yii2": "~2.0.41.1",
+                "yiisoft/yii2": "~2.0.42.1",
                 "yiisoft/yii2-debug": "^2.1.16",
-                "yiisoft/yii2-queue": "~2.3.1",
+                "yiisoft/yii2-queue": "~2.3.2",
                 "yiisoft/yii2-swiftmailer": "^2.1.2"
             },
             "conflict": {
@@ -689,7 +689,7 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2021-05-04T16:40:11+00:00"
+            "time": "2021-05-11T17:25:59+00:00"
         },
         {
             "name": "craftcms/contact-form",
@@ -3045,21 +3045,21 @@
         },
         {
             "name": "spicyweb/craft-embedded-assets",
-            "version": "2.5.3",
+            "version": "2.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spicywebau/craft-embedded-assets.git",
-                "reference": "39a280768fa818d6e731371ebafd6075620076f8"
+                "reference": "36fdf1724575cf4eb2b523727d38f520535481c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spicywebau/craft-embedded-assets/zipball/39a280768fa818d6e731371ebafd6075620076f8",
-                "reference": "39a280768fa818d6e731371ebafd6075620076f8",
+                "url": "https://api.github.com/repos/spicywebau/craft-embedded-assets/zipball/36fdf1724575cf4eb2b523727d38f520535481c6",
+                "reference": "36fdf1724575cf4eb2b523727d38f520535481c6",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "^3.4.0",
-                "embed/embed": "^3.4.15"
+                "craftcms/cms": "^3.6.0",
+                "embed/embed": "3.4.15"
             },
             "type": "craft-plugin",
             "extra": {
@@ -3103,7 +3103,7 @@
                 "rss": "https://github.com/spicywebau/craft-embedded-assets/commits/master.atom",
                 "source": "https://github.com/spicywebau/craft-embedded-assets"
             },
-            "time": "2021-04-09T13:15:37+00:00"
+            "time": "2021-05-10T07:58:37+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -5430,16 +5430,16 @@
         },
         {
             "name": "yiisoft/yii2",
-            "version": "2.0.41.1",
+            "version": "2.0.42.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "2ad0894a2ccbd3912b33de4419ad1ae3df0595c4"
+                "reference": "976e2e892af4df933831b5e0a05d0acf4b173d98"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/2ad0894a2ccbd3912b33de4419ad1ae3df0595c4",
-                "reference": "2ad0894a2ccbd3912b33de4419ad1ae3df0595c4",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/976e2e892af4df933831b5e0a05d0acf4b173d98",
+                "reference": "976e2e892af4df933831b5e0a05d0acf4b173d98",
                 "shasum": ""
             },
             "require": {
@@ -5547,7 +5547,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-03-04T15:45:04+00:00"
+            "time": "2021-05-06T11:44:35+00:00"
         },
         {
             "name": "yiisoft/yii2-composer",
@@ -5627,16 +5627,16 @@
         },
         {
             "name": "yiisoft/yii2-debug",
-            "version": "2.1.16",
+            "version": "2.1.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-debug.git",
-                "reference": "0d8ce76b2dd036a5fc38b26434e1c672ad8975a9"
+                "reference": "21a259c27dacedf19ac1e00d4a7180e3043d7859"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/0d8ce76b2dd036a5fc38b26434e1c672ad8975a9",
-                "reference": "0d8ce76b2dd036a5fc38b26434e1c672ad8975a9",
+                "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/21a259c27dacedf19ac1e00d4a7180e3043d7859",
+                "reference": "21a259c27dacedf19ac1e00d4a7180e3043d7859",
                 "shasum": ""
             },
             "require": {
@@ -5713,20 +5713,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-12-23T16:36:12+00:00"
+            "time": "2021-05-05T22:02:36+00:00"
         },
         {
             "name": "yiisoft/yii2-queue",
-            "version": "2.3.1",
+            "version": "2.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-queue.git",
-                "reference": "a6758a2b9c2d8aca9b949f4faa9e3cca0dfbc8be"
+                "reference": "7446216c87eff371245113b41f5a227d4d9182f7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-queue/zipball/a6758a2b9c2d8aca9b949f4faa9e3cca0dfbc8be",
-                "reference": "a6758a2b9c2d8aca9b949f4faa9e3cca0dfbc8be",
+                "url": "https://api.github.com/repos/yiisoft/yii2-queue/zipball/7446216c87eff371245113b41f5a227d4d9182f7",
+                "reference": "7446216c87eff371245113b41f5a227d4d9182f7",
                 "shasum": ""
             },
             "require": {
@@ -5819,7 +5819,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-12-23T17:04:23+00:00"
+            "time": "2021-05-05T22:59:45+00:00"
         },
         {
             "name": "yiisoft/yii2-swiftmailer",
