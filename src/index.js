@@ -1,3 +1,6 @@
 import './styles/styles.scss';
 import './scripts/scripts';
-import 'alpinejs';
+
+import Alpine from 'alpinejs';
+window.Alpine = Alpine;
+Alpine.start();

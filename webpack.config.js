@@ -41,7 +41,11 @@ config = {
             {
                 test: /\.js$/,
                 use: {
-                    loader: "babel-loader"
+                    loader: "babel-loader",
+                    // https://github.com/primefaces/primevue/issues/913
+                    options: {
+                        plugins: [require("@babel/plugin-proposal-optional-chaining")]
+                    },
                 }
             }
         ]
